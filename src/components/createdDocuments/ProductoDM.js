@@ -2,9 +2,12 @@ import React from 'react';
 import { Document, Page, Text, View, Image, StyleSheet, Font } from "@react-pdf/renderer";
 import '../../styles/home.css'
 import escudocuria from '../../images/escudocuria.png'; 
+import Ariana from '../../styles/fonts/ArianaVioleta.ttf'
+
 
 const ProductoDM = (props) => {
-
+// Register font
+Font.register({ family: 'Ariana', src: Ariana });
 
 
 
@@ -14,10 +17,10 @@ const ProductoDM = (props) => {
       padding: "2px", fontSize: "12px", lineHeight:"2px"
     },
     titleText: {
-      fontSize: "18px",
-      margin: "auto" , 
-      fontSize: "18px", 
-      color: 'gray'
+      fontSize: "34px",
+      margin: "auto" ,  
+      color: 'gray',
+      fontFamily: "Ariana"
     }
   });
 
@@ -69,8 +72,6 @@ const ProductoDM = (props) => {
             <Text  style={{ fontSize: "12px", lineHeight:"1.5px" }}>Cura Parroco de {props.parroquia}</Text>
             <Text style={{ fontSize: "12px", lineHeight:"1.5px" }} >Diocesis de Alajuela</Text>
             
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
             <Text style={{  fontSize: "12px", marginLeft: "auto"}} >_____________________________________</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Tel: {props.tel}</Text>

@@ -1,5 +1,4 @@
 .App {
-    text-align: justify;
     width: 100%;
 }
 
@@ -10,9 +9,21 @@
 }
 
 .topImage {
-    max-width: 80px;
-    max-height: 80px;
-    position: "relative";
+    width: 80px;
+    height: 80px;
+    position: relative;
     margin-top: -100px;
     margin-left: 15px;
+}
+.footer {
+    background-color:#353b43;
+    color: aliceblue;
+    width: 100%;
+    position: fixed;
+    bottom: 0; 
+    font-size: 9px;
+   }
+.empty {
+    width: 100%;
+    height: 65.5vh;
 }

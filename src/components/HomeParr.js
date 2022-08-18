@@ -6,14 +6,9 @@ import DelegacionMatrimonial from './DelegacionMatrimonial';
 const HomeParr = (props) => {
     const [documento, setDocumento] = useState("");
 
-    const shoot = () => {
-        alert("Great Shot!");
-    }
-    console.log(props.usuario)
-
     return (
 
-        <div>
+        <div className='homeParr'>
             <h3>Seleccione el documento Parroquial que quiere crear</h3>
 
             {
@@ -21,7 +16,6 @@ const HomeParr = (props) => {
                     if (props.usuario === 'PA') {
                         return (
                             <>
-
                                 <div className="row">
                                     <div className="col-sm-6">
                                         <div className="card">
@@ -56,9 +50,9 @@ const HomeParr = (props) => {
                             </>
 
                         )
-                    } else if ('b' === 'b') {
+                    } else if (props.usuario === 'Nothing') {
                         return (
-                            <p>Hello</p>
+                            <p>Nothing</p>
                         )
                     } else {
                         return (
