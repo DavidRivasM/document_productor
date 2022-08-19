@@ -66,9 +66,9 @@ Font.register({ family: 'OpenSans', src: OpenSans });
           
 
             <Text style={{  fontSize: "12px", marginLeft: "auto"}} ></Text>
-            <Text style={{ fontSize: "9px"}}>Pbro. Juan Bautista Molina Salas</Text>
-            <Text style={{  fontSize: "9px"}}>APODERADO GENERALÍSIMO</Text>
-            <Text style={{  fontSize: "9px"}}>Temporalidades Iglesia Católica Diócesis de Alajuela</Text>
+            <Text style={{ fontSize: "12px"}}>Pbro. Juan Bautista Molina Salas</Text>
+            <Text style={{  fontSize: "12px"}}>APODERADO GENERALÍSIMO</Text>
+            <Text style={{  fontSize: "12px"}}>Temporalidades Iglesia Católica Diócesis de Alajuela</Text>
           </View>
         </Page>
       </Document>
