@@ -16,12 +16,12 @@ const HomeParr = (props) => {
                     if (props.usuario === 'PA') {
                         return (
                             <>
-                                <div className="row">
+                                 <div className="row">
                                     <div className="col-sm-6">
                                         <div className="card">
                                             <div className="card-body">
-                                                <h5 className="card-title">Delegacion Matrimonial</h5>
-                                                <p className="card-text">Documento que se realiza para iniciar con el proceso de matrimonio por parte de la iglesia catolica.</p>
+                                                <h5 className="card-title">Delegacion matrimonial</h5>
+                                                <p className="card-text">Documento que realiza una parroquia con otra parroquia como destinatario que tiene como finalidad delegar la celebracion del acto sacramental de un matrimonio.</p>
                                                 {
                                                     documento === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento("Delegacion Matrimonial")}>
                                                         Crear

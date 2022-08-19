@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Home from './components/HomeParr';
+import HomeParr from './components/HomeParr';
 import HomeCuda from './components/HomeCuda';
 
 import archivo from './images/archivo.png'
@@ -46,7 +46,7 @@ function App() {
               )
             } else if (value === "PA") {
               return (
-                <Home usuario={value} />
+                <HomeParr usuario={value} />
               )
             }
             else if (value === "CUDA") {
@@ -69,16 +69,16 @@ function App() {
             <p style={{
              marginBottom:'-1px'
             }} className="text-center">Copyright © 2022. Diseñado & Desarrollado por el Equipo de trabajo del Archivo de la Diocesis de Alajuela. Contactenos por whatsapp: <img className='rounded' src={whatsapp} alt="Logo" style={{
-              width: "10px",
-              height: "10px",
+              width: "15px",
+              height: "15px",
               padding: "1px"
             }} />6106 0262; al correo eletronico: <img className='rounded' src={gmail} alt="Logo" style={{
-              width: "10px",
-              height: "10px",
+              width: "15px",
+              height: "15px",
               padding: "1px"
             }} />archivocuriaalajuela@hotmail.com o al telefono: <img className='rounded' src={telefono} alt="Logo" style={{
-              width: "10px",
-              height: "10px",
+              width: "15px",
+              height: "15px",
               padding: "1px"
             }} />2433 6005 Ext. 144</p>
            </div>

@@ -2,25 +2,22 @@ import React from 'react';
 import { Document, Page, Text, View, Image, StyleSheet, Font } from "@react-pdf/renderer";
 import '../../styles/home.css'
 import escudocuria from '../../images/escudocuria.png'; 
-import Ariana from '../../styles/fonts/ArianaVioleta.ttf'
-
+import GreatVives from '../../styles/fonts/GreatVibes.ttf'
 
 const ProductoDM = (props) => {
+
 // Register font
-Font.register({ family: 'Ariana', src: Ariana });
-
-
-
+Font.register({ family: 'GreatVives', src: GreatVives });
 
   const styles = StyleSheet.create({
     baseText: {
       padding: "2px", fontSize: "12px", lineHeight:"2px"
     },
     titleText: {
-      fontSize: "34px",
+      fontSize: "28px",
       margin: "auto" ,  
       color: 'gray',
-      fontFamily: "Ariana"
+      fontFamily: "GreatVives"
     }
   });
 
@@ -37,12 +34,12 @@ Font.register({ family: 'Ariana', src: Ariana });
           <Image
             src={escudocuria}
             alt="random image"
-            style={{ width: "80px", height: "80px", position: "absolute", bottom: "650px" }}
+            style={{ width: "80px", height: "80px", position: "absolute", bottom: "625px" }}
           />
           <Image
             src={props.image}
             alt="random image"
-            style={{ width: "80px", height: "80px", position: "absolute", bottom: "650px", right: "10px" }}
+            style={{ width: "80px", height: "80px", position: "absolute", bottom: "625px", right: "5px" }}
           />
 
             <Text style={ styles.titleText }>Diocesis de Alajuela Costa Rica</Text>

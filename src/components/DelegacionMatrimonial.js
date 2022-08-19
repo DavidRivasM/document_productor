@@ -88,7 +88,7 @@ class DelegacionMatrimonial extends Component {
 
     sunmitPost = (e) => {
 
-        if (!this.state.codigo || !this.state.parroquia || !this.state.lugar || !this.state.parroquia || !this.state.fecha || !this.state.cura || !this.state.novio || !this.state.fechaMatrimonio|| !this.state.novia || !this.state.fechaPresentacion) {
+        if (!this.state.codigo || !this.state.parroquia || !this.state.lugar || !this.state.parroquia || !this.state.fecha || !this.state.cura || !this.state.novio || !this.state.fechaMatrimonio || !this.state.novia || !this.state.fechaPresentacion) {
             alert('Todos los espacios son requeridos!');
             e.preventDefault();
         } else {
@@ -121,42 +121,42 @@ class DelegacionMatrimonial extends Component {
                                                 </select>
 
                                                 <div className="form-group">
-                                                    <span ><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                     <input onChange={this.onChange('codigo')} name="codigo" type="text" placeholder="Ingrese el codigo de referencia" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span ><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                     <input onChange={this.onChange('lugar')} name="lugar" type="text" placeholder="Ingrese el lugar" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span >Ingrese la fecha de elaboracion del documento<i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center">Ingrese la fecha de elaboracion del documento<i className="fa fa-pencil-square-o bigicon"></i></span>
                                                     <input onChange={this.onChange('fecha')} name="fecha" type="date" placeholder="Ingrese la fecha de elaboracion" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                     <textarea onChange={this.onChange('fechaMatrimonio')} className="form-control" name="fechaMatrimonio" placeholder="Ingrese el dia del matrimonio"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span ><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                     <input onChange={this.onChange('fechaPresentacion')} name="fechaPresentacion" type="text" placeholder="Ingrese el dia y hora de solicitud de los novios" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span ><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                     <textarea onChange={this.onChange('cura')} className="form-control" name="cura" placeholder="Ingrese el nombre del cura" ></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span ><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                     <textarea onChange={this.onChange('novio')} className="form-control" name="novio" placeholder="Ingrese el nombre del novio" ></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span ><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                     <textarea onChange={this.onChange('novia')} className="form-control" name="novia" placeholder="Ingrese el nombre de la novia" ></textarea>
                                                 </div>
                                                 <div className="form-group">
@@ -169,8 +169,7 @@ class DelegacionMatrimonial extends Component {
                             </div>
                         </div>
 
-
-                   
+                 
                     ) : (
                         <div>
 
