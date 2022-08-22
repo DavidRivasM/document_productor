@@ -55,57 +55,57 @@ class AutorizacionEspecial extends Component {
                                                 <legend className="text-center header">Ingrese los datos</legend>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center">Ingrese el consecutivo<i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo</i></span>
                                                     <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="01-2022" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center">Ingrese el nombre de la persona<i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la persona</i></span>
                                                     <input onChange={this.onChange('persona')} name="persona" type="text" placeholder="Marielos Rodriguez Aratola" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center">Ingrese la cedula de la persona<i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cédula de la persona</i></span>
                                                     <input onChange={this.onChange('cedula')} name="cedula" type="text" placeholder="UNO DOS DOS CUATRO CUARTO DOS UNO SEIS OCHO" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center">Ingrese la institucion donde se hara el tramite<i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la institución donde se hará el trámite</i></span>
                                                     <textarea onChange={this.onChange('institucion')} className="form-control" name="institucion" placeholder="Municipalidad de Alajuela"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center">Ingrese el detalle del tramite<i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el detalle del trámite</i></span>
                                                     <input onChange={this.onChange('detalleTramite')} name="detalleTramite" type="text" placeholder="pago de luz" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center">Ingrese el fin del tramite<i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el fin del trámite</i></span>
                                                     <textarea onChange={this.onChange('finTramite')} className="form-control" name="finTramite" placeholder="evitar el corte del servicio"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center">Ingrese el nombre de la parroquia<i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la parroquia</i></span>
                                                     <textarea onChange={this.onChange('parroquia')} className="form-control" name="parroquia" placeholder="Parroquia del Carmen" rows="7"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center">Ingrese la hora<i className="fa fa-pencil-square-o bigicon"></i></span>
-                                                    <textarea onChange={this.onChange('hora')} className="form-control" name="hora" placeholder="diez"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la hora</i></span>
+                                                    <textarea onChange={this.onChange('hora')} className="form-control" name="hora" placeholder="diez a.m"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center">Ingrese la fecha<i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha</i></span>
                                                     <textarea onChange={this.onChange('fecha')} className="form-control" name="fecha" placeholder="once de marzo"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col text-center">Ingrese el año<i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                    <span className="col text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el año</i></span>
                                                     <textarea onChange={this.onChange('ano')} className="form-control" name="ano" placeholder="2022"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar informacion</button>
+                                                    <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar información</button>
                                                 </div>
                                             </fieldset>
                                         </form>
@@ -120,7 +120,7 @@ class AutorizacionEspecial extends Component {
                         <div>
 
 
-                            <h5 >La informacion fue validada!</h5>
+                            <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
                                 document={<ProductoAE consecutivo={this.state.consecutivo} persona={this.state.persona} cedula={this.state.cedula} institucion={this.state.institucion} detalleTramite={this.state.detalleTramite} finTramite={this.state.finTramite} parroquia={this.state.parroquia} hora={this.state.hora} fecha={this.state.fecha} ano={this.state.ano} />}

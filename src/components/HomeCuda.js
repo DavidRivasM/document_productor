@@ -19,8 +19,8 @@ const HomeCuda = (props) => {
                                     <div className="col-sm-6">
                                         <div className="card">
                                             <div className="card-body">
-                                                <h5 className="card-title">Autorizacion especial</h5>
-                                                <p className="card-text">Documento que se realiza con el fin de brindar permisos legales para que una persona pueda realizar algun tramite administrativo en nombre de la Diocesis de Alajuela.</p>
+                                                <h5 className="card-title">Autorización especial</h5>
+                                                <p className="card-text">Documento que se realiza con el fin de brindar permisos legales para que una persona pueda realizar algún tramite administrativo en nombre de la Diócesis de Alajuela.</p>
                                                 {
                                                     documento === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento("Autorizacion especial")}>
                                                         Crear

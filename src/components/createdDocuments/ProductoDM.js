@@ -14,7 +14,7 @@ Font.register({ family: 'GreatVives', src: GreatVives });
       padding: "2px", fontSize: "12px", lineHeight:"2px"
     },
     titleText: {
-      fontSize: "28px",
+      fontSize: "25px",
       margin: "auto" ,  
       color: 'gray',
       fontFamily: "GreatVives"
@@ -34,31 +34,31 @@ Font.register({ family: 'GreatVives', src: GreatVives });
           <Image
             src={escudocuria}
             alt="random image"
-            style={{ width: "80px", height: "80px", position: "absolute", bottom: "625px" }}
+            style={{ width: "78px", height: "78px", position: "absolute", bottom: "622px" }}
           />
           <Image
             src={props.image}
             alt="random image"
-            style={{ width: "80px", height: "80px", position: "absolute", bottom: "625px", right: "5px" }}
+            style={{ width: "78px", height: "78px", position: "absolute", bottom: "622px", right: "1px" }}
           />
 
-            <Text style={ styles.titleText }>Diocesis de Alajuela Costa Rica</Text>
+            <Text style={ styles.titleText }>Diócesis de Alajuela Costa Rica</Text>
             <Text style={ styles.titleText }>{props.parroquia}</Text>
             <Text style={{ margin: "auto"}} >_________________________________________</Text>
-            <Text style={{ margin: "auto", padding: "2px" , fontSize: "15px", lineHeight:"2px", fontWeight: "bold" }}>Delegacion matrimonial</Text>
+            <Text style={{ margin: "auto", padding: "2px" , fontSize: "15px", lineHeight:"2px", fontWeight: "bold" }}>Delegación matrimonial</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px"}}>{props.codigo}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px"}}>{props.codigo}-{props.consecutivo}</Text>
             <Text style={{ padding: "2px", fontSize: "12px"}}>{props.lugar}, {props.fecha}</Text>
             <Text style={{ padding: "2px", fontSize: "12px"}}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px"}}>Pbro. {props.cura},</Text>
             <Text style={{ padding: "2px", fontSize: "12px"}}>                     </Text>
             
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Por la presente es mi deseo saludarle y desearle paz y bien. El suscrito, Pbro. {props.cura}, Cura Parroco de {props.parroquia}, conforme a los canones 1108 y 1152, envio cordialmente la delegacion para que bendiga la union matrimonial de los senores:</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Por la presente es mi deseo saludarle y desearle paz y bien. El suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, conforme a los canones 1108 y 1152, envío cordialmente la delegación para que bendiga la unión matrimonial de los señores:</Text>
 
             <Text style={{ margin: "auto", padding: "5px", fontSize: "12px", lineHeight:"2px" }}>{props.novio} y {props.novia}</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>El dia {props.fechaMatrimonio}.</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Ellos se presentaron el dia {props.fechaPresentacion} en la {props.parroquia}, cuya administracion tengo a cargo. No encontrando ningun impedimento, procedemos a enviarle el expediente matrimonial y los documentos para su respectiva inscripcion.</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Ellos se presentaron el día {props.fechaPresentacion} en la {props.parroquia}, cuya administración tengo a cargo. No encontrando ningún impedimento, procedemos a enviarle el expediente matrimonial y los documentos para su respectiva inscripción.</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Deseandoles paz y bien,</Text>
 
@@ -66,14 +66,14 @@ Font.register({ family: 'GreatVives', src: GreatVives });
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
             <Text style={{ paddingTop: "2px", fontSize: "12px" }} >_____________________________________</Text>
             <Text style={{ fontSize: "12px", lineHeight:"1.5px" }}>Pbro. {props.cura}</Text>
-            <Text  style={{ fontSize: "12px", lineHeight:"1.5px" }}>Cura Parroco de {props.parroquia}</Text>
-            <Text style={{ fontSize: "12px", lineHeight:"1.5px" }} >Diocesis de Alajuela</Text>
+            <Text  style={{ fontSize: "12px", lineHeight:"1.5px" }}>Cura Párroco de {props.parroquia}</Text>
+            <Text style={{ fontSize: "12px", lineHeight:"1.5px" }} >Diócesis de Alajuela</Text>
             
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
-            <Text style={{  fontSize: "12px", marginLeft: "auto"}} >_____________________________________</Text>
+            <Text style={{  fontSize: "12px", marginLeft: "auto",  color: 'gray'}} >_____________________________________</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Tel: {props.tel}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Correo electronico: {props.email}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Direccion: {props.web}</Text>
+            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Correo electrónico: {props.email}</Text>
+            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Dirección: {props.web}</Text>
           </View>
         </Page>
       </Document>
