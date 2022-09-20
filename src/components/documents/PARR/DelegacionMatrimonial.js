@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProductoDM from './createdDocuments/ProductoDM';
+import ProductoDelegacionMatrimonial from '../../createdDocuments/PARR/ProductoDelegacionMatrimonial';
 import { PDFDownloadLink } from "@react-pdf/renderer";
 ;
 
@@ -120,7 +120,7 @@ class DelegacionMatrimonial extends Component {
                                         <form className="form-horizontal" method="post">
                                             <fieldset>
                                                 <legend className="text-center header">Ingrese los datos</legend>
-                                                
+
                                                 <select name="parroquia" onChange={this.onChange('parroquia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
                                                     <option selected>Seleccione la parroquia</option>
                                                     <option value="Parroquia del Coyol">Parroquia del Coyol</option>
@@ -177,7 +177,7 @@ class DelegacionMatrimonial extends Component {
                             </div>
                         </div>
 
-                 
+
                     ) : (
                         <div>
 
@@ -185,8 +185,9 @@ class DelegacionMatrimonial extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoDM parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} fechaMatrimonio={this.state.fechaMatrimonio} fechaPresentacion={this.state.fechaPresentacion} cura={this.state.cura} novio={this.state.novio} novia={this.state.novia} tel={this.state.tel} email={this.state.email} web={this.state.web} image={this.state.image} codigo={this.state.codigo} />}
-                                fileName={this.state.codigo+"-"+this.state.consecutivo}
+                                document={<ProductoDelegacionMatrimonial parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} fechaMatrimonio={this.state.fechaMatrimonio} fechaPresentacion={this.state.fechaPresentacion} cura={this.state.cura} novio={this.state.novio} novia={this.state.novia} tel={this.state.tel} email={this.state.email} web={this.state.web} image={this.state.image} codigo={this.state.codigo} />}
+                                fileName={this.state.codigo + "-" + this.state.consecutivo}
+                                pdfVersion="1.7"
                             >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

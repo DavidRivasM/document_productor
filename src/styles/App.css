@@ -15,6 +15,15 @@
     margin-top: -100px;
     margin-left: 15px;
 }
+
+/* @media (max-width: 450px) { 
+    .topImage{
+        display: none;
+    }
+ } */
+
+
+
 .footer {
     background-color:#353b43;
     color: aliceblue;

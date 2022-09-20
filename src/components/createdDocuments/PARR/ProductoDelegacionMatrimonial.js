@@ -1,10 +1,10 @@
 import React from 'react';
 import { Document, Page, Text, View, Image, StyleSheet, Font } from "@react-pdf/renderer";
-import '../../styles/home.css'
-import escudocuria from '../../images/escudocuria.png'; 
-import GreatVives from '../../styles/fonts/GreatVibes.ttf'
+import '../../../styles/home.css'
+import escudocuria from '../../../images/escudocuria.png'; 
+import GreatVives from '../../../styles/fonts/GreatVibes.ttf'
 
-const ProductoDM = (props) => {
+const ProductoDelegacionMatrimonial = (props) => {
 
 // Register font
 Font.register({ family: 'GreatVives', src: GreatVives });
@@ -81,4 +81,4 @@ Font.register({ family: 'GreatVives', src: GreatVives });
   );
 }
 
-export default ProductoDM;
+export default ProductoDelegacionMatrimonial;
