@@ -6,7 +6,7 @@ import GreatVives from '../../../styles/fonts/GreatVibes.ttf'
 import OpenSans from '../../../styles/fonts/OpenSans-Bold.ttf'
 
 
-const ProductoProclamaMatrimonial = (props) => {
+const ProductoCartaNulidad = (props) => {
 
   // Register font
   Font.register({ family: 'GreatVives', src: GreatVives });
@@ -72,56 +72,51 @@ const ProductoProclamaMatrimonial = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "545px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "625px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "545px", right: "1px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "625px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
             <Text style={styles.titleText}>{props.parroquia}</Text>
             <Text style={{ margin: "auto" }} >_________________________________________</Text>
-            <Text style={{ margin: "auto", padding: "2px", fontSize: "15px", lineHeight: "2px", fontWeight: "bold" }}>PROCLAMA MATRIMONIAL</Text>
-            <Text style={{ padding: "2px", fontSize: "12px" }}>{props.codigo}-PRM-{props.consecutivo}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
-            <Text style={{ padding: "2px", fontSize: "12px" }}>Publicacion del: {props.fechaInicioProclama}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px" }}>Al: {props.fechaFinProclama}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.lugar}, {props.fecha}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.codigo}-{props.consecutivo}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
-            <View style={styles.table1}>
-            </View>
-            <Text>Nombre del contrayente: {props.nombreHombre}</Text>
-            <Text>Nacionalidad: {props.nacionalidadHombre}</Text>
-            <Text>Residente en la parroquia de: {props.parroquiaHombre}</Text>
-            <View style={styles.table2}>
-            </View>
-            <Text>Nombre de la contrayente: {props.nombreMujer}</Text>
-            <Text>Nacionalidad: {props.nacionalidadMujer}</Text>
-            <Text>Residente en la parroquia de: {props.parroquiaMujer}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "3px" }}>                     </Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "3px" }}>                     </Text>
-
-
-            <Text style={{ padding: "2px", fontSize: "12px" }}>
-              Pretenden contraer matrimonio canónico el día {props.fechaMatrimonio}. En el templo de {props.parroquia} de la Diócesis de Alajuela.
-            </Text>
-
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>En el código de derecho canónico establece en el canon 1069, que “todos los fieles están obligados a manifestar al párroco o al ordinario del lugar, antes de la celebración del matrimonio, los impedimentos de que tengan noticias” por lo tanto si conoce de algo que se oponga a la celebración válida y lícita de este matrimonio comunicarlo lo antes posible al párroco
-            </Text>
-
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "3px" }}>                     </Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "3px" }}>                     </Text>
-
-
-            <Text style={{ paddingTop: "2px", fontSize: "12px", margin: "auto" }} >_____________________________________</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Cura Párroco de {props.parroquia}</Text>
-
+            <Text style={{ padding: "2px", fontSize: "12px" }}>Senor: {props.vicario}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>Vicario Judicial de Primera Instancia</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>Tribunal Eclesiástico Provincia de Costa Rica</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
+
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Paz y Bien</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"}}>Muy estimado Padre, por medio de la presente, de manera respetuosa, quisiera
+              presentarle el caso de Sr {props.solicitante},ced {props.cedSolicitante}, vecino {props.residenciaSolicitante} de
+              parroquia de
+              {props.parroquiaSolicitante}, quien en días pasados me visitó en la oficina de {props.lugar} con el fin de buscar asesoría
+              sobre el proceso de estudio de la posible nulidad matrimonial en su relación sacramental con
+              el Sr. {props.conyugueSolicitante}, céd: {props.cedConyugue}, vecino de {props.residenciaConyugue}.</Text>
+
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Estimados, todos los detalles de su caso, considero suficiente el argumento que se ha
+              presentado para establecer posibles causales de nulidad matrimonial, en las condiciones que
+              evaluará usted con prudencia.</Text>
+
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por las atenciones a la presente, gracias y encomendando a Dios sus intenciones se
+              despide, en Cristo Buen Pastor,</Text>
+      
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
+         
+         
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Pbro. {props.cura}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Cura Párroco de {props.parroquia}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Diocesis de Alajuela________________________</Text>
+
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
             <Text style={{ fontSize: "12px", marginLeft: "auto", color: 'gray' }} >_____________________________________</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Tel: {props.tel}</Text>
@@ -134,4 +129,4 @@ const ProductoProclamaMatrimonial = (props) => {
   );
 }
 
-export default ProductoProclamaMatrimonial;
+export default ProductoCartaNulidad;

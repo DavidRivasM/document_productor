@@ -4,8 +4,7 @@ import DelegacionMatrimonial from '../documents/PARR/DelegacionMatrimonial';
 import ConstanciaPrimeraComunion from '../documents/PARR/ConstanciaPrimeraComunion';
 import DeclaracionJuradaConfirmacion from '../documents/PARR/DeclaracionJuradaConfirmacion';
 import ProclamaMatrimonial from '../documents/PARR/ProclamaMatrimonial';
-import ProclamaTest from '../documents/PARR/ProclamaTest';
-
+import CartaNulidad from '../documents/PARR/CartaNulidad';
 
 const HomePARR = (props) => {
     const [documento1, setDocumento1] = useState("");
@@ -15,7 +14,7 @@ const HomePARR = (props) => {
     const [documento5, setDocumento5] = useState("");
 
 
-    
+
 
 
     return (
@@ -91,13 +90,13 @@ const HomePARR = (props) => {
                 <div className="col-sm-6">
                     <div className="card">
                         <div className="card-body">
-                            <h5 className="card-title">Proclama matrimonial Test</h5>
-                            <p className="card-text">Documento que elabora una parroquia para difundir el acto sacramental de un matrimonio a las personas en general.</p>
+                            <h5 className="card-title">Carta Nulidad General</h5>
+                            <p className="card-text">Documento que hace una solicitud para realizar un tramite de nulidad sobre un matrimonio en partiicular.</p>
                             {
-                                documento5 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento5("Proclama matromonial test")}>
+                                documento5 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento5("Carta Nulidad")}>
                                     Crear
                                 </button> : <>
-                                    <ProclamaTest/>
+                                    <CartaNulidad/>
                                     <button type="button" className="btn btn-danger" onClick={() => setDocumento5("")} >Volver</button>
                                 </>
                             }
@@ -105,7 +104,6 @@ const HomePARR = (props) => {
                     </div>
                 </div>
 
-               
             </div>
         </div>
     )
