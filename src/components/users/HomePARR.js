@@ -5,6 +5,7 @@ import ConstanciaPrimeraComunion from '../documents/PARR/ConstanciaPrimeraComuni
 import DeclaracionJuradaConfirmacion from '../documents/PARR/DeclaracionJuradaConfirmacion';
 import ProclamaMatrimonial from '../documents/PARR/ProclamaMatrimonial';
 import CartaNulidad from '../documents/PARR/CartaNulidad';
+import CartaBuenasCostumbres from '../documents/PARR/CartaBuenasCostumbres';
 
 const HomePARR = (props) => {
     const [documento1, setDocumento1] = useState("");
@@ -12,6 +13,8 @@ const HomePARR = (props) => {
     const [documento3, setDocumento3] = useState("");
     const [documento4, setDocumento4] = useState("");
     const [documento5, setDocumento5] = useState("");
+    const [documento6, setDocumento6] = useState("");
+
 
 
 
@@ -90,7 +93,7 @@ const HomePARR = (props) => {
                 <div className="col-sm-6">
                     <div className="card">
                         <div className="card-body">
-                            <h5 className="card-title">Carta Nulidad General</h5>
+                            <h5 className="card-title">Carta nulidad general</h5>
                             <p className="card-text">Documento que hace una solicitud para realizar un tramite de nulidad sobre un matrimonio en partiicular.</p>
                             {
                                 documento5 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento5("Carta Nulidad")}>
@@ -98,6 +101,23 @@ const HomePARR = (props) => {
                                 </button> : <>
                                     <CartaNulidad/>
                                     <button type="button" className="btn btn-danger" onClick={() => setDocumento5("")} >Volver</button>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-sm-6">
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">Carta buenas costumbres</h5>
+                            <p className="card-text">Carta que emite un parroco a otro con el fin de hacer constar las buenas costumbres y modo de vida de un feligres.</p>
+                            {
+                                documento6 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento6("Carta Buenas Costumbres")}>
+                                    Crear
+                                </button> : <>
+                                    <CartaBuenasCostumbres/>
+                                    <button type="button" className="btn btn-danger" onClick={() => setDocumento6("")} >Volver</button>
                                 </>
                             }
                         </div>
