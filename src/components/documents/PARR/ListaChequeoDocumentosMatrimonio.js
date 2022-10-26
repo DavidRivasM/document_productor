@@ -1,29 +1,32 @@
 import React, { Component } from 'react';
+import ProductoListaChequeoDocumentosMatrimonio from '../../createdDocuments/PARR/ProductoListaChequeoDocumentosMatrimonio';
 import { PDFDownloadLink } from "@react-pdf/renderer";
-import ProductoCartaBuenasCostumbres from '../../createdDocuments/PARR/ProductoCartaBuenasCostumbres';
 
 
 
 
-class CartaBuenasCostumbres extends Component {
+class ListaChequeoDocumentosMatrimonio extends Component {
 
 
     state = {
         parroquia: '',
         consecutivo: '',
-        destinatario: '',
-        fecha: '',
-        nombreFeligres: '',
-        cedFeligres: '',
-        residenciaFeligres: '',
-       
+        nombreNovio: '',
+        nombreNovia: '',
+        fechaMatrimonio: '',
+        parroquiaRemitente: '',
+        parroquiaEntrega: '',
+        personaEntrega: '',
+        lugarRecibe: '',
+        personaRecibe: '',
+        fechaDia: '',
+
         tel: "",
         cura: '',
         email: "",
         web: "",
         image: "",
         codigo: "",
-        lugar: '',
         postSubmitted: false,
 
         file: ''
@@ -34,11 +37,6 @@ class CartaBuenasCostumbres extends Component {
             [input]: URL.createObjectURL(e.target.value[0])
         });
     }
-
-
-   
-
-
 
     onChange = input => e => {
         this.setState({
@@ -66,9 +64,6 @@ class CartaBuenasCostumbres extends Component {
             this.setState({
                 cura: "Juan Mora"
             })
-            this.setState({
-                lugar: "Poas"
-            })
         }
 
         else if (this.state.parroquia === "Parroquia de Orotina") {
@@ -91,9 +86,6 @@ class CartaBuenasCostumbres extends Component {
             this.setState({
                 cura: "Marcio Mora"
             })
-            this.setState({
-                lugar: "Orotina"
-            })
         }
 
         else if (this.state.parroquia === "Parroquia del Coyol") {
@@ -115,9 +107,6 @@ class CartaBuenasCostumbres extends Component {
             })
             this.setState({
                 cura: "Esteban Mora"
-            })
-            this.setState({
-                lugar: "Coyol"
             })
         }
         else {
@@ -145,7 +134,7 @@ class CartaBuenasCostumbres extends Component {
         
         return (
             <>
-            
+
                 {!this.state.postSubmitted ?
                     (
                         <div className="jumbotron">
@@ -154,10 +143,11 @@ class CartaBuenasCostumbres extends Component {
                                     <div className="well well-sm">
                                         <form className="form-horizontal" method="post">
                                             <fieldset>
-                                                <legend className="text-center header">Ingrese los datos</legend>
+                                                <legend className="text-center header">Ingrese los Datos </legend>
+
                                                 
                                                 <select name="parroquia" onChange={this.onChange('parroquia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
-                                                    <option selected>Seleccione la parroquia</option>
+                                                    <option defaultValue>Seleccione la parroquia</option>
                                                     <option value="Parroquia del Coyol">Parroquia del Coyol</option>
                                                     <option value="Parroquia de Orotina">Parroquia de Orotina</option>
                                                     <option value="Parroquia de San Pedro de Poas">Parroquia de Poás</option>
@@ -169,30 +159,49 @@ class CartaBuenasCostumbres extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el destinatario</i></span>
-                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"> Ingrese el nombre del novio.</i></span>
+                                                    <input onChange={this.onChange('nombreNovio')} name="nombreNovio" type="text" placeholder="Pedro Gonzales" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboracion del documento</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="text" placeholder="2 de enero de 2022" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la novia.</i></span>
+                                                    <input onChange={this.onChange('nombreNovia')} name="nombreNovia" type="text" placeholder="Veronica Alfaro" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del feligres</i></span>
-                                                    <input onChange={this.onChange('nombreFeligres')} name="nombreFeligres" type="text" placeholder="Julio Oreamuno Mora" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha del matrimonio.</i></span>
+                                                    <input onChange={this.onChange('fechaMatrimonio')} name="fechaMatrimonio" type="text" placeholder="09-08-2022" className="form-control" /> 
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cedula del feligres</i></span>
-                                                    <input onChange={this.onChange('cedFeligres')} name="cedFeligres" type="text" placeholder="2 4567 2341" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la parroquia remitente.</i></span>
+                                                    <input onChange={this.onChange('parroquiaRemitente')} name="parroquiaRemitente" type="text" placeholder="Barrio San Jose" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del feligres</i></span>
-                                                    <input onChange={this.onChange('residenciaFeligres')} name="residenciaFeligres" type="text" placeholder="Los Angeles" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la parroquia que recibe los datos .</i></span>
+                                                    <input onChange={this.onChange('parroquiaEntrega')} name="parroquiaEntrega" type="text" placeholder="Nuestra Senora del Pilar" className="form-control" />
                                                 </div>
 
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la secretaria.</i></span>
+                                                    <input onChange={this.onChange('personaEntrega')} name="personaEntrega" type="text" placeholder="Karla Barrantes" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la parroquia que recibe los datos.</i></span>
+                                                    <input onChange={this.onChange('lugarRecibe')} name="lugarRecibe" type="text" placeholder="Santiago Apostol" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la secretaria que recibe los datos.</i></span>
+                                                    <input onChange={this.onChange('personaRecibe')} name="personaRecibe" type="text" placeholder="Ana Cascante" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de hoy.</i></span>
+                                                    <input onChange={this.onChange('fechaDia')} name="fechaDia" type="text" placeholder="22-12-2009" className="form-control" />
+                                                </div>
 
                                                 <div className="form-group">
                                                     <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar informacion</button>
@@ -212,17 +221,20 @@ class CartaBuenasCostumbres extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoCartaBuenasCostumbres parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} residenciaFeligres={this.state.residenciaFeligres} nombreFeligres={this.state.nombreFeligres} cedFeligres={this.state.cedFeligres} destinatario={this.state.destinatario}/>}
-                                fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
+                                document={<ProductoListaChequeoDocumentosMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} nombreNovio={this.state.nombreNovio} nombreNovia={this.state.nombreNovia} fechaMatrimonio={this.state.fechaMatrimonio} parroquiaRemitente={this.state.parroquiaRemitente} parroquiaEntrega={this.state.parroquiaEntrega} personaEntrega={this.state.personaEntrega} lugarRecibe={this.state.lugarRecibe}personaRecibe={this.state.personaRecibe} fechaDia={this.state.fechaDia} firma={this.state.firma} tel={this.state.tel} cura={this.state.cura} email={this.state.email} web={this.state.web} image={this.state.image} codigo={this.state.codigo} />}
+                                fileName={this.state.codigo + "-LAS-" + this.state.consecutivo}
+                                pdfVersion="1.7"
+                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
-
                         </div>
                     )
                 }
+
+
             </>
         );
     }
 }
 
-export default CartaBuenasCostumbres;
+export default ListaChequeoDocumentosMatrimonio;

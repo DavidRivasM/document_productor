@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 import { PDFDownloadLink } from "@react-pdf/renderer";
-import ProductoCartaBuenasCostumbres from '../../createdDocuments/PARR/ProductoCartaBuenasCostumbres';
+import ProductoPermisoBautizarOtraParroquia from '../../createdDocuments/PARR/ProductoPermisoBautizarOtraParroquia';
 
 
 
 
-class CartaBuenasCostumbres extends Component {
+class PermisoBautizarOtraParroquia extends Component {
 
 
     state = {
         parroquia: '',
         consecutivo: '',
+         fecha: '',
+        nombrePadre: '',
+        cedPadre: '',
+        nombreMadre: '',
+        cedMadre: '',
+        nombreNino: '',
         destinatario: '',
-        fecha: '',
-        nombreFeligres: '',
-        cedFeligres: '',
-        residenciaFeligres: '',
-       
+        
         tel: "",
         cura: '',
         email: "",
@@ -34,11 +36,6 @@ class CartaBuenasCostumbres extends Component {
             [input]: URL.createObjectURL(e.target.value[0])
         });
     }
-
-
-   
-
-
 
     onChange = input => e => {
         this.setState({
@@ -168,29 +165,40 @@ class CartaBuenasCostumbres extends Component {
                                                     <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="01-2022" className="form-control" />
                                                 </div>
 
-                                                <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el destinatario</i></span>
-                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
-                                                </div>
-
+                            
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboracion del documento</i></span>
                                                     <input onChange={this.onChange('fecha')} name="fecha" type="text" placeholder="2 de enero de 2022" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del feligres</i></span>
-                                                    <input onChange={this.onChange('nombreFeligres')} name="nombreFeligres" type="text" placeholder="Julio Oreamuno Mora" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Padre</i></span>
+                                                    <input onChange={this.onChange('nombrePadre')} name="nombrePadre" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cedula del feligres</i></span>
-                                                    <input onChange={this.onChange('cedFeligres')} name="cedFeligres" type="text" placeholder="2 4567 2341" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el numero de cedula del padre</i></span>
+                                                    <input onChange={this.onChange('cedPadre')} name="cedPadre" type="text" placeholder="2 0897 0567" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del feligres</i></span>
-                                                    <input onChange={this.onChange('residenciaFeligres')} name="residenciaFeligres" type="text" placeholder="Los Angeles" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese nombre de la nombre de la madre</i></span>
+                                                    <input onChange={this.onChange('nombreMadre')} name="nombreMadre" type="text" placeholder="Loria Alfaro" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el numero de cedula de la madre</i></span>
+                                                    <input onChange={this.onChange('cedMadre')} name="cedMadre" type="text" placeholder="2 0987 0897" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del nino</i></span>
+                                                    <input onChange={this.onChange('nombreNino')} name="nombreNino" type="text" placeholder="Julian Alfaro" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del cura destinatario</i></span>
+                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Juan Mora" className="form-control" />
                                                 </div>
 
 
@@ -203,16 +211,12 @@ class CartaBuenasCostumbres extends Component {
                                 </div>
                             </div>
                         </div>
-
-
                     ) : (
                         <div>
-
-
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoCartaBuenasCostumbres parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} residenciaFeligres={this.state.residenciaFeligres} nombreFeligres={this.state.nombreFeligres} cedFeligres={this.state.cedFeligres} destinatario={this.state.destinatario}/>}
+                                document={<ProductoPermisoBautizarOtraParroquia parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} nombreMadre={this.state.nombreMadre} cedMadre={this.state.cedMadre} nombrePadre={this.state.nombrePadre} cedPadre={this.state.cedPadre} nombreNino={this.state.nombreNino}destinatario={this.state.destinatario}/>}
                                 fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
@@ -225,4 +229,4 @@ class CartaBuenasCostumbres extends Component {
     }
 }
 
-export default CartaBuenasCostumbres;
+export default PermisoBautizarOtraParroquia;

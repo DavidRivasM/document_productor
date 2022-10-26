@@ -6,6 +6,9 @@ import DeclaracionJuradaConfirmacion from '../documents/PARR/DeclaracionJuradaCo
 import ProclamaMatrimonial from '../documents/PARR/ProclamaMatrimonial';
 import CartaNulidad from '../documents/PARR/CartaNulidad';
 import CartaBuenasCostumbres from '../documents/PARR/CartaBuenasCostumbres';
+import ListaChequeoDocumentosMatrimonio from '../documents/PARR/ListaChequeoDocumentosMatrimonio';
+import PermisoBautizarOtraParroquia from '../documents/PARR/PermisoBautizarOtraParroquia';
+
 
 const HomePARR = (props) => {
     const [documento1, setDocumento1] = useState("");
@@ -14,9 +17,8 @@ const HomePARR = (props) => {
     const [documento4, setDocumento4] = useState("");
     const [documento5, setDocumento5] = useState("");
     const [documento6, setDocumento6] = useState("");
-
-
-
+    const [documento7, setDocumento7] = useState("");
+    const [documento8, setDocumento8] = useState("");
 
 
 
@@ -28,8 +30,8 @@ const HomePARR = (props) => {
                 <div className="col-sm-6">
                     <div className="card">
                         <div className="card-body">
-                            <h5 className="card-title">Delegación matrimonial</h5>
-                            <p className="card-text">Documento que realiza una parroquia con otra parroquia como destinatario que tiene como finalidad delegar la celebración del acto sacramental de un matrimonio.</p>
+                            <h5 className="card-title">Delegación matrimonial dentro de parroquia</h5>
+                            <p className="card-text">Documento que realiza una parroquia con la finalidad delegar la celebración del acto sacramental de un matrimonio.</p>
                             {
                                 documento1 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento1("Delegacion Matrimonial")}>
                                     Crear
@@ -123,6 +125,42 @@ const HomePARR = (props) => {
                         </div>
                     </div>
                 </div>
+
+                <div className="col-sm-6">
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">Lista chequeo de documentos de un matrimonio</h5>
+                            <p className="card-text">Lista con el fin de llevar un orden a la hora de enviar un expediente matrimonial a otra parroquia.</p>
+                            {
+                                documento7 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento7("Lista Chequeo Matrimonio")}>
+                                    Crear
+                                </button> : <>
+                                    <ListaChequeoDocumentosMatrimonio/>
+                                    <button type="button" className="btn btn-danger" onClick={() => setDocumento7("")} >Volver</button>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </div>
+                
+                <div className="col-sm-6">
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">Permiso para bautizar en otra parroquia</h5>
+                            <p className="card-text">Permiso para poder bautizar a un nino en otra parroquia.</p>
+                            {
+                                documento8 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento8("Permiso Bautizar Otra Parroquia")}>
+                                    Crear
+                                </button> : <>
+                                    <PermisoBautizarOtraParroquia/>
+                                    <button type="button" className="btn btn-danger" onClick={() => setDocumento8("")} >Volver</button>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                
 
             </div>
         </div>
