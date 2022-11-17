@@ -6,7 +6,7 @@ import GreatVives from '../../../styles/fonts/GreatVibes.ttf'
 import OpenSans from '../../../styles/fonts/OpenSans-Bold.ttf'
 
 
-const ProductoCartaBuenasCostumbres = (props) => {
+const ProductoPermisoConfirmacionCatequesis = (props) => {
 
   // Register font
   Font.register({ family: 'GreatVives', src: GreatVives });
@@ -72,44 +72,46 @@ const ProductoCartaBuenasCostumbres = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "635px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "630px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "635px", right: "1px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "630px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
             <Text style={styles.titleText}>{props.parroquia}</Text>
             <Text style={{ margin: "auto" }} >_________________________________________</Text>
+            <Text style={styles.boldText}>PERMISO PARA MATRÍCULA DE CATEQUESIS/CONFIRMACIÓN EN OTRA PARROQUIA</Text>
+
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.lugar}, {props.fecha}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.codigo}-{props.consecutivo}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px" }}>Sr: {props.destinatario}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>    </Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>A {props.destinatario}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>Cura Parroco</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>{props.parroquiaDestinatario}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Estimado presbítero, por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, hace constar que el senor\señora:</Text>
-            
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"  }}>   </Text>
-            <Text style={styles.boldText}>{props.nombreFeligres}</Text>
-            <Text style={styles.boldText}>CEDULA: {props.cedFeligres}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"  }}>   </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Estimado presbítero,</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Es vecina y feligrés de esta comunidad parroquial; específicamente del sector de {props.residenciaFeligres}. Hago constar que no hay motivos para dudar de sus buenas costumbres y modo de vida ante la comunidad.</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, autorizo a los familiares del joven:</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Sin más, por el momento, se despide su servidor en Cristo,</Text>
+            <Text style={styles.boldText}>{props.personaSolicitante}</Text>
+            <Text style={styles.boldText}>Cédula: {props.cedPersonaSolicitante}</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Quien es vecino y feligrés de esta comunidad parroquial; para que realice en su parroquia, en {props.direccionParroquia}, la matrícula para el proceso de catequesis para niños y adolescentes, a petición de sus padres {props.padrePersonaSolicitante} y {props.madrePersonaSolicitante}; quienes han dado las siguientes razones: {props.razon}</Text>
 
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>_________________________________</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
+
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>________________________________________</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Pbro. {props.cura}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Cura Párroco de {props.parroquia}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Diocesis de Alajuela</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
             <Text style={{ fontSize: "12px", marginLeft: "auto", color: 'gray' }} >_____________________________________</Text>
@@ -123,4 +125,4 @@ const ProductoCartaBuenasCostumbres = (props) => {
   );
 }
 
-export default ProductoCartaBuenasCostumbres;
+export default ProductoPermisoConfirmacionCatequesis;

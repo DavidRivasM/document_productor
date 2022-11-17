@@ -44,21 +44,22 @@ const ProductoConstanciaPrimeraComunion = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "622px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "640px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "622px", right: "1px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "640px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
             <Text style={styles.titleText}>{props.parroquia}</Text>
             <Text style={{ margin: "auto" }} >_________________________________________</Text>
-            <Text style={{ margin: "auto", padding: "2px", fontSize: "15px", lineHeight: "2px", fontWeight: "bold" }}>Contancia de Primera Comunion</Text>
+            <Text style={styles.boldText}>Contancia de Primera Comunion</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px" }}>{props.codigo}-CCO-{props.consecutivo}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px" }}>{props.lugar}, {props.fecha}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.codigo}-CCO-{props.consecutivo}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.lugar}, {props.fecha}</Text>
             <Text style={{ padding: "2px", fontSize: "12px" }}>                     </Text>
             <Text style={styles.boldText}>A quien interese</Text>
             <Text style={{ padding: "2px", fontSize: "12px" }}>                     </Text>

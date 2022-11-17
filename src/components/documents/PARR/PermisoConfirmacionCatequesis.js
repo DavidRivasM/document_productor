@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import ProductoConstanciaPrimeraComunion from '../../createdDocuments/PARR/ProductoConstanciaPrimeraComunion';
+import ProductoPermisoConfirmacionCatequesis from '../../createdDocuments/PARR/ProductoPermisoConfirmacionCatequesis';
 import { PDFDownloadLink } from "@react-pdf/renderer";
-;
 
 
-class ConstanciaPrimeraComunion extends Component {
+class PermisoConfirmacionCatequesis extends Component {
     state = {
         parroquia: '',
         consecutivo: '',
-        lugar: '',
         fecha: '',
-        persona: '',
-        añoComunion: '',
-        libro: '',
-        folio: '',
-        asiento: '',
+        destinatario: '',
+        parroquiaDestinatario: '',
+        personaSolicitante: '',
+        cedPersonaSolicitante: '',
+        direccionParroquia: '',
+        padrePersonaSolicitante: '',
+        madrePersonaSolicitante: '',
+        razon: "",
 
         cura: '',
         ced: '',
@@ -23,6 +24,7 @@ class ConstanciaPrimeraComunion extends Component {
         web: "",
         image: "",
         codigo: "",
+        lugar: '',
         postSubmitted: false,
     }
 
@@ -53,12 +55,6 @@ class ConstanciaPrimeraComunion extends Component {
             this.setState({
                 lugar: "Poás de Alajuela"
             })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
-            })
         }
 
         else if (this.state.parroquia === "Parroquia de Catedral") {
@@ -80,12 +76,6 @@ class ConstanciaPrimeraComunion extends Component {
             })
             this.setState({
                 lugar: "Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
             })
         }
 
@@ -109,12 +99,6 @@ class ConstanciaPrimeraComunion extends Component {
             this.setState({
                 lugar: "Zarcero de Alajuela"
             })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
-            })
         }
 
         else if (this.state.parroquia === "Parroquia Nuestra Señora del Carmen") {
@@ -137,12 +121,6 @@ class ConstanciaPrimeraComunion extends Component {
             this.setState({
                 lugar: "El Carmen de Alajuela"
             })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
-            })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes") {
 
@@ -163,12 +141,6 @@ class ConstanciaPrimeraComunion extends Component {
             })
             this.setState({
                 lugar: "Grecia de Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
             })
         }
         else {
@@ -220,33 +192,54 @@ class ConstanciaPrimeraComunion extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" placeholder=" 24 de febrero de 2022" />
+                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" placeholder="24 de febrero de 2022" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del la persona solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('persona')} className="form-control" name="persona" placeholder="Vinicio Ramirez Retana"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Párroco.</i></span>
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" className="form-control" placeholder="Bartolome Mora" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el año en que la persona solicitante hizo la primera comunión.</i></span>
-                                                    <textarea onChange={this.onChange('añoComunion')} className="form-control" name="añoComunion" placeholder="1999"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Párroco destinatario.</i></span>
+                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="David Rivas Mora" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('libro')} className="form-control" name="libro" placeholder="UNO"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la parroquia en donde labora el Párroco destinatario.</i></span>
+                                                    <input onChange={this.onChange('parroquiaDestinatario')} name="parroquiaDestinatario" type="text" placeholder="Desamparados" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el folio del libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('folio')} className="form-control" name="folio" placeholder="DOS"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la persona que realizará la Confirmación o Catequesis.</i></span>
+                                                    <textarea onChange={this.onChange('personaSolicitante')} className="form-control" name="personaSolicitante" placeholder="Juana de Arco"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el asiento del libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('asiento')} className="form-control" name="asiento" placeholder="TRES"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el número de cédula de la persona que realizará la Confirmación o Catequesis.</i></span>
+                                                    <textarea onChange={this.onChange('cedPersonaSolicitante')} className="form-control" name="cedPersonaSolicitante" placeholder="1 1234 1234"></textarea>
                                                 </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la ubicación de la parroquia en donde se pretende realizar la Confirmación o Catequesis.</i></span>
+                                                    <textarea onChange={this.onChange('direccionParroquia')} className="form-control" name="direccionParroquia" placeholder="La Garita, Alajuela"></textarea>
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del padre de la persona que realizará la Confirmación o Catequesis..</i></span>
+                                                    <textarea onChange={this.onChange('padrePersonaSolicitante')} className="form-control" name="padrePersonaSolicitante" placeholder="Pedro Mora Porras"></textarea>
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la madre de la persona que realizará la Confirmación o Catequesis..</i></span>
+                                                    <textarea onChange={this.onChange('madrePersonaSolicitante')} className="form-control" name="madrePersonaSolicitante" placeholder="Maria Rojas Mora"></textarea>
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la razón por la cual la persona que realizará la Confirmación o Catequesis.</i></span>
+                                                    <textarea onChange={this.onChange('razon')} className="form-control" name="razon" placeholder="por una situación médica hasta ahora puede realizar la confirmación"></textarea>
+                                                </div>
+                                                                                                    
                                                 <div className="form-group">
                                                     <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar información</button>
                                                 </div>
@@ -265,8 +258,8 @@ class ConstanciaPrimeraComunion extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoConstanciaPrimeraComunion parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} persona={this.state.persona} añoComunion={this.state.añoComunion} libro={this.state.libro} folio={this.state.folio} asiento={this.state.asiento} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} />}
-                                fileName={this.state.codigo + "-CCO-" + this.state.consecutivo}                            >
+                                document={<ProductoPermisoConfirmacionCatequesis parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} destinatario={this.state.destinatario} parroquiaDestinatario={this.state.parroquiaDestinatario} personaSolicitante={this.state.personaSolicitante} cedPersonaSolicitante={this.state.cedPersonaSolicitante} direccionParroquia={this.state.direccionParroquia} padrePersonaSolicitante={this.state.padrePersonaSolicitante} razon={this.state.razon} cura={this.state.cura} madrePersonaSolicitante={this.state.madrePersonaSolicitante} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} />}
+                                fileName={this.state.codigo + "-" + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
 
@@ -281,4 +274,4 @@ class ConstanciaPrimeraComunion extends Component {
     }
 }
 
-export default ConstanciaPrimeraComunion;
+export default PermisoConfirmacionCatequesis;

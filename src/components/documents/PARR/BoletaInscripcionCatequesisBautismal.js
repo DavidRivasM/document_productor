@@ -1,36 +1,42 @@
 import React, { Component } from 'react';
-import ProductoConstanciaPrimeraComunion from '../../createdDocuments/PARR/ProductoConstanciaPrimeraComunion';
 import { PDFDownloadLink } from "@react-pdf/renderer";
-;
+import ProductoBoletaInscripcionCatequesisBautismal from '../../createdDocuments/PARR/ProductoBoletaInscripcionCatequesisBautismal';
 
 
-class ConstanciaPrimeraComunion extends Component {
+
+
+class BoletaInscripcionCatequesisBautismal extends Component {
+
+
     state = {
         parroquia: '',
         consecutivo: '',
-        lugar: '',
         fecha: '',
-        persona: '',
-        añoComunion: '',
-        libro: '',
-        folio: '',
-        asiento: '',
-
-        cura: '',
-        ced: '',
+        solicitante: '',
+        cedSolicitante: '',
+        edadSolicitante: '',
+        residenciaSolicitante: '',
+        telefonoSolicitante: '',
+        correoSolicitante: '',
+        calidadAsistencia: '',
+        estadoCivil: '',
+        participacionIglesia: '',
+        descripcionParticipacionIglesia: '',
+       
         tel: "",
+        cura: '',
         email: "",
         web: "",
         image: "",
         codigo: "",
+        lugar: '',
         postSubmitted: false,
     }
 
     onChange = input => e => {
         this.setState({
             [input]: e.target.value,
-        })
-            ;
+        });
     }
 
     capturar = () => {
@@ -52,12 +58,6 @@ class ConstanciaPrimeraComunion extends Component {
             })
             this.setState({
                 lugar: "Poás de Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
             })
         }
 
@@ -81,12 +81,6 @@ class ConstanciaPrimeraComunion extends Component {
             this.setState({
                 lugar: "Alajuela"
             })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
-            })
         }
 
         else if (this.state.parroquia === "Parroquia de San Rafael Arcángel") {
@@ -108,12 +102,6 @@ class ConstanciaPrimeraComunion extends Component {
             })
             this.setState({
                 lugar: "Zarcero de Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
             })
         }
 
@@ -137,12 +125,6 @@ class ConstanciaPrimeraComunion extends Component {
             this.setState({
                 lugar: "El Carmen de Alajuela"
             })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
-            })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes") {
 
@@ -164,22 +146,15 @@ class ConstanciaPrimeraComunion extends Component {
             this.setState({
                 lugar: "Grecia de Alajuela"
             })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
-            })
         }
         else {
             console.log("Ejecuta el ELSE")
         }
-
     }
-
+    
     sunmitPost = (e) => {
 
-        if (!this.state.consecutivo  ) {
+        if (!this.state.consecutivo || !this.state.parroquia) {
             alert('Todos los espacios son requeridos!');
             e.preventDefault();
         } else {
@@ -187,11 +162,12 @@ class ConstanciaPrimeraComunion extends Component {
                 postSubmitted: true
             })
             this.capturar();
+        
         }
-
     }
 
     render(props) {
+        
         return (
             <>
                 {!this.state.postSubmitted ?
@@ -203,7 +179,7 @@ class ConstanciaPrimeraComunion extends Component {
                                         <form className="form-horizontal" method="post">
                                             <fieldset>
                                                 <legend className="text-center header">Ingrese los datos</legend>
-
+                                                
                                                 <select name="parroquia" onChange={this.onChange('parroquia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
                                                     <option defaultValue>Seleccione la parroquia</option>
                                                     <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
@@ -219,34 +195,66 @@ class ConstanciaPrimeraComunion extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" placeholder=" 24 de febrero de 2022" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de inscripción del solicitante.</i></span>
+                                                    <input onChange={this.onChange('fecha')} name="fecha" type="text" placeholder="2 de marzo de 2020" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del la persona solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('persona')} className="form-control" name="persona" placeholder="Vinicio Ramirez Retana"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre y apellidos del solicitante.</i></span>
+                                                    <input onChange={this.onChange('solicitante')} name="solicitante" type="text" placeholder="David Rivas Mora" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el año en que la persona solicitante hizo la primera comunión.</i></span>
-                                                    <textarea onChange={this.onChange('añoComunion')} className="form-control" name="añoComunion" placeholder="1999"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el número de cédula del solicitante.</i></span>
+                                                    <input onChange={this.onChange('cedSolicitante')} name="cedSolicitante" type="text" placeholder="1 1234 1234" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('libro')} className="form-control" name="libro" placeholder="UNO"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de residencia del solicitante.</i></span>
+                                                    <input onChange={this.onChange('residenciaSolicitante')} name="residenciaSolicitante" type="text" placeholder="Alajuela centro" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el folio del libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('folio')} className="form-control" name="folio" placeholder="DOS"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la edad del solicitante.</i></span>
+                                                    <input onChange={this.onChange('edadSolicitante')} name="edadSolicitante" type="text" placeholder="23 años" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el asiento del libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('asiento')} className="form-control" name="asiento" placeholder="TRES"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el número de teléfono del solicitante.</i></span>
+                                                    <input onChange={this.onChange('telefonoSolicitante')} name="telefonoSolicitante" type="text" placeholder="2212 2212" className="form-control" />
                                                 </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el correo electrónico del solicitante.</i></span>
+                                                    <input onChange={this.onChange('correoSolicitante')} name="correoSolicitante" type="text" placeholder="alejo@gmail.com" className="form-control" />
+                                                </div>
+
+                                                <select name="estadoCivil" onChange={this.onChange('estadoCivil')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
+                                                    <option selected>Seleccione el estado civil</option>
+                                                    <option value="Soltero">Soltero/a</option>
+                                                    <option value="Divorciado">Divorciado/a</option>
+                                                    <option value="Viudo/a">Viudo/a</option>
+                                                </select>
+
+                                                <select name="estadoCivil" onChange={this.onChange('calidadAsistencia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
+                                                    <option selected>Seleccione la calidad de asistencia del solicitante</option>
+                                                    <option value="Madre">Madre</option>
+                                                    <option value="Padre">Padre</option>
+                                                    <option value="Padrino">Padrino</option>
+                                                    <option value="Madrina">Madrina</option>
+                                                </select>
+
+                                                <select name="participacionIglesia" onChange={this.onChange('participacionIglesia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
+                                                    <option selected>Ha participado en alguna actividad eclesiástica.</option>
+                                                    <option value="Si">Si</option>
+                                                    <option value="No">No</option>
+                                                </select>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la descripción de actividades en las que participó el solicitante</i></span>
+                                                    <input onChange={this.onChange('descripcionParticipacionIglesia')} name="descripcionParticipacionIglesia" type="text" placeholder="Tiene la Confirma realizada" className="form-control" />
+                                                </div>
+
                                                 <div className="form-group">
                                                     <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar información</button>
                                                 </div>
@@ -256,8 +264,6 @@ class ConstanciaPrimeraComunion extends Component {
                                 </div>
                             </div>
                         </div>
-
-
                     ) : (
                         <div>
 
@@ -265,20 +271,17 @@ class ConstanciaPrimeraComunion extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoConstanciaPrimeraComunion parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} persona={this.state.persona} añoComunion={this.state.añoComunion} libro={this.state.libro} folio={this.state.folio} asiento={this.state.asiento} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} />}
-                                fileName={this.state.codigo + "-CCO-" + this.state.consecutivo}                            >
+                                document={<ProductoBoletaInscripcionCatequesisBautismal parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} fecha={this.state.fecha} solicitante={this.state.solicitante} cedSolicitante={this.state.cedSolicitante} edadSolicitante={this.state.edadSolicitante} residenciaSolicitante={this.state.residenciaSolicitante} telefonoSolicitante={this.state.telefonoSolicitante} correoSolicitante={this.state.correoSolicitante} calidadAsistencia={this.state.calidadAsistencia} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} estadoCivil={this.state.estadoCivil} participacionIglesia={this.state.participacionIglesia} descripcionParticipacionIglesia={this.state.descripcionParticipacionIglesia}/>}
+                                fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
-
 
                         </div>
                     )
                 }
-
-
             </>
         );
     }
 }
 
-export default ConstanciaPrimeraComunion;
+export default BoletaInscripcionCatequesisBautismal;

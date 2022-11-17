@@ -1,36 +1,43 @@
 import React, { Component } from 'react';
-import ProductoConstanciaPrimeraComunion from '../../createdDocuments/PARR/ProductoConstanciaPrimeraComunion';
 import { PDFDownloadLink } from "@react-pdf/renderer";
-;
+import ProductoCartaCelebrarMatrimonio from '../../createdDocuments/PARR/ProductoCartaCelebrarMatrimonio';
 
 
-class ConstanciaPrimeraComunion extends Component {
+
+
+class CartaCelebrarMatrimonio extends Component {
+
+
     state = {
         parroquia: '',
         consecutivo: '',
-        lugar: '',
+        destinatario: '',
+        lugarTrabajoDestinatario: '',
         fecha: '',
-        persona: '',
-        añoComunion: '',
-        libro: '',
-        folio: '',
-        asiento: '',
-
-        cura: '',
-        ced: '',
+        esposo: '',
+        esposa: '',
+        cedEsposo: '',
+        cedEsposa: '',
+        fechaMatrimonio: '',
+        lugarMatrimonio: '',
+       
         tel: "",
+        cura: '',
+        cedCura: '',
+        residenciaCura: '',
         email: "",
         web: "",
         image: "",
         codigo: "",
+        lugar: '',
         postSubmitted: false,
+
     }
 
     onChange = input => e => {
         this.setState({
             [input]: e.target.value,
-        })
-            ;
+        });
     }
 
     capturar = () => {
@@ -52,12 +59,6 @@ class ConstanciaPrimeraComunion extends Component {
             })
             this.setState({
                 lugar: "Poás de Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
             })
         }
 
@@ -81,12 +82,6 @@ class ConstanciaPrimeraComunion extends Component {
             this.setState({
                 lugar: "Alajuela"
             })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
-            })
         }
 
         else if (this.state.parroquia === "Parroquia de San Rafael Arcángel") {
@@ -108,12 +103,6 @@ class ConstanciaPrimeraComunion extends Component {
             })
             this.setState({
                 lugar: "Zarcero de Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
             })
         }
 
@@ -137,12 +126,6 @@ class ConstanciaPrimeraComunion extends Component {
             this.setState({
                 lugar: "El Carmen de Alajuela"
             })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
-            })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes") {
 
@@ -164,22 +147,16 @@ class ConstanciaPrimeraComunion extends Component {
             this.setState({
                 lugar: "Grecia de Alajuela"
             })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
-            })
         }
         else {
             console.log("Ejecuta el ELSE")
         }
 
     }
-
+    
     sunmitPost = (e) => {
 
-        if (!this.state.consecutivo  ) {
+        if (!this.state.consecutivo || !this.state.parroquia) {
             alert('Todos los espacios son requeridos!');
             e.preventDefault();
         } else {
@@ -187,13 +164,16 @@ class ConstanciaPrimeraComunion extends Component {
                 postSubmitted: true
             })
             this.capturar();
+        
         }
 
     }
 
     render(props) {
+        
         return (
             <>
+            
                 {!this.state.postSubmitted ?
                     (
                         <div className="jumbotron">
@@ -203,7 +183,7 @@ class ConstanciaPrimeraComunion extends Component {
                                         <form className="form-horizontal" method="post">
                                             <fieldset>
                                                 <legend className="text-center header">Ingrese los datos</legend>
-
+                                                
                                                 <select name="parroquia" onChange={this.onChange('parroquia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
                                                     <option defaultValue>Seleccione la parroquia</option>
                                                     <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
@@ -214,39 +194,72 @@ class ConstanciaPrimeraComunion extends Component {
                                                 </select>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo</i></span>
                                                     <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="01-2022" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" placeholder=" 24 de febrero de 2022" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Párroco que redacta el documento.</i></span>
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Bartolome Mora Chavarria" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del la persona solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('persona')} className="form-control" name="persona" placeholder="Vinicio Ramirez Retana"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cédula del Párroco que redacta el documento.</i></span>
+                                                    <input onChange={this.onChange('cedCura')} name="cedCura" type="text" placeholder="1 1234 1234" className="form-control" />
+                                                </div>
+
+                                                
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del Párroco que redacta el documento.</i></span>
+                                                    <input onChange={this.onChange('residenciaCura')} name="residenciaCura" type="text" placeholder="Casa Cural de la Garita" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el año en que la persona solicitante hizo la primera comunión.</i></span>
-                                                    <textarea onChange={this.onChange('añoComunion')} className="form-control" name="añoComunion" placeholder="1999"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de cura de destinatario.</i></span>
+                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('libro')} className="form-control" name="libro" placeholder="UNO"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de trabajo del cura destinatario.</i></span>
+                                                    <input onChange={this.onChange('lugarTrabajoDestinatario')} name="lugarTrabajoDestinatario" type="text" placeholder="Santa Barvara, Heredia" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el folio del libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('folio')} className="form-control" name="folio" placeholder="DOS"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboracion del documento</i></span>
+                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" placeholder="2 de enero de 2022" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el asiento del libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('asiento')} className="form-control" name="asiento" placeholder="TRES"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del conyugue.</i></span>
+                                                    <input onChange={this.onChange('esposo')} name="esposo" type="text" placeholder="Julio Oreamuno Mora" className="form-control" />
                                                 </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cédula del conyugue.</i></span>
+                                                    <input onChange={this.onChange('cedEsposo')} name="cedEsposo" type="text" placeholder="1 1234 1234" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la conyugue.</i></span>
+                                                    <input onChange={this.onChange('esposa')} name="esposa" type="text" placeholder="Maria Mora Alpizar" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cédula de la conyugue.</i></span>
+                                                    <input onChange={this.onChange('cedEsposa')} name="cedEsposa" type="text" placeholder="1 1234 1234" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha prevista del matrimonio.</i></span>
+                                                    <input onChange={this.onChange('fechaMatrimonio')} name="fechaMatrimonio" type="text" placeholder="2 de enero de 2022" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar previsto del matrimonio.</i></span>
+                                                    <input onChange={this.onChange('lugarMatrimonio')} name="lugarMatrimonio" type="text" placeholder="La Garita, Alajuela" className="form-control" />
+                                                </div>
+
+
                                                 <div className="form-group">
                                                     <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar información</button>
                                                 </div>
@@ -265,20 +278,17 @@ class ConstanciaPrimeraComunion extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoConstanciaPrimeraComunion parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} persona={this.state.persona} añoComunion={this.state.añoComunion} libro={this.state.libro} folio={this.state.folio} asiento={this.state.asiento} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} />}
-                                fileName={this.state.codigo + "-CCO-" + this.state.consecutivo}                            >
+                                document={<ProductoCartaCelebrarMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} destinatario={this.state.destinatario} fecha={this.state.fecha} cura={this.state.cura} residenciaCura={this.state.residenciaCura} cedCura={this.state.cedCura} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} lugar={this.state.lugar} lugarMatrimonio={this.state.lugarMatrimonio} nombreFeligres={this.state.nombreFeligres} esposo={this.state.esposo} esposa={this.state.esposa} cedEsposo={this.state.cedEsposo} cedEsposa={this.state.cedEsposa} fechaMatrimonio={this.state.fechaMatrimonio} lugarTrabajoDestinatario={this.state.destinatalugarTrabajoDestinatariorio}/>}
+                                fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
-
 
                         </div>
                     )
                 }
-
-
             </>
         );
     }
 }
 
-export default ConstanciaPrimeraComunion;
+export default CartaCelebrarMatrimonio;

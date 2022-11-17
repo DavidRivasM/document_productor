@@ -3,11 +3,15 @@ import { Document, Page, Text, View, Image, StyleSheet, Font } from "@react-pdf/
 import '../../../styles/home.css'
 import escudocuria from '../../../images/escudocuria.png'; 
 import GreatVives from '../../../styles/fonts/GreatVibes.ttf'
+import OpenSans from '../../../styles/fonts/OpenSans-Bold.ttf'
+
 
 const ProductoDelegacionMatrimonial = (props) => {
 
 // Register font
 Font.register({ family: 'GreatVives', src: GreatVives });
+Font.register({ family: 'OpenSans', src: OpenSans });
+
 
   const styles = StyleSheet.create({
     baseText: {
@@ -18,6 +22,12 @@ Font.register({ family: 'GreatVives', src: GreatVives });
       margin: "auto" ,  
       color: 'gray',
       fontFamily: "GreatVives"
+    },
+    boldText: {
+      fontSize: "12px",
+      margin: "auto",
+      fontFamily: "OpenSans",
+      padding: "2px"
     }
   });
 
@@ -34,29 +44,31 @@ Font.register({ family: 'GreatVives', src: GreatVives });
           <Image
             src={escudocuria}
             alt="random image"
-            style={{ width: "78px", height: "78px", position: "absolute", bottom: "622px" }}
+            style={{ width: "78px", height: "78px", position: "absolute", bottom: "640px" }}
           />
           <Image
             src={props.image}
             alt="random image"
-            style={{ width: "78px", height: "78px", position: "absolute", bottom: "622px", right: "1px" }}
+            style={{ width: "78px", height: "78px", position: "absolute", bottom: "640px", right: "1px" }}
           />
 
             <Text style={ styles.titleText }>Diócesis de Alajuela Costa Rica</Text>
             <Text style={ styles.titleText }>{props.parroquia}</Text>
             <Text style={{ margin: "auto"}} >_________________________________________</Text>
-            <Text style={{ margin: "auto", padding: "2px" , fontSize: "15px", lineHeight:"2px", fontWeight: "bold" }}>Delegación matrimonial</Text>
+            <Text style={styles.boldText}>Delegación matrimonial {props.tipo}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"0.5px" }}>     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px"}}>{props.codigo}-{props.consecutivo}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px"}}>{props.lugar}, {props.fecha}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px"}}>                     </Text>
-            <Text style={{ padding: "2px", fontSize: "12px"}}>Pbro. {props.cura},</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto"}}>{props.codigo}-{props.consecutivo}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto"}}>{props.lugar}, {props.fecha}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto"}}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>Pbro. {props.destinatario},</Text>
             <Text style={{ padding: "2px", fontSize: "12px"}}>                     </Text>
             
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Por la presente es mi deseo saludarle y desearle paz y bien. El suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, conforme a los canones 1108 y 1152, envío cordialmente la delegación para que bendiga la unión matrimonial de los señores:</Text>
 
-            <Text style={{ margin: "auto", padding: "5px", fontSize: "12px", lineHeight:"2px" }}>{props.novio} y {props.novia}</Text>
+            <Text style={styles.boldText}>{props.novio} y {props.novia}</Text>
 
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"0.5px" }}>     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>El dia {props.fechaMatrimonio}.</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Ellos se presentaron el día {props.fechaPresentacion} en la {props.parroquia}, cuya administración tengo a cargo. No encontrando ningún impedimento, procedemos a enviarle el expediente matrimonial y los documentos para su respectiva inscripción.</Text>
 
@@ -70,6 +82,9 @@ Font.register({ family: 'GreatVives', src: GreatVives });
             <Text style={{ fontSize: "12px", lineHeight:"1.5px" }} >Diócesis de Alajuela</Text>
             
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"1px"  }}>                     </Text>
+
             <Text style={{  fontSize: "12px", marginLeft: "auto",  color: 'gray'}} >_____________________________________</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Tel: {props.tel}</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Correo electrónico: {props.email}</Text>

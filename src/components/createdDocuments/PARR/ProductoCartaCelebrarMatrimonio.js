@@ -6,7 +6,7 @@ import GreatVives from '../../../styles/fonts/GreatVibes.ttf'
 import OpenSans from '../../../styles/fonts/OpenSans-Bold.ttf'
 
 
-const ProductoCartaBuenasCostumbres = (props) => {
+const ProductoCartaCelebrarMatrimonio = (props) => {
 
   // Register font
   Font.register({ family: 'GreatVives', src: GreatVives });
@@ -72,38 +72,39 @@ const ProductoCartaBuenasCostumbres = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "635px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "610px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "635px", right: "1px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "610px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
             <Text style={styles.titleText}>{props.parroquia}</Text>
             <Text style={{ margin: "auto" }} >_________________________________________</Text>
+
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.lugar}, {props.fecha}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.codigo}-{props.consecutivo}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px" }}>Sr: {props.destinatario}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>    </Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>Pbro. {props.destinatario}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>Cura Parroco</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>{props.lugarTrabajoDestinatario}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>Estimado presbítero,</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Estimado presbítero, por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, hace constar que el senor\señora:</Text>
-            
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"  }}>   </Text>
-            <Text style={styles.boldText}>{props.nombreFeligres}</Text>
-            <Text style={styles.boldText}>CEDULA: {props.cedFeligres}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"  }}>   </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por medio de las presentes, el suscrito {props.cura} de la Diócesis de Alajuela, céd. {props.cedCura}, residente {props.residenciaCura}, solicita respetuosamente la respectiva delegación de su parte a tenor del cn. 1111 con el fin de presenciar el matrimonio de {props.esposo} ced. {props.cedEsposo} y {props.esposa} ced. {props.cedEsposa}, fijado para el {props.fechaMatrimonio} en la iglesia de la diaconía de {props.lugarMatrimonio}.</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Es vecina y feligrés de esta comunidad parroquial; específicamente del sector de {props.residenciaFeligres}. Hago constar que no hay motivos para dudar de sus buenas costumbres y modo de vida ante la comunidad.</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por las atenciones a la presente, gracias y encomendado a Dios sus intenciones se despide, en Cristo Buen Pastor,</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Sin más, por el momento, se despide su servidor en Cristo,</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
+           
 
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>_________________________________</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
+
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>_______________________________</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Pbro. {props.cura}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Cura Párroco de {props.parroquia}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Diocesis de Alajuela</Text>
@@ -111,6 +112,7 @@ const ProductoCartaBuenasCostumbres = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
+
 
             <Text style={{ fontSize: "12px", marginLeft: "auto", color: 'gray' }} >_____________________________________</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Tel: {props.tel}</Text>
@@ -123,4 +125,4 @@ const ProductoCartaBuenasCostumbres = (props) => {
   );
 }
 
-export default ProductoCartaBuenasCostumbres;
+export default ProductoCartaCelebrarMatrimonio;

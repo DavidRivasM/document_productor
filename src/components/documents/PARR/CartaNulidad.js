@@ -37,7 +37,7 @@ class CartaNulidad extends Component {
     }
 
     capturar = () => {
-        if (this.state.parroquia === "Parroquia de San Pedro de Poas") {
+        if (this.state.parroquia === "Parroquia de San Pedro de Poás") {
             this.setState({
                 tel: 24485193
             })
@@ -54,72 +54,96 @@ class CartaNulidad extends Component {
                 codigo: "PPOAS"
             })
             this.setState({
-                cura: "Mario Bros"
-            })
-            this.setState({
-                ced: "1 1424 1244"
-            })
-            this.setState({
-                lugar: "San Pedro de Poas"
+                lugar: "Poás de Alajuela"
             })
         }
 
-        else if (this.state.parroquia === "Parroquia de Orotina") {
+        else if (this.state.parroquia === "Parroquia de Catedral") {
 
             this.setState({
-                tel: 22901214
+                tel: 24414665
             })
             this.setState({
-                email: "parroquiaorotina@gmail.com"
+                email: "catedraldealajuela1921@gmail.com"
             })
             this.setState({
-                web: "Orotina, Alajuela"
+                web: "https://es-la.facebook.com/Catedral1921alajuela/"
             })
             this.setState({
-                image: "https://upload.wikimedia.org/wikipedia/commons/3/35/Escudo_de_Orotina.png?1660143063863"
+                image: "https://i.ibb.co/qdx2xZ4/LOGO-Catedral.jpg"
             })
             this.setState({
-                codigo: "POROT"
+                codigo: "PCATE"
             })
             this.setState({
-                cura: "Mario Bros"
-            })
-            this.setState({
-                ced: "1 1424 1244"
-            })
-            this.setState({
-                lugar: "Orotina centro"
+                lugar: "Alajuela"
             })
         }
 
-        else if (this.state.parroquia === "Parroquia del Coyol") {
+        else if (this.state.parroquia === "Parroquia de San Rafael Arcángel") {
 
             this.setState({
-                tel: 22222222
+                tel: 24633000
             })
             this.setState({
-                email: "parroquiacoyol@gmail.com"
+                email: "parroquiasanrafaelzarcero@gmail.com"
             })
             this.setState({
-                web: "El Coyol, Alajuela"
+                web: "https://www.facebook.com/ParroquiaZarcero/"
             })
             this.setState({
-                image: "https://scontent.fsjo15-1.fna.fbcdn.net/v/t1.6435-9/124446854_1078134035966959_2324299155969680830_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GPQ4uLmuDtgAX9F0De2&_nc_ht=scontent.fsjo15-1.fna&oh=00_AT_TfGepSJ_La8URMRGJghYHzlca8WnRa21RroFfb6n0Fw&oe=631A125F"
+                image: "https://i.ibb.co/JjDT9Gq/LOGO-Zarcero.jpg"
             })
             this.setState({
-                codigo: "PCOYOL"
+                codigo: "PZARC"
             })
             this.setState({
-                cura: "Mario Bros"
-            })
-            this.setState({
-                ced: "1 1424 1244"
-            })
-            this.setState({
-                lugar: "Coyol bajo el puente"
+                lugar: "Zarcero de Alajuela"
             })
         }
 
+        else if (this.state.parroquia === "Parroquia Nuestra Señora del Carmen") {
+
+            this.setState({
+                tel: 24411390
+            })
+            this.setState({
+                email: "iglesiaelcarmenalajuela@gmail.com"
+            })
+            this.setState({
+                web: "https://es-la.facebook.com/ParroquiaNuestraSradelCarmenAlajuela/"
+            })
+            this.setState({
+                image: "https://i.ibb.co/8b21wr4/LOGO-El-Carmen.png"
+            })
+            this.setState({
+                codigo: "PCARM"
+            })
+            this.setState({
+                lugar: "El Carmen de Alajuela"
+            })
+        }
+        else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes") {
+
+            this.setState({
+                tel: 24941616
+            })
+            this.setState({
+                email: "parroquiadegrecia@gmail.com"
+            })
+            this.setState({
+                web: "http://www.ParroquiadeGrecia.com/"
+            })
+            this.setState({
+                image: "https://i.ibb.co/fn3zpxb/LOGO-Grecia.jpg"
+            })
+            this.setState({
+                codigo: "PGREC"
+            })
+            this.setState({
+                lugar: "Grecia de Alajuela"
+            })
+        }
         else {
             console.log("Ejecuta el ELSE")
         }
@@ -155,24 +179,32 @@ class CartaNulidad extends Component {
                                                 <legend className="text-center header">Ingrese los datos</legend>
 
                                                 <select name="parroquia" onChange={this.onChange('parroquia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
-                                                    <option selected>Seleccione la parroquia</option>
-                                                    <option value="Parroquia del Coyol">Parroquia del Coyol</option>
-                                                    <option value="Parroquia de Orotina">Parroquia de Orotina</option>
-                                                    <option value="Parroquia de San Pedro de Poas">Parroquia de Poás</option>
+                                                    <option defaultValue>Seleccione la parroquia</option>
+                                                    <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
+                                                    <option value="Parroquia de Catedral">Parroquia de Catedral</option>
+                                                    <option value="Parroquia de San Rafael Arcángel">Parroquia de San Rafael Arcángel</option>
+                                                    <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
+                                                    <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
                                                 </select>
 
+
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo.</i></span>
                                                     <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="01-2022" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
                                                     <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" placeholder="24 de febrero de 2022" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Vicario Judicial.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Cura párroco que redacta el documento.</i></span>
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" className="form-control" placeholder="Bartolome de las Casas" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Vicario Judicial a quien va dirigido el documento.</i></span>
                                                     <textarea onChange={this.onChange('vicario')} className="form-control" name="vicario" placeholder="Vinicio Ramirez Retana"></textarea>
                                                 </div>
 
@@ -182,37 +214,37 @@ class CartaNulidad extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cedula del solicitante.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el número de cédula del solicitante.</i></span>
                                                     <textarea onChange={this.onChange('cedSolicitante')} className="form-control" name="cedSolicitante" placeholder="1 1234 1234"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del solicitante.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de residencia del solicitante.</i></span>
                                                     <textarea onChange={this.onChange('residenciaSolicitante')} className="form-control" name="residenciaSolicitante" placeholder="La Garita"></textarea>
                                                 </div>
                                                
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la parroquia del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('parroquiaSolicitante')} className="form-control" name="parroquiaSolicitante" placeholder="El Carmen"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la parroquia en la que esta empadronado el solicitante.</i></span>
+                                                    <textarea onChange={this.onChange('parroquiaSolicitante')} className="form-control" name="parroquiaSolicitante" placeholder="Parroquia del Carmen"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del conyugue Solicitante</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del conyugue.</i></span>
                                                     <textarea onChange={this.onChange('conyugueSolicitante')} className="form-control" name="conyugueSolicitante" placeholder="Carmen Salas"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cedula del conyugue Solicitante</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese l número de cédula del conyugue.</i></span>
                                                     <textarea onChange={this.onChange('cedConyugue')} className="form-control" name="cedConyugue" placeholder="2 2344 1234"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del conyugue Solicitante</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de residencia del conyugue.</i></span>
                                                     <textarea onChange={this.onChange('residenciaConyugue')} className="form-control" name="residenciaConyugue" placeholder="Tambor"></textarea>
                                                 </div>
                                                        
                                                 <div className="form-group">
-                                                    <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar informacion</button>
+                                                    <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar información</button>
                                                 </div>
                                             </fieldset>
                                         </form>

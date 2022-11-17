@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
-import ProductoConstanciaPrimeraComunion from '../../createdDocuments/PARR/ProductoConstanciaPrimeraComunion';
+import ProductoPortadaEnvioDocumentos from '../../createdDocuments/PARR/ProductoPortadaEnvioDocumentos';
 import { PDFDownloadLink } from "@react-pdf/renderer";
-;
 
 
-class ConstanciaPrimeraComunion extends Component {
+
+
+class PortadaEnvioDocumentos extends Component {
+
+
     state = {
         parroquia: '',
         consecutivo: '',
-        lugar: '',
-        fecha: '',
-        persona: '',
-        añoComunion: '',
-        libro: '',
-        folio: '',
-        asiento: '',
-
-        cura: '',
-        ced: '',
+        nombreParte: '',
+        nombreActor: '',
+        nombreConvenida: '',
+       
         tel: "",
+        cura: '',
         email: "",
         web: "",
         image: "",
@@ -29,8 +27,7 @@ class ConstanciaPrimeraComunion extends Component {
     onChange = input => e => {
         this.setState({
             [input]: e.target.value,
-        })
-            ;
+        });
     }
 
     capturar = () => {
@@ -49,12 +46,6 @@ class ConstanciaPrimeraComunion extends Component {
             })
             this.setState({
                 codigo: "PPOAS"
-            })
-            this.setState({
-                lugar: "Poás de Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
             })
             this.setState({
                 cura: "Juan Mora"
@@ -79,13 +70,7 @@ class ConstanciaPrimeraComunion extends Component {
                 codigo: "PCATE"
             })
             this.setState({
-                lugar: "Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
+                cura: "Marcio Mora"
             })
         }
 
@@ -107,13 +92,7 @@ class ConstanciaPrimeraComunion extends Component {
                 codigo: "PZARC"
             })
             this.setState({
-                lugar: "Zarcero de Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
+                cura: "Esteban Mora"
             })
         }
 
@@ -135,13 +114,7 @@ class ConstanciaPrimeraComunion extends Component {
                 codigo: "PCARM"
             })
             this.setState({
-                lugar: "El Carmen de Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
+                cura: "Esteban Mora"
             })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes") {
@@ -162,13 +135,7 @@ class ConstanciaPrimeraComunion extends Component {
                 codigo: "PGREC"
             })
             this.setState({
-                lugar: "Grecia de Alajuela"
-            })
-            this.setState({
-                ced: "1 1234 1234"
-            })
-            this.setState({
-                cura: "Juan Mora"
+                cura: "Esteban Mora"
             })
         }
         else {
@@ -176,10 +143,10 @@ class ConstanciaPrimeraComunion extends Component {
         }
 
     }
-
+    
     sunmitPost = (e) => {
 
-        if (!this.state.consecutivo  ) {
+        if (!this.state.consecutivo || !this.state.parroquia) {
             alert('Todos los espacios son requeridos!');
             e.preventDefault();
         } else {
@@ -187,13 +154,16 @@ class ConstanciaPrimeraComunion extends Component {
                 postSubmitted: true
             })
             this.capturar();
+        
         }
 
     }
 
     render(props) {
+        
         return (
             <>
+            
                 {!this.state.postSubmitted ?
                     (
                         <div className="jumbotron">
@@ -214,41 +184,27 @@ class ConstanciaPrimeraComunion extends Component {
                                                 </select>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo del caso.</i></span>
                                                     <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="01-2022" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" placeholder=" 24 de febrero de 2022" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese los apellidos de la parte involucrada en el caso.</i></span>
+                                                    <input onChange={this.onChange('nombreParte')} name="nombreParte" type="text" placeholder="Mora Porras" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del la persona solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('persona')} className="form-control" name="persona" placeholder="Vinicio Ramirez Retana"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del actor.</i></span>
+                                                    <input onChange={this.onChange('nombreActor')} name="nombreActor" type="text" placeholder="Juan" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el año en que la persona solicitante hizo la primera comunión.</i></span>
-                                                    <textarea onChange={this.onChange('añoComunion')} className="form-control" name="añoComunion" placeholder="1999"></textarea>
-                                                </div>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la convenida.</i></span>
+                                                    <input onChange={this.onChange('nombreConvenida')} name="nombreConvenida" type="text" placeholder="Marta Fonseca Chaves" className="form-control" />
+                                                </div>                                         
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('libro')} className="form-control" name="libro" placeholder="UNO"></textarea>
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el folio del libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('folio')} className="form-control" name="folio" placeholder="DOS"></textarea>
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el asiento del libro en que esta registrada la primera comunión del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('asiento')} className="form-control" name="asiento" placeholder="TRES"></textarea>
-                                                </div>
-                                                <div className="form-group">
-                                                    <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar información</button>
+                                                    <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar informacion</button>
                                                 </div>
                                             </fieldset>
                                         </form>
@@ -265,12 +221,12 @@ class ConstanciaPrimeraComunion extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoConstanciaPrimeraComunion parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} persona={this.state.persona} añoComunion={this.state.añoComunion} libro={this.state.libro} folio={this.state.folio} asiento={this.state.asiento} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} />}
-                                fileName={this.state.codigo + "-CCO-" + this.state.consecutivo}                            >
+                                document={<ProductoPortadaEnvioDocumentos parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} nombreParte={this.state.nombreParte} nombreActor={this.state.nombreActor} nombreConvenida={this.state.nombreConvenida}  tel={this.state.tel} cura={this.state.cura} email={this.state.email} web={this.state.web} image={this.state.image} codigo={this.state.codigo} />}
+                                fileName={this.state.codigo + "-PEDTE-" + this.state.consecutivo}
+                                pdfVersion="1.7"
+                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
-
-
                         </div>
                     )
                 }
@@ -281,4 +237,4 @@ class ConstanciaPrimeraComunion extends Component {
     }
 }
 
-export default ConstanciaPrimeraComunion;
+export default PortadaEnvioDocumentos;

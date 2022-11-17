@@ -28,14 +28,6 @@ class ListaChequeoDocumentosMatrimonio extends Component {
         image: "",
         codigo: "",
         postSubmitted: false,
-
-        file: ''
-    }
-
-    photoInput = input => e => {
-        this.setState({
-            [input]: URL.createObjectURL(e.target.value[0])
-        });
     }
 
     onChange = input => e => {
@@ -45,7 +37,7 @@ class ListaChequeoDocumentosMatrimonio extends Component {
     }
 
     capturar = () => {
-        if (this.state.parroquia === "Parroquia de San Pedro de Poas") {
+        if (this.state.parroquia === "Parroquia de San Pedro de Poás") {
             this.setState({
                 tel: 24485193
             })
@@ -66,44 +58,87 @@ class ListaChequeoDocumentosMatrimonio extends Component {
             })
         }
 
-        else if (this.state.parroquia === "Parroquia de Orotina") {
+        else if (this.state.parroquia === "Parroquia de Catedral") {
 
             this.setState({
-                tel: 22901214
+                tel: 24414665
             })
             this.setState({
-                email: "parroquiaorotina@gmail.com"
+                email: "catedraldealajuela1921@gmail.com"
             })
             this.setState({
-                web: "Orotina, Alajuela"
+                web: "https://es-la.facebook.com/Catedral1921alajuela/"
             })
             this.setState({
-                image: "https://upload.wikimedia.org/wikipedia/commons/3/35/Escudo_de_Orotina.png?1660143063863"
+                image: "https://i.ibb.co/qdx2xZ4/LOGO-Catedral.jpg"
             })
             this.setState({
-                codigo: "POROT"
+                codigo: "PCATE"
             })
             this.setState({
                 cura: "Marcio Mora"
             })
         }
 
-        else if (this.state.parroquia === "Parroquia del Coyol") {
+        else if (this.state.parroquia === "Parroquia de San Rafael Arcángel") {
 
             this.setState({
-                tel: 22222222
+                tel: 24633000
             })
             this.setState({
-                email: "parroquiacoyol@gmail.com"
+                email: "parroquiasanrafaelzarcero@gmail.com"
             })
             this.setState({
-                web: "El Coyol, Alajuela"
+                web: "https://www.facebook.com/ParroquiaZarcero/"
             })
             this.setState({
-                image: "https://scontent.fsjo15-1.fna.fbcdn.net/v/t1.6435-9/124446854_1078134035966959_2324299155969680830_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GPQ4uLmuDtgAX9F0De2&_nc_ht=scontent.fsjo15-1.fna&oh=00_AT_TfGepSJ_La8URMRGJghYHzlca8WnRa21RroFfb6n0Fw&oe=631A125F"
+                image: "https://i.ibb.co/JjDT9Gq/LOGO-Zarcero.jpg"
             })
             this.setState({
-                codigo: "PCOYOL"
+                codigo: "PZARC"
+            })
+            this.setState({
+                cura: "Esteban Mora"
+            })
+        }
+
+        else if (this.state.parroquia === "Parroquia Nuestra Señora del Carmen") {
+
+            this.setState({
+                tel: 24411390
+            })
+            this.setState({
+                email: "iglesiaelcarmenalajuela@gmail.com"
+            })
+            this.setState({
+                web: "https://es-la.facebook.com/ParroquiaNuestraSradelCarmenAlajuela/"
+            })
+            this.setState({
+                image: "https://i.ibb.co/8b21wr4/LOGO-El-Carmen.png"
+            })
+            this.setState({
+                codigo: "PCARM"
+            })
+            this.setState({
+                cura: "Esteban Mora"
+            })
+        }
+        else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes") {
+
+            this.setState({
+                tel: 24941616
+            })
+            this.setState({
+                email: "parroquiadegrecia@gmail.com"
+            })
+            this.setState({
+                web: "http://www.ParroquiadeGrecia.com/"
+            })
+            this.setState({
+                image: "https://i.ibb.co/fn3zpxb/LOGO-Grecia.jpg"
+            })
+            this.setState({
+                codigo: "PGREC"
             })
             this.setState({
                 cura: "Esteban Mora"
@@ -148,9 +183,11 @@ class ListaChequeoDocumentosMatrimonio extends Component {
                                                 
                                                 <select name="parroquia" onChange={this.onChange('parroquia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
                                                     <option defaultValue>Seleccione la parroquia</option>
-                                                    <option value="Parroquia del Coyol">Parroquia del Coyol</option>
-                                                    <option value="Parroquia de Orotina">Parroquia de Orotina</option>
-                                                    <option value="Parroquia de San Pedro de Poas">Parroquia de Poás</option>
+                                                    <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
+                                                    <option value="Parroquia de Catedral">Parroquia de Catedral</option>
+                                                    <option value="Parroquia de San Rafael Arcángel">Parroquia de San Rafael Arcángel</option>
+                                                    <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
+                                                    <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
                                                 </select>
 
                                                 <div className="form-group">
@@ -179,27 +216,27 @@ class ListaChequeoDocumentosMatrimonio extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la parroquia que recibe los datos .</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la parroquia que recibe los documentos.</i></span>
                                                     <input onChange={this.onChange('parroquiaEntrega')} name="parroquiaEntrega" type="text" placeholder="Nuestra Senora del Pilar" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la secretaria.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la persona que entregó los documentos.</i></span>
                                                     <input onChange={this.onChange('personaEntrega')} name="personaEntrega" type="text" placeholder="Karla Barrantes" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la parroquia que recibe los datos.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la parroquia donde se recibieron los documentos.</i></span>
                                                     <input onChange={this.onChange('lugarRecibe')} name="lugarRecibe" type="text" placeholder="Santiago Apostol" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la secretaria que recibe los datos.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la secretaria que recibió los documentos.</i></span>
                                                     <input onChange={this.onChange('personaRecibe')} name="personaRecibe" type="text" placeholder="Ana Cascante" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de hoy.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha en la que se enviaron los documentos.</i></span>
                                                     <input onChange={this.onChange('fechaDia')} name="fechaDia" type="text" placeholder="22-12-2009" className="form-control" />
                                                 </div>
 

@@ -87,18 +87,16 @@ const ProductoCartaNulidad = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.codigo}-{props.consecutivo}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px" }}>Senor: {props.vicario}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>Señor: {props.vicario}</Text>
             <Text style={{ padding: "2px", fontSize: "12px" }}>Vicario Judicial de Primera Instancia</Text>
             <Text style={{ padding: "2px", fontSize: "12px" }}>Tribunal Eclesiástico Provincia de Costa Rica</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Paz y Bien</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"}}>Muy estimado Padre, por medio de la presente, de manera respetuosa, quisiera
-              presentarle el caso de Sr {props.solicitante},ced {props.cedSolicitante}, vecino {props.residenciaSolicitante} de
-              parroquia de
-              {props.parroquiaSolicitante}, quien en días pasados me visitó en la oficina de {props.lugar} con el fin de buscar asesoría
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"}}>Muy estimado Padre, por medio de la presente de manera respetuosa quisiera
+              presentarle el caso de Sr. {props.solicitante}, ced: {props.cedSolicitante}, vecino {props.residenciaSolicitante} de {props.parroquiaSolicitante}, quien en días pasados me visitó en la oficina de {props.lugar} con el fin de buscar asesoría
               sobre el proceso de estudio de la posible nulidad matrimonial en su relación sacramental con
-              el Sr. {props.conyugueSolicitante}, céd: {props.cedConyugue}, vecino de {props.residenciaConyugue}.</Text>
+              el sr/a. {props.conyugueSolicitante}, céd: {props.cedConyugue}, vecino/a de {props.residenciaConyugue}.</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Estimados, todos los detalles de su caso, considero suficiente el argumento que se ha
               presentado para establecer posibles causales de nulidad matrimonial, en las condiciones que
@@ -109,11 +107,10 @@ const ProductoCartaNulidad = (props) => {
       
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
          
-         
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>_____________________________________</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Pbro. {props.cura}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Cura Párroco de {props.parroquia}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Diocesis de Alajuela________________________</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Diocesis de Alajuela</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>

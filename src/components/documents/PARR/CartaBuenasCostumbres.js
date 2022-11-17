@@ -47,7 +47,7 @@ class CartaBuenasCostumbres extends Component {
     }
 
     capturar = () => {
-        if (this.state.parroquia === "Parroquia de San Pedro de Poas") {
+        if (this.state.parroquia === "Parroquia de San Pedro de Poás") {
             this.setState({
                 tel: 24485193
             })
@@ -64,60 +64,94 @@ class CartaBuenasCostumbres extends Component {
                 codigo: "PPOAS"
             })
             this.setState({
-                cura: "Juan Mora"
-            })
-            this.setState({
-                lugar: "Poas"
+                lugar: "Poás de Alajuela"
             })
         }
 
-        else if (this.state.parroquia === "Parroquia de Orotina") {
+        else if (this.state.parroquia === "Parroquia de Catedral") {
 
             this.setState({
-                tel: 22901214
+                tel: 24414665
             })
             this.setState({
-                email: "parroquiaorotina@gmail.com"
+                email: "catedraldealajuela1921@gmail.com"
             })
             this.setState({
-                web: "Orotina, Alajuela"
+                web: "https://es-la.facebook.com/Catedral1921alajuela/"
             })
             this.setState({
-                image: "https://upload.wikimedia.org/wikipedia/commons/3/35/Escudo_de_Orotina.png?1660143063863"
+                image: "https://i.ibb.co/qdx2xZ4/LOGO-Catedral.jpg"
             })
             this.setState({
-                codigo: "POROT"
+                codigo: "PCATE"
             })
             this.setState({
-                cura: "Marcio Mora"
-            })
-            this.setState({
-                lugar: "Orotina"
+                lugar: "Alajuela"
             })
         }
 
-        else if (this.state.parroquia === "Parroquia del Coyol") {
+        else if (this.state.parroquia === "Parroquia de San Rafael Arcángel") {
 
             this.setState({
-                tel: 22222222
+                tel: 24633000
             })
             this.setState({
-                email: "parroquiacoyol@gmail.com"
+                email: "parroquiasanrafaelzarcero@gmail.com"
             })
             this.setState({
-                web: "El Coyol, Alajuela"
+                web: "https://www.facebook.com/ParroquiaZarcero/"
             })
             this.setState({
-                image: "https://scontent.fsjo15-1.fna.fbcdn.net/v/t1.6435-9/124446854_1078134035966959_2324299155969680830_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=GPQ4uLmuDtgAX9F0De2&_nc_ht=scontent.fsjo15-1.fna&oh=00_AT_TfGepSJ_La8URMRGJghYHzlca8WnRa21RroFfb6n0Fw&oe=631A125F"
+                image: "https://i.ibb.co/JjDT9Gq/LOGO-Zarcero.jpg"
             })
             this.setState({
-                codigo: "PCOYOL"
+                codigo: "PZARC"
             })
             this.setState({
-                cura: "Esteban Mora"
+                lugar: "Zarcero de Alajuela"
+            })
+        }
+
+        else if (this.state.parroquia === "Parroquia Nuestra Señora del Carmen") {
+
+            this.setState({
+                tel: 24411390
             })
             this.setState({
-                lugar: "Coyol"
+                email: "iglesiaelcarmenalajuela@gmail.com"
+            })
+            this.setState({
+                web: "https://es-la.facebook.com/ParroquiaNuestraSradelCarmenAlajuela/"
+            })
+            this.setState({
+                image: "https://i.ibb.co/8b21wr4/LOGO-El-Carmen.png"
+            })
+            this.setState({
+                codigo: "PCARM"
+            })
+            this.setState({
+                lugar: "El Carmen de Alajuela"
+            })
+        }
+        else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes") {
+
+            this.setState({
+                tel: 24941616
+            })
+            this.setState({
+                email: "parroquiadegrecia@gmail.com"
+            })
+            this.setState({
+                web: "http://www.ParroquiadeGrecia.com/"
+            })
+            this.setState({
+                image: "https://i.ibb.co/fn3zpxb/LOGO-Grecia.jpg"
+            })
+            this.setState({
+                codigo: "PGREC"
+            })
+            this.setState({
+                lugar: "Grecia de Alajuela"
             })
         }
         else {
@@ -157,11 +191,14 @@ class CartaBuenasCostumbres extends Component {
                                                 <legend className="text-center header">Ingrese los datos</legend>
                                                 
                                                 <select name="parroquia" onChange={this.onChange('parroquia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
-                                                    <option selected>Seleccione la parroquia</option>
-                                                    <option value="Parroquia del Coyol">Parroquia del Coyol</option>
-                                                    <option value="Parroquia de Orotina">Parroquia de Orotina</option>
-                                                    <option value="Parroquia de San Pedro de Poas">Parroquia de Poás</option>
+                                                    <option defaultValue>Seleccione la parroquia</option>
+                                                    <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
+                                                    <option value="Parroquia de Catedral">Parroquia de Catedral</option>
+                                                    <option value="Parroquia de San Rafael Arcángel">Parroquia de San Rafael Arcángel</option>
+                                                    <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
+                                                    <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
                                                 </select>
+
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo</i></span>
@@ -169,33 +206,38 @@ class CartaBuenasCostumbres extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el destinatario</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Cura que redacta el documento.</i></span>
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Cura que será el destinatario.</i></span>
                                                     <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboracion del documento</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
                                                     <input onChange={this.onChange('fecha')} name="fecha" type="text" placeholder="2 de enero de 2022" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del feligres</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del feligresa al que se va a constar que tiene buenas costumbres.</i></span>
                                                     <input onChange={this.onChange('nombreFeligres')} name="nombreFeligres" type="text" placeholder="Julio Oreamuno Mora" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cedula del feligres</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el número de cedula del feligres.</i></span>
                                                     <input onChange={this.onChange('cedFeligres')} name="cedFeligres" type="text" placeholder="2 4567 2341" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del feligres</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del feligres.</i></span>
                                                     <input onChange={this.onChange('residenciaFeligres')} name="residenciaFeligres" type="text" placeholder="Los Angeles" className="form-control" />
                                                 </div>
 
 
                                                 <div className="form-group">
-                                                    <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar informacion</button>
+                                                    <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar información</button>
                                                 </div>
                                             </fieldset>
                                         </form>
@@ -212,7 +254,7 @@ class CartaBuenasCostumbres extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoCartaBuenasCostumbres parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} residenciaFeligres={this.state.residenciaFeligres} nombreFeligres={this.state.nombreFeligres} cedFeligres={this.state.cedFeligres} destinatario={this.state.destinatario}/>}
+                                document={<ProductoCartaBuenasCostumbres parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} residenciaFeligres={this.state.residenciaFeligres} nombreFeligres={this.state.nombreFeligres} cedFeligres={this.state.cedFeligres} destinatario={this.state.destinatario}/>}
                                 fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

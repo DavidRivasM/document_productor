@@ -72,12 +72,12 @@ const ProductoPermisoBautizarOtraParroquia = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "600px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "630px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "600px", right: "1px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "630px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
@@ -93,7 +93,7 @@ const ProductoPermisoBautizarOtraParroquia = (props) => {
 
             <Text style={{ padding: "2px", fontSize: "12px" }}>Sr:</Text>
             <Text style={{ padding: "2px", fontSize: "12px" }}>Cura Parroco</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Pbr.{props.destinatario}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Pbr. {props.destinatario}</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "0.5px" }}>                     </Text>
 
@@ -103,7 +103,7 @@ const ProductoPermisoBautizarOtraParroquia = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "0.5px" }}>                     </Text>
 
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"}}>Las razones que los mueven a bautizar en su parroquia son:</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"}}>Las razones que los mueven a bautizar en su parroquia son: {props.razon}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"  }}>Siempre y cuando todos los requisitos estén en orden.</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Deseándole paz y bien,</Text>
@@ -113,7 +113,10 @@ const ProductoPermisoBautizarOtraParroquia = (props) => {
             <Text style={{ fontSize: "12px", lineHeight: "1.5px",  margin: "auto" }}>Cura Párroco de {props.parroquia}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px",  margin: "auto" }}>Diocesis de Alajuela</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "0.5px" }}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
+
 
             <Text style={{ fontSize: "12px", marginLeft: "auto", color: 'gray' }} >_____________________________________</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Tel: {props.tel}</Text>
