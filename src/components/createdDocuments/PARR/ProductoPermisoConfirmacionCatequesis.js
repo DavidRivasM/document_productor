@@ -83,7 +83,9 @@ const ProductoPermisoConfirmacionCatequesis = (props) => {
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
             <Text style={styles.titleText}>{props.parroquia}</Text>
             <Text style={{ margin: "auto" }} >_________________________________________</Text>
-            <Text style={styles.boldText}>PERMISO PARA MATRÍCULA DE CATEQUESIS/CONFIRMACIÓN EN OTRA PARROQUIA</Text>
+            <Text style={styles.boldText}>PERMISO PARA MATRÍCULA DE CATEQUESIS/CONFIRMACIÓN</Text>
+            <Text style={styles.boldText}>EN OTRA PARROQUIA</Text>
+
 
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.lugar}, {props.fecha}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.codigo}-{props.consecutivo}</Text>

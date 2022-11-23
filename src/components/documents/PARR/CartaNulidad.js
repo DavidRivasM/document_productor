@@ -80,7 +80,7 @@ class CartaNulidad extends Component {
             })
         }
 
-        else if (this.state.parroquia === "Parroquia de San Rafael Arcángel") {
+        else if (this.state.parroquia === "Parroquia de San Rafael Arcángel Zarcero") {
 
             this.setState({
                 tel: 24633000
@@ -182,7 +182,7 @@ class CartaNulidad extends Component {
                                                     <option defaultValue>Seleccione la parroquia</option>
                                                     <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
                                                     <option value="Parroquia de Catedral">Parroquia de Catedral</option>
-                                                    <option value="Parroquia de San Rafael Arcángel">Parroquia de San Rafael Arcángel</option>
+                                                    <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
                                                     <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
                                                     <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
                                                 </select>
@@ -190,7 +190,7 @@ class CartaNulidad extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo.</i></span>
-                                                    <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="01-2022" className="form-control" />
+                                                    <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="001-2022" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -262,7 +262,7 @@ class CartaNulidad extends Component {
 
                             <PDFDownloadLink
                                 document={<ProductoCartaNulidad parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} vicario={this.state.vicario} solicitante={this.state.solicitante} cedSolicitante={this.state.cedSolicitante} residenciaSolicitante={this.state.residenciaSolicitante} parroquiaSolicitante={this.state.parroquiaSolicitante} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} conyugueSolicitante={this.state.conyugueSolicitante} cedConyugue={this.state.cedConyugue} residenciaConyugue={this.state.residenciaConyugue}/>}
-                                fileName={this.state.codigo + this.state.consecutivo}                            >
+                                fileName={this.state.codigo + "-" + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
 

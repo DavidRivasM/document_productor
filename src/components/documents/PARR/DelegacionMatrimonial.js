@@ -76,7 +76,7 @@ class DelegacionMatrimonial extends Component {
             })
         }
 
-        else if (this.state.parroquia === "Parroquia de San Rafael Arcángel") {
+        else if (this.state.parroquia === "Parroquia de San Rafael Arcángel Zarcero") {
 
             this.setState({
                 tel: 24633000
@@ -178,14 +178,14 @@ class DelegacionMatrimonial extends Component {
                                                     <option defaultValue>Seleccione la parroquia</option>
                                                     <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
                                                     <option value="Parroquia de Catedral">Parroquia de Catedral</option>
-                                                    <option value="Parroquia de San Rafael Arcángel">Parroquia de San Rafael Arcángel</option>
+                                                    <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
                                                     <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
                                                     <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
                                                 </select>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo.</i></span>
-                                                    <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="01-2022" className="form-control" />
+                                                    <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="001-2022" className="form-control" />
                                                 </div>
 
                                                 <select name="parroquia" onChange={this.onChange('tipo')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">

@@ -72,12 +72,12 @@ const ProductoSolicitudTalonarioMatrimonio = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "620px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "600px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "620px", right: "1px" }}
+              style={{ width: "78px", height: "78px", position: "absolute", bottom: "600px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
@@ -104,16 +104,15 @@ const ProductoSolicitudTalonarioMatrimonio = (props) => {
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Autorizo al señor {props.personaAutorizada}, cédula {props.cedPersonaAutorizada}, para retirarlos a nombre de ésta parroquia.</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Agradeciéndole su valiosa colaboración, le saluda:
-            U.L.</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Agradeciéndole su valiosa colaboración, le saluda:</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
 
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Cura Párroco de {props.parroquia}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Diocesis de Alajuela</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Pbro. {props.cura}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Cura Párroco de {props.parroquia}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Diocesis de Alajuela</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>

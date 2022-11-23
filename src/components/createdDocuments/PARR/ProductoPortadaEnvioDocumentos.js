@@ -45,7 +45,8 @@ const ProductoPortadaEnvioDocumentos = (props) => {
     },
     tableCol: {
       width: "60%",
-      margin: "auto"
+      margin: "auto",
+      textAlign: "center"
     },
     tableCol2: {
       width: "20%",
@@ -69,30 +70,33 @@ const ProductoPortadaEnvioDocumentos = (props) => {
           <Text style={styles.baseText}>          </Text>
 
           <View style={styles.table}>
+          <Text style={styles.baseText}>  </Text>
             <View style={styles.tableRow}>
-              <View style={styles.tableCol2}>
-                <Image
-                  src={escudocuria}
-                  alt="random image"
-                  style={{ width: "75px", height: "75px" }}
-                />
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.baseText}>  </Text>
-                <Text style={styles.boldText}>Diocesis de Alajuela - Costa Rica</Text>
-                <Text style={styles.boldText}>{props.parroquia}</Text>
-                <Text style={{ marginTop: "-15px" }}>____________________________</Text>
-              </View>
-              <View style={styles.tableCol2}>
-                <Image
-                  src={props.image}
-                  alt="random image"
-                  style={{ width: "78px", height: "78px" }}
-                />
-              </View>
+              <Image
+                src={escudocuria}
+                alt="random image"
+                style={{ width: "75px", height: "75px", position: "absolute", left: "-100px", top: "-25px" }}
+              />
+              <Image
+              src={props.image}
+              alt="random image"
+              style={{ width: "70px", height: "70px", position: "absolute", right: "-100px", top: "-25px" }}
+            />
+              <Text style={styles.baseText}>  </Text>
+              <Text style={styles.boldText}>Diocesis de Alajuela - Costa Rica</Text>
             </View>
+
+            <View style={styles.tableRow}>
+              <Text style={styles.boldText}>{props.parroquia}</Text>
+            </View>
+
+            <View style={styles.tableRow}>
+              <Text style={{}}>____________________________</Text>
+            </View>
+          
+          
             <Text style={styles.baseText}>  </Text>
-            <Text style={styles.baseText}>  </Text>
+          
             <View style={styles.tableRow}>
 
               <Text style={styles.baseText}>A Tribunal Eclesiastico Provincial de Costa Rica</Text>
@@ -114,7 +118,7 @@ const ProductoPortadaEnvioDocumentos = (props) => {
             <View style={styles.tableRow}>
               <Text style={{ fontSize: "10px", color: "gray" }}>Apellidos (Actor) (Convenida)</Text>
             </View>
-            
+
             <Text style={styles.baseText}>  </Text>
 
 
