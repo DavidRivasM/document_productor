@@ -17,7 +17,7 @@ const HomeCUDA = (props) => {
                 <div className="col-sm-6">
                     <div className="card">
                         <div className="card-body">
-                            <h5 className="card-title">Autorización especial</h5>
+                            <h5 className="card-title">Autorización especial (FORM-CUDA-01)</h5>
                             <p className="card-text">Documento que se realiza con el fin de brindar permisos legales para que una persona pueda realizar algún tramite administrativo en nombre de la Diócesis de Alajuela.</p>
                             {
                                 documento1 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento1("Autorizacion especial")}>
@@ -33,7 +33,7 @@ const HomeCUDA = (props) => {
                 <div className="col-sm-6">
                     <div className="card">
                         <div className="card-body">
-                            <h5 className="card-title">Declaración Jurada</h5>
+                            <h5 className="card-title">Declaración Jurada (FORM-CUDA-02)</h5>
                             <p className="card-text">Documento que realiza un presbitero bajo fé de juramento sobre un asunto de competencia diocesana en particular.</p>
                             {
                                 documento2 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento2("Declaracion jurada")}>
@@ -49,7 +49,7 @@ const HomeCUDA = (props) => {
                 <div className="col-sm-6">
                     <div className="card">
                         <div className="card-body">
-                            <h5 className="card-title">Solicitud</h5>
+                            <h5 className="card-title">Solicitud  (FORM-CUDA-03)</h5>
                             <p className="card-text">Documento que se realiza un presbitero para solicitar algun tramite, servicio o producto a una insitutucion o persona en particular.</p>
                             {
                                 documento3 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento3("Solicitud")}>
