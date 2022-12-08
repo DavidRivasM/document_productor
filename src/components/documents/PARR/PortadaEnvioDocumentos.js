@@ -10,7 +10,6 @@ class PortadaEnvioDocumentos extends Component {
 
     state = {
         parroquia: '',
-        consecutivo: '',
         nombreParte: '',
         nombreActor: '',
         nombreConvenida: '',
@@ -146,7 +145,7 @@ class PortadaEnvioDocumentos extends Component {
     
     sunmitPost = (e) => {
 
-        if (!this.state.consecutivo || !this.state.parroquia) {
+        if ( !this.state.parroquia) {
             alert('Todos los espacios son requeridos!');
             e.preventDefault();
         } else {
@@ -184,11 +183,6 @@ class PortadaEnvioDocumentos extends Component {
                                                 </select>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo del caso.</i></span>
-                                                    <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="001-2022" className="form-control" />
-                                                </div>
-
-                                                <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese los apellidos de la parte involucrada en el caso.</i></span>
                                                     <input onChange={this.onChange('nombreParte')} name="nombreParte" type="text" placeholder="Mora Porras" className="form-control" />
                                                 </div>
@@ -222,7 +216,7 @@ class PortadaEnvioDocumentos extends Component {
 
                             <PDFDownloadLink
                                 document={<ProductoPortadaEnvioDocumentos parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} nombreParte={this.state.nombreParte} nombreActor={this.state.nombreActor} nombreConvenida={this.state.nombreConvenida}  tel={this.state.tel} cura={this.state.cura} email={this.state.email} web={this.state.web} image={this.state.image} codigo={this.state.codigo} />}
-                                fileName={this.state.codigo + "-PEDTE-" + this.state.consecutivo}
+                                fileName={this.state.codigo + "-PEDTE"}
                                 pdfVersion="1.7"
                             >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>

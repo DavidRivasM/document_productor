@@ -10,7 +10,6 @@ class ListaChequeoDocumentosMatrimonio extends Component {
 
     state = {
         parroquia: '',
-        consecutivo: '',
         nombreNovio: '',
         nombreNovia: '',
         fechaMatrimonio: '',
@@ -152,7 +151,7 @@ class ListaChequeoDocumentosMatrimonio extends Component {
     
     sunmitPost = (e) => {
 
-        if (!this.state.consecutivo || !this.state.parroquia) {
+        if ( !this.state.parroquia) {
             alert('Todos los espacios son requeridos!');
             e.preventDefault();
         } else {
@@ -189,11 +188,6 @@ class ListaChequeoDocumentosMatrimonio extends Component {
                                                     <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
                                                     <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
                                                 </select>
-
-                                                <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo</i></span>
-                                                    <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="001-2022" className="form-control" />
-                                                </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"> Ingrese el nombre del novio.</i></span>
@@ -259,7 +253,7 @@ class ListaChequeoDocumentosMatrimonio extends Component {
 
                             <PDFDownloadLink
                                 document={<ProductoListaChequeoDocumentosMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} nombreNovio={this.state.nombreNovio} nombreNovia={this.state.nombreNovia} fechaMatrimonio={this.state.fechaMatrimonio} parroquiaRemitente={this.state.parroquiaRemitente} parroquiaEntrega={this.state.parroquiaEntrega} personaEntrega={this.state.personaEntrega} lugarRecibe={this.state.lugarRecibe}personaRecibe={this.state.personaRecibe} fechaDia={this.state.fechaDia} firma={this.state.firma} tel={this.state.tel} cura={this.state.cura} email={this.state.email} web={this.state.web} image={this.state.image} codigo={this.state.codigo} />}
-                                fileName={this.state.codigo + "-LAS-" + this.state.consecutivo}
+                                fileName={this.state.codigo + "-LAS"}
                                 pdfVersion="1.7"
                             >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>

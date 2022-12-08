@@ -139,7 +139,7 @@ const ProductoListaChequeoDocumentosMatrimonio = (props) => {
             <Text style={styles.boldText}>Documentos enviados a la Parroquia</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "0.5px" }}>        </Text>
-            <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.codigo}-LAS-{props.consecutivo}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.codigo}-LAS</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "0.5px" }}>        </Text>
 
 
