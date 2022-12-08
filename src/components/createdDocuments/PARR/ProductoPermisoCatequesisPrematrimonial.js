@@ -78,12 +78,12 @@ const ProductoPermisoCatequesisPrematrimonial = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "72px", height: "72px", position: "absolute", bottom: "610px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "610px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "72px", height: "72px", position: "absolute", bottom: "610px", right: "1px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "610px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>

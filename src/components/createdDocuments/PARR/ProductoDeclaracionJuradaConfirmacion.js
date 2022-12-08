@@ -57,12 +57,12 @@ const ProductoDeclaracionJuradaConfirmacion = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "660px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "680px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "78px", height: "78px", position: "absolute", bottom: "660px", right: "1px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "680px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
