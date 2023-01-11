@@ -62,7 +62,7 @@ class PermisoBautizarOtraParroquia extends Component {
                 codigo: "PPOAS"
             })
             this.setState({
-                cura: "Juan Mora"
+                lugar: "Poás"
             })
         }
 
@@ -84,7 +84,7 @@ class PermisoBautizarOtraParroquia extends Component {
                 codigo: "PCATE"
             })
             this.setState({
-                cura: "Marcio Mora"
+                lugar: "Catedral"
             })
         }
 
@@ -106,7 +106,7 @@ class PermisoBautizarOtraParroquia extends Component {
                 codigo: "PZARC"
             })
             this.setState({
-                cura: "Esteban Mora"
+                lugar: "Poás"
             })
         }
 
@@ -128,7 +128,7 @@ class PermisoBautizarOtraParroquia extends Component {
                 codigo: "PCARM"
             })
             this.setState({
-                cura: "Esteban Mora"
+                lugar: "El Carmen"
             })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes") {
@@ -149,12 +149,9 @@ class PermisoBautizarOtraParroquia extends Component {
                 codigo: "PGREC"
             })
             this.setState({
-                cura: "Esteban Mora"
+                lugar: "Las Mercedes"
             })
         }
-
-
-
         else if (this.state.parroquia === "Parroquia Santo Cristo de Esquipulas") {
             this.setState({
                 tel: 24410728
@@ -171,7 +168,11 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PLAGN"
             })
+            this.setState({
+                lugar: "La Agonía"
+            })
         }
+
         else if (this.state.parroquia === "Parroquia Sagrado Corazón de Jesús") {
             this.setState({
                 tel: 24307465
@@ -187,6 +188,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PSCJA"
+            })
+            this.setState({
+                lugar: "Alajuela"
             })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de Fátima") {
@@ -205,6 +209,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PINVU"
             })
+            this.setState({
+                lugar: "INVU Las Cañas"
+            })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Piedades Naranjo") {
             this.setState({
@@ -221,6 +228,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PNARAN"
+            })
+            this.setState({
+                lugar: "Naranjo"
             })
         }
         else if (this.state.parroquia === "Parroquia San Ramón Nonato") {
@@ -239,6 +249,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PSRAM"
             })
+            this.setState({
+                lugar: "San Ramón"
+            })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes Palmares") {
             this.setState({
@@ -255,6 +268,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PPALM"
+            })
+            this.setState({
+                lugar: "Palmares"
             })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Piedades") {
@@ -273,6 +289,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PPSUR"
             })
+            this.setState({
+                lugar: "Naranjo"
+            })
         }
         else if (this.state.parroquia === "Parroquia San Rafael Arcángel Atenas") {
             this.setState({
@@ -289,6 +308,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PATEN"
+            })
+            this.setState({
+                lugar: "Atenas"
             })
         }
         else if (this.state.parroquia === "Parroquia Santo Domingo de Guzmán Orotina") {
@@ -307,6 +329,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "POROT"
             })
+            this.setState({
+                lugar: "Orotina"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santa Rosa de Lima") {
             this.setState({
@@ -323,6 +348,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PTURR"
+            })
+            this.setState({
+                lugar: "Turrúcares"
             })
         }
         else if (this.state.parroquia === "Parroquia San Joaquín de Flores") {
@@ -341,6 +369,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PSJOAH"
             })
+            this.setState({
+                lugar: "San Joaquín de Flores"
+            })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de los Desamparados") {
             this.setState({
@@ -357,6 +388,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PDESA"
+            })
+            this.setState({
+                lugar: "Desamparados"
             })
         }
         else if (this.state.parroquia === "Parroquia Santa Bárvara") {
@@ -375,6 +409,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PSBARH"
             })
+            this.setState({
+                lugar: "Santa Bárbara"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santo Domingo de Guzmán Heredia") {
             this.setState({
@@ -391,6 +428,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PROBLE"
+            })
+            this.setState({
+                lugar: "Santa Bárbara"
             })
         }
         else if (this.state.parroquia === "Parroquia Santos Ángeles Custodios") {
@@ -409,6 +449,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PCARRI"
             })
+            this.setState({
+                lugar: "Carrizal"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santiago Apóstol") {
             this.setState({
@@ -425,6 +468,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PRSEGA"
+            })
+            this.setState({
+                lugar: "Río Segundo"
             })
         }
         else if (this.state.parroquia === "Parroquia San Antonio de Padua") {
@@ -443,6 +489,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PBELEN"
             })
+            this.setState({
+                lugar: "Belén"
+            })
         }
         else if (this.state.parroquia === "Parroquia San Rafael") {
             this.setState({
@@ -460,6 +509,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PSRAFA"
             })
+            this.setState({
+                lugar: "San Rafael"
+            })
         }
         else if (this.state.parroquia === "Parroquia Inmaculada Concepción") {
             this.setState({
@@ -475,7 +527,7 @@ class PermisoBautizarOtraParroquia extends Component {
                 image: "https://i.ibb.co/wBV5vt3/inmaculada-concepcion.jpg"
             })
             this.setState({
-                codigo: "PGUACI"
+                codigo: "Guácima"
             })
         }
         else if (this.state.parroquia === "Parroquia San Antonio de Padua El Tejar") {
@@ -494,6 +546,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PTEJAR"
             })
+            this.setState({
+                lugar: "El Tejar"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santigo Apóstol Sarchí") {
             this.setState({
@@ -510,6 +565,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PSARCH"
+            })
+            this.setState({
+                lugar: "Sarchí"
             })
         }
         else if (this.state.parroquia === "Parroquia Santa Gertrudis") {
@@ -528,6 +586,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PSGERT"
             })
+            this.setState({
+                lugar: "Grecia"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santo Padre Pío") {
             this.setState({
@@ -544,6 +605,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PTACAR"
+            })
+            this.setState({
+                lugar: "Tacares"
             })
         }
         else if (this.state.parroquia === "Parroquia Santa Bárvara Sabanilla") {
@@ -562,6 +626,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PSABAN"
             })
+            this.setState({
+                lugar: "Sabanilla"
+            })
         }
         else if (this.state.parroquia === "Parroquia Patriarca San José") {
             this.setState({
@@ -578,6 +645,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PPSJOA"
+            })
+            this.setState({
+                lugar: "San José"
             })
         }
         else if (this.state.parroquia === "Parroquia Santa Ana") {
@@ -596,6 +666,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PTAMB"
             })
+            this.setState({
+                lugar: "Tambor"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santa Cecilia") {
             this.setState({
@@ -613,6 +686,9 @@ class PermisoBautizarOtraParroquia extends Component {
             this.setState({
                 codigo: "PCOYOL"
             })
+            this.setState({
+                lugar: "El Coyol"
+            })
         }
         else if (this.state.parroquia === "Parroquia San Isidro Labrador") {
             this.setState({
@@ -629,6 +705,9 @@ class PermisoBautizarOtraParroquia extends Component {
             })
             this.setState({
                 codigo: "PSISID"
+            })
+            this.setState({
+                lugar: "San Isidro"
             })
         }
 
@@ -767,7 +846,7 @@ class PermisoBautizarOtraParroquia extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoPermisoBautizarOtraParroquia parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} nombreMadre={this.state.nombreMadre} cedMadre={this.state.cedMadre} nombrePadre={this.state.nombrePadre} cedPadre={this.state.cedPadre} nombreNino={this.state.nombreNino} razon={this.state.razon} destinatario={this.state.destinatario}/>}
+                                document={<ProductoPermisoBautizarOtraParroquia parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} nombreMadre={this.state.nombreMadre} cedMadre={this.state.cedMadre} nombrePadre={this.state.nombrePadre} cedPadre={this.state.cedPadre} nombreNino={this.state.nombreNino} razon={this.state.razon} destinatario={this.state.destinatario} email={this.state.email}/>}
                                 fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

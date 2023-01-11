@@ -44,12 +44,12 @@ Font.register({ family: 'OpenSans', src: OpenSans });
           <Image
             src={escudocuria}
             alt="random image"
-            style={{ width: "70px", height: "70px", position: "absolute", bottom: "675px" }}
+            style={{ width: "70px", height: "70px", position: "absolute", bottom: "670px" }}
           />
           <Image
             src={props.image}
             alt="random image"
-            style={{ width: "70px", height: "70px", position: "absolute", bottom: "675px", right: "1px" }}
+            style={{ width: "70px", height: "70px", position: "absolute", bottom: "670px", right: "1px" }}
           />
 
             <Text style={ styles.titleText }>Diócesis de Alajuela Costa Rica</Text>
@@ -64,7 +64,7 @@ Font.register({ family: 'OpenSans', src: OpenSans });
             <Text style={{ padding: "2px", fontSize: "12px" }}>Pbro. {props.destinatario},</Text>
             <Text style={{ padding: "2px", fontSize: "12px"}}>                     </Text>
             
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Por la presente es mi deseo saludarle y desearle paz y bien. El suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, conforme a los canones 1108 y 1152, envío cordialmente la delegación para que bendiga la unión matrimonial de los señores:</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Por la presente es mi deseo saludarle y desearle paz y bien. El suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, conforme a los cánones 1108 y 1152, envío cordialmente la delegación para que bendiga la unión matrimonial de los señores:</Text>
 
             <Text style={styles.boldText}>{props.novio} y {props.novia}</Text>
 

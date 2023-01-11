@@ -60,7 +60,7 @@ class DeclaracionJuradaConfirmacion extends Component {
                 codigo: "PPOAS"
             })
             this.setState({
-                cura: "Juan Mora"
+                lugar: "Poás"
             })
         }
 
@@ -82,7 +82,7 @@ class DeclaracionJuradaConfirmacion extends Component {
                 codigo: "PCATE"
             })
             this.setState({
-                cura: "Marcio Mora"
+                lugar: "Catedral"
             })
         }
 
@@ -104,7 +104,7 @@ class DeclaracionJuradaConfirmacion extends Component {
                 codigo: "PZARC"
             })
             this.setState({
-                cura: "Esteban Mora"
+                lugar: "Poás"
             })
         }
 
@@ -126,7 +126,7 @@ class DeclaracionJuradaConfirmacion extends Component {
                 codigo: "PCARM"
             })
             this.setState({
-                cura: "Esteban Mora"
+                lugar: "El Carmen"
             })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes") {
@@ -147,12 +147,9 @@ class DeclaracionJuradaConfirmacion extends Component {
                 codigo: "PGREC"
             })
             this.setState({
-                cura: "Esteban Mora"
+                lugar: "Las Mercedes"
             })
         }
-
-
-
         else if (this.state.parroquia === "Parroquia Santo Cristo de Esquipulas") {
             this.setState({
                 tel: 24410728
@@ -169,7 +166,11 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PLAGN"
             })
+            this.setState({
+                lugar: "La Agonía"
+            })
         }
+
         else if (this.state.parroquia === "Parroquia Sagrado Corazón de Jesús") {
             this.setState({
                 tel: 24307465
@@ -185,6 +186,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PSCJA"
+            })
+            this.setState({
+                lugar: "Alajuela"
             })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de Fátima") {
@@ -203,6 +207,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PINVU"
             })
+            this.setState({
+                lugar: "INVU Las Cañas"
+            })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Piedades Naranjo") {
             this.setState({
@@ -219,6 +226,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PNARAN"
+            })
+            this.setState({
+                lugar: "Naranjo"
             })
         }
         else if (this.state.parroquia === "Parroquia San Ramón Nonato") {
@@ -237,6 +247,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PSRAM"
             })
+            this.setState({
+                lugar: "San Ramón"
+            })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Mercedes Palmares") {
             this.setState({
@@ -253,6 +266,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PPALM"
+            })
+            this.setState({
+                lugar: "Palmares"
             })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de las Piedades") {
@@ -271,6 +287,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PPSUR"
             })
+            this.setState({
+                lugar: "Naranjo"
+            })
         }
         else if (this.state.parroquia === "Parroquia San Rafael Arcángel Atenas") {
             this.setState({
@@ -287,6 +306,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PATEN"
+            })
+            this.setState({
+                lugar: "Atenas"
             })
         }
         else if (this.state.parroquia === "Parroquia Santo Domingo de Guzmán Orotina") {
@@ -305,6 +327,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "POROT"
             })
+            this.setState({
+                lugar: "Orotina"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santa Rosa de Lima") {
             this.setState({
@@ -321,6 +346,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PTURR"
+            })
+            this.setState({
+                lugar: "Turrúcares"
             })
         }
         else if (this.state.parroquia === "Parroquia San Joaquín de Flores") {
@@ -339,6 +367,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PSJOAH"
             })
+            this.setState({
+                lugar: "San Joaquín de Flores"
+            })
         }
         else if (this.state.parroquia === "Parroquia Nuestra Señora de los Desamparados") {
             this.setState({
@@ -355,6 +386,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PDESA"
+            })
+            this.setState({
+                lugar: "Desamparados"
             })
         }
         else if (this.state.parroquia === "Parroquia Santa Bárvara") {
@@ -373,6 +407,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PSBARH"
             })
+            this.setState({
+                lugar: "Santa Bárbara"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santo Domingo de Guzmán Heredia") {
             this.setState({
@@ -389,6 +426,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PROBLE"
+            })
+            this.setState({
+                lugar: "Santa Bárbara"
             })
         }
         else if (this.state.parroquia === "Parroquia Santos Ángeles Custodios") {
@@ -407,6 +447,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PCARRI"
             })
+            this.setState({
+                lugar: "Carrizal"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santiago Apóstol") {
             this.setState({
@@ -423,6 +466,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PRSEGA"
+            })
+            this.setState({
+                lugar: "Río Segundo"
             })
         }
         else if (this.state.parroquia === "Parroquia San Antonio de Padua") {
@@ -441,6 +487,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PBELEN"
             })
+            this.setState({
+                lugar: "Belén"
+            })
         }
         else if (this.state.parroquia === "Parroquia San Rafael") {
             this.setState({
@@ -458,6 +507,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PSRAFA"
             })
+            this.setState({
+                lugar: "San Rafael"
+            })
         }
         else if (this.state.parroquia === "Parroquia Inmaculada Concepción") {
             this.setState({
@@ -473,7 +525,7 @@ class DeclaracionJuradaConfirmacion extends Component {
                 image: "https://i.ibb.co/wBV5vt3/inmaculada-concepcion.jpg"
             })
             this.setState({
-                codigo: "PGUACI"
+                codigo: "Guácima"
             })
         }
         else if (this.state.parroquia === "Parroquia San Antonio de Padua El Tejar") {
@@ -492,6 +544,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PTEJAR"
             })
+            this.setState({
+                lugar: "El Tejar"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santigo Apóstol Sarchí") {
             this.setState({
@@ -508,6 +563,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PSARCH"
+            })
+            this.setState({
+                lugar: "Sarchí"
             })
         }
         else if (this.state.parroquia === "Parroquia Santa Gertrudis") {
@@ -526,6 +584,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PSGERT"
             })
+            this.setState({
+                lugar: "Grecia"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santo Padre Pío") {
             this.setState({
@@ -542,6 +603,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PTACAR"
+            })
+            this.setState({
+                lugar: "Tacares"
             })
         }
         else if (this.state.parroquia === "Parroquia Santa Bárvara Sabanilla") {
@@ -560,6 +624,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PSABAN"
             })
+            this.setState({
+                lugar: "Sabanilla"
+            })
         }
         else if (this.state.parroquia === "Parroquia Patriarca San José") {
             this.setState({
@@ -576,6 +643,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PPSJOA"
+            })
+            this.setState({
+                lugar: "San José"
             })
         }
         else if (this.state.parroquia === "Parroquia Santa Ana") {
@@ -594,6 +664,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PTAMB"
             })
+            this.setState({
+                lugar: "Tambor"
+            })
         }
         else if (this.state.parroquia === "Parroquia Santa Cecilia") {
             this.setState({
@@ -611,6 +684,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             this.setState({
                 codigo: "PCOYOL"
             })
+            this.setState({
+                lugar: "El Coyol"
+            })
         }
         else if (this.state.parroquia === "Parroquia San Isidro Labrador") {
             this.setState({
@@ -627,6 +703,9 @@ class DeclaracionJuradaConfirmacion extends Component {
             })
             this.setState({
                 codigo: "PSISID"
+            })
+            this.setState({
+                lugar: "San Isidro"
             })
         }
 
