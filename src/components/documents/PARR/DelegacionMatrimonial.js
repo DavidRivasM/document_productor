@@ -94,7 +94,7 @@ class DelegacionMatrimonial extends Component {
                 codigo: "PZARC"
             })
             this.setState({
-                lugar: "Poás"
+                lugar: "Zarcero"
             })
         }
 

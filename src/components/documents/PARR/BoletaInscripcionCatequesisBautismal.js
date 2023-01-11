@@ -101,7 +101,7 @@ class BoletaInscripcionCatequesisBautismal extends Component {
                 codigo: "PZARC"
             })
             this.setState({
-                lugar: "Poás"
+                lugar: "Zarcero"
             })
         }
 

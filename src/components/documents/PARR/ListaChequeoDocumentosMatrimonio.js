@@ -97,7 +97,7 @@ class ListaChequeoDocumentosMatrimonio extends Component {
                 codigo: "PZARC"
             })
             this.setState({
-                lugar: "Poás"
+                lugar: "Zarcero"
             })
         }
 

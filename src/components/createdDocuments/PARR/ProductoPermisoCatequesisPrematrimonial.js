@@ -118,10 +118,10 @@ const ProductoPermisoCatequesisPrematrimonial = (props) => {
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1.5px" }}>      </Text>
 
-            <Text style={{ fontSize: "12px" }} >_____________________________________</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Pbro. {props.cura}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Cura Párroco de {props.parroquia}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px" }}>Diocesis de Alajuela</Text>
+            <Text style={{ fontSize: "12px", margin: "auto" }} >_____________________________________</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Cura Párroco de {props.parroquia}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Diocesis de Alajuela</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
 

@@ -76,9 +76,9 @@ const ProductoConstanciaPrimeraComunion = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px"}}>                     </Text>
 
 
-            <Text style={{ paddingTop: "2px", fontSize: "12px", margin: "auto" }} >_____________________________________</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Cura Párroco de {props.parroquia}</Text>
+            <Text style={{ paddingTop: "2px", fontSize: "12px", margin: "auto", margin: "auto" }} >_____________________________________</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto", margin: "auto" }}>Pbro. {props.cura}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto", margin: "auto" }}>Cura Párroco de {props.parroquia}</Text>
            
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>

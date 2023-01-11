@@ -95,7 +95,7 @@ class ConstanciaPrimeraComunion extends Component {
                 codigo: "PZARC"
             })
             this.setState({
-                lugar: "Poás"
+                lugar: "Zarcero"
             })
         }
 

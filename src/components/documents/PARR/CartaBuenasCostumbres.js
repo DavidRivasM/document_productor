@@ -108,7 +108,7 @@ class CartaBuenasCostumbres extends Component {
                 codigo: "PZARC"
             })
             this.setState({
-                lugar: "Poás"
+                lugar: "Zarcero"
             })
         }
 
