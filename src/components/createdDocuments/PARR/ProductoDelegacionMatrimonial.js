@@ -64,15 +64,15 @@ Font.register({ family: 'OpenSans', src: OpenSans });
             <Text style={{ padding: "2px", fontSize: "12px" }}>Pbro. {props.destinatario},</Text>
             <Text style={{ padding: "2px", fontSize: "12px"}}>                     </Text>
             
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Por la presente es mi deseo saludarle y desearle paz y bien. El suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, conforme a los cnones 1108 y 1152, envío cordialmente la delegación para que bendiga la unión matrimonial de los señores:</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Por la presente es mi deseo saludarle y desearle paz y bien. El suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, conforme a los cánones 1108 y 1152, envío cordialmente la delegación para que bendiga la unión matrimonial de los señores:</Text>
 
             <Text style={styles.boldText}>{props.novio} y {props.novia}</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"0.5px" }}>     </Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>El dia {props.fechaMatrimonio}.</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>El día {props.fechaMatrimonio}.</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Ellos se presentaron el día {props.fechaPresentacion} en la {props.parroquia}, cuya administración tengo a cargo. No encontrando ningún impedimento, procedemos a enviarle el expediente matrimonial y los documentos para su respectiva inscripción.</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Deseandoles paz y bien,</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Deseándoles paz y bien,</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
