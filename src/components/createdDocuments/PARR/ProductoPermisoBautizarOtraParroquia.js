@@ -93,11 +93,11 @@ const ProductoPermisoBautizarOtraParroquia = (props) => {
 
             <Text style={{ padding: "2px", fontSize: "12px" }}>Sr:</Text>
             <Text style={{ padding: "2px", fontSize: "12px" }}>Cura Parroco</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Pbr. {props.destinatario}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Pbro. {props.destinatario}</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "0.5px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Estimado presbítero, por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, {props.autorizador}, {props.puestoAutorizador} de {props.parroquia}, autoriza a los señores {props.nombrePadre}, con número de cédula {props.cedPadre} y a {props.nombreMadre} con número de cédula {props.cedMadre} padres del niño (a); vecinos y feligreses de esta comunidad parroquial; para que bauticen en su Parroquia a su hijo/a:</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Estimado presbítero, por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, Pbro. {props.autorizador}, {props.puestoAutorizador} de {props.parroquia}, autoriza a los señores {props.nombrePadre}, con número de cédula {props.cedPadre} y a {props.nombreMadre} con número de cédula {props.cedMadre} padres del niño (a); vecinos y feligreses de esta comunidad parroquial; para que bauticen en su Parroquia a su hijo/a:</Text>
 
             <Text style={styles.boldText}>{props.nombreNino}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "0.5px" }}>                     </Text>
@@ -110,7 +110,7 @@ const ProductoPermisoBautizarOtraParroquia = (props) => {
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>_______________________________</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>{props.autorizador}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.autorizador}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>{props.puestoAutorizador} de {props.parroquia}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Diocesis de Alajuela</Text>
 

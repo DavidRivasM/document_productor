@@ -798,12 +798,12 @@ class PermisoBautizarOtraParroquia extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la persona que autoriza el bautizmo.</i></span>
-                                                    <input onChange={this.onChange('autorizador')} name="autorizador" type="text" placeholder="Aco. Pedro Mora Chavarria" className="form-control" />
+                                                    <input onChange={this.onChange('autorizador')} name="autorizador" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el puesto de trabajo de quien autoriza el bautizmo.</i></span>
-                                                    <input onChange={this.onChange('puestoAutorizador')} name="puestoAutorizador" type="text" placeholder="Acólito" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad de quien autoriza el bautizmo.</i></span>
+                                                    <input onChange={this.onChange('puestoAutorizador')} name="puestoAutorizador" type="text" placeholder="Vicario Parroquial" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
