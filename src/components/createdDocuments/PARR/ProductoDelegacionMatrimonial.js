@@ -44,12 +44,12 @@ Font.register({ family: 'OpenSans', src: OpenSans });
           <Image
             src={escudocuria}
             alt="random image"
-            style={{ width: "70px", height: "70px", position: "absolute", bottom: "670px" }}
+            style={{ width: "70px", height: "70px", position: "absolute", bottom: "665px" }}
           />
           <Image
             src={props.image}
             alt="random image"
-            style={{ width: "70px", height: "70px", position: "absolute", bottom: "670px", right: "1px" }}
+            style={{ width: "70px", height: "70px", position: "absolute", bottom: "665px", right: "1px" }}
           />
 
             <Text style={ styles.titleText }>Diócesis de Alajuela Costa Rica</Text>
@@ -64,7 +64,7 @@ Font.register({ family: 'OpenSans', src: OpenSans });
             <Text style={{ padding: "2px", fontSize: "12px" }}>Pbro. {props.destinatario},</Text>
             <Text style={{ padding: "2px", fontSize: "12px"}}>                     </Text>
             
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Por la presente es mi deseo saludarle y desearle paz y bien. El suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, conforme a los cánones 1108 y 1152, envío cordialmente la delegación para que bendiga la unión matrimonial de los señores:</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px" }}>Por la presente es mi deseo saludarle y desearle paz y bien. El suscrito, Pbro. {props.cura}, {props.calidadCura} de {props.parroquia}, conforme a los cánones 1108 y 1152, envío cordialmente la delegación para que bendiga la unión matrimonial de los señores:</Text>
 
             <Text style={styles.boldText}>{props.novio} y {props.novia}</Text>
 
@@ -78,17 +78,16 @@ Font.register({ family: 'OpenSans', src: OpenSans });
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
             <Text style={{ paddingTop: "2px", fontSize: "12px", margin: "auto" }} >_____________________________________</Text>
             <Text style={{ fontSize: "12px", lineHeight:"1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
-            <Text  style={{ fontSize: "12px", lineHeight:"1.5px", margin: "auto" }}>Cura Párroco de {props.parroquia}</Text>
+            <Text  style={{ fontSize: "12px", lineHeight:"1.5px", margin: "auto" }}>{props.calidadCura} de {props.parroquia}</Text>
             <Text style={{ fontSize: "12px", lineHeight:"1.5px", margin: "auto" }} >Diócesis de Alajuela</Text>
             
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"2px"  }}>                     </Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight:"1px"  }}>                     </Text>
 
             <Text style={{  fontSize: "12px", marginLeft: "auto",  color: 'gray'}} >_____________________________________</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Tel: {props.tel}</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Correo electrónico: {props.email}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Dirección: {props.web}</Text>
+            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray'}}>Página web: {props.web}</Text>
           </View>
         </Page>
       </Document>

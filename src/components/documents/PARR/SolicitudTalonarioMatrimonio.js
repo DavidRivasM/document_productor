@@ -15,6 +15,7 @@ class SolicitudTalonarioMatrimonio extends Component {
         lugarTrabajo: '',
 
         cura: '',
+        calidadCura: '',
         ced: '',
         tel: "",
         email: "",
@@ -782,8 +783,13 @@ class SolicitudTalonarioMatrimonio extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Cura párroco que redacta el documento.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
                                                     <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Bartolome de las Casas" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
+                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" placeholder="Vicario Parroquial" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -792,7 +798,7 @@ class SolicitudTalonarioMatrimonio extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la sede en donde es jefe el destinatario.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la sede en donde labora el destinatario.</i></span>
                                                     <input onChange={this.onChange('lugarTrabajo')} name="lugarTrabajo" type="text" placeholder="Desamparados" className="form-control" />
                                                 </div>
 
@@ -829,7 +835,7 @@ class SolicitudTalonarioMatrimonio extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoSolicitudTalonarioMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} destinatario={this.state.destinatario} codigoRegistro={this.state.codigoRegistro} personaAutorizada={this.state.personaAutorizada} lugarTrabajo={this.state.lugarTrabajo} cedPersonaAutorizada={this.state.cedPersonaAutorizada} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} />}
+                                document={<ProductoSolicitudTalonarioMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} destinatario={this.state.destinatario} codigoRegistro={this.state.codigoRegistro} personaAutorizada={this.state.personaAutorizada} lugarTrabajo={this.state.lugarTrabajo} cedPersonaAutorizada={this.state.cedPersonaAutorizada} cura={this.state.cura} calidadCura={this.state.calidadCura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} />}
                                 fileName={this.state.codigo + "-" + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

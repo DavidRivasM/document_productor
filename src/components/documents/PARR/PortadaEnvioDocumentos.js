@@ -776,7 +776,7 @@ class PortadaEnvioDocumentos extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del actor.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la parte involucrada en el caso.</i></span>
                                                     <input onChange={this.onChange('nombreActor')} name="nombreActor" type="text" placeholder="Juan" className="form-control" />
                                                 </div>
 

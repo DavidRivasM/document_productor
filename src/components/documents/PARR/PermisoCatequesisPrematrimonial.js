@@ -22,6 +22,7 @@ class PermisoCatequesisPrematrimonial extends Component {
 
         tel: "",
         cura: '',
+        calidadCura: '',
         cedCura: '',
         residenciaCura: '',
         email: "",
@@ -778,18 +779,19 @@ class PermisoCatequesisPrematrimonial extends Component {
                                                     <option value="Parroquia Santa Cecilia">Parroquia Santa Cecilia</option>
                                                     <option value="Parroquia San Isidro Labrador">Parroquia San Isidro Labrador</option>
                                                 </select>
+
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo.</i></span>
                                                     <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="001-2022" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el Cura párroco de destinatario.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario.</i></span>
                                                     <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de trabaja el Cura párroco de destinatario.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de trabajo del sacerdote destinatario.</i></span>
                                                     <input onChange={this.onChange('lugarTrabajoDestinatario')} name="lugarTrabajoDestinatario" type="text" placeholder="Santa Barvara, Heredia" className="form-control" />
                                                 </div>
 
@@ -799,8 +801,13 @@ class PermisoCatequesisPrematrimonial extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de Párroco que redacta el documento.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
                                                     <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Oldemar Mora" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
+                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" placeholder="Vicario Parroquial" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -846,7 +853,7 @@ class PermisoCatequesisPrematrimonial extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoPermisoCatequesisPrematrimonial parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} destinatario={this.state.destinatario} fecha={this.state.fecha} cura={this.state.cura}web={this.state.web} image={this.state.image} email={this.state.email} codigo={this.state.codigo} tel={this.state.tel} lugar={this.state.lugar} esposo={this.state.esposo} esposa={this.state.esposa} cedEsposo={this.state.cedEsposo} cedEsposa={this.state.cedEsposa} razon={this.state.razon}  lugarTrabajoDestinatario={this.state.lugarTrabajoDestinatario} />}
+                                document={<ProductoPermisoCatequesisPrematrimonial parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} destinatario={this.state.destinatario} fecha={this.state.fecha} cura={this.state.cura} calidadCura={this.state.calidadCura} web={this.state.web} image={this.state.image} email={this.state.email} codigo={this.state.codigo} tel={this.state.tel} lugar={this.state.lugar} esposo={this.state.esposo} esposa={this.state.esposa} cedEsposo={this.state.cedEsposo} cedEsposa={this.state.cedEsposa} razon={this.state.razon}  lugarTrabajoDestinatario={this.state.lugarTrabajoDestinatario} />}
                                 fileName={this.state.codigo + '-' + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

@@ -78,12 +78,12 @@ const ProductoPermisoCatequesisPrematrimonial = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "610px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "630px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "610px", right: "1px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "630px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
@@ -103,7 +103,7 @@ const ProductoPermisoCatequesisPrematrimonial = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px" }}>Estimado presbítero,</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, Pbro. {props.cura}, Cura Párroco de {props.parroquia}, autoriza a los señores:</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, Pbro. {props.cura}, {props.calidadCura} de {props.parroquia}, autoriza a los señores:</Text>
 
             <Text style={styles.boldText2}>{props.esposo}</Text>
             <Text style={styles.boldText2}>Cédula: {props.cedEsposo}</Text>
@@ -116,19 +116,19 @@ const ProductoPermisoCatequesisPrematrimonial = (props) => {
             </Text>
 
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1.5px" }}>      </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
 
             <Text style={{ fontSize: "12px", margin: "auto" }} >_____________________________________</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Cura Párroco de {props.parroquia}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>{props.calidadCura} de {props.parroquia}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Diocesis de Alajuela</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "0.5px" }}>                     </Text>
 
             <Text style={{ fontSize: "12px", marginLeft: "auto", color: 'gray' }} >_____________________________________</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Tel: {props.tel}</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Correo electrónico: {props.email}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Dirección: {props.web}</Text>
+            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Página web: {props.web}</Text>
           </View>
         </Page>
       </Document>
