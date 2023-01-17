@@ -19,6 +19,7 @@ class CartaBuenasCostumbres extends Component {
        
         tel: "",
         cura: '',
+        calidadCura: '',
         email: "",
         web: "",
         image: "",
@@ -26,17 +27,7 @@ class CartaBuenasCostumbres extends Component {
         lugar: '',
         postSubmitted: false,
 
-        file: ''
     }
-
-    photoInput = input => e => {
-        this.setState({
-            [input]: URL.createObjectURL(e.target.value[0])
-        });
-    }
-
-
-   
 
 
 
@@ -757,7 +748,6 @@ class CartaBuenasCostumbres extends Component {
                                                     <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
                                                     <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
                                                     <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
-
                                                     <option value="Parroquia Santo Cristo de Esquipulas">Parroquia Santo Cristo de Esquipulas</option>
                                                     <option value="Parroquia Sagrado Corazón de Jesús">Parroquia Sagrado Corazón de Jesús</option>
                                                     <option value="Parroquia Nuestra Señora de Fátima">Parroquia Nuestra Señora de Fátima</option>
@@ -795,12 +785,17 @@ class CartaBuenasCostumbres extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Cura que redacta el documento.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
                                                     <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Cura que será el destinatario.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
+                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" placeholder="Vicario Parroquial" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario.</i></span>
                                                     <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
                                                 </div>
 
@@ -843,7 +838,7 @@ class CartaBuenasCostumbres extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoCartaBuenasCostumbres parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} residenciaFeligres={this.state.residenciaFeligres} nombreFeligres={this.state.nombreFeligres} cedFeligres={this.state.cedFeligres} destinatario={this.state.destinatario}/>}
+                                document={<ProductoCartaBuenasCostumbres parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} calidadCura={this.state.calidadCura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} residenciaFeligres={this.state.residenciaFeligres} nombreFeligres={this.state.nombreFeligres} cedFeligres={this.state.cedFeligres} destinatario={this.state.destinatario}/>}
                                 fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

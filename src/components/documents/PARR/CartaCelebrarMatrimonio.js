@@ -23,6 +23,7 @@ class CartaCelebrarMatrimonio extends Component {
        
         tel: "",
         cura: '',
+        calidadCura: '',
         cedCura: '',
         residenciaCura: '',
         email: "",
@@ -787,28 +788,33 @@ class CartaCelebrarMatrimonio extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Párroco que redacta el documento.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
                                                     <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Bartolome Mora Chavarria" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cédula del Párroco que redacta el documento.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
+                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" placeholder="Vicario parroquial" className="form-control" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cédula del sacerdote firmante.</i></span>
                                                     <input onChange={this.onChange('cedCura')} name="cedCura" type="text" placeholder="1 1234 1234" className="form-control" />
                                                 </div>
 
                                                 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del Párroco que redacta el documento.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del sacerdote que redacta el documento.</i></span>
                                                     <input onChange={this.onChange('residenciaCura')} name="residenciaCura" type="text" placeholder="Casa Cural de la Garita" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de cura de destinatario.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario.</i></span>
                                                     <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de trabajo del cura destinatario.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de trabajo del sacerdote destinatario.</i></span>
                                                     <input onChange={this.onChange('lugarTrabajoDestinatario')} name="lugarTrabajoDestinatario" type="text" placeholder="Santa Barvara, Heredia" className="form-control" />
                                                 </div>
 
@@ -866,7 +872,7 @@ class CartaCelebrarMatrimonio extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoCartaCelebrarMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} destinatario={this.state.destinatario} fecha={this.state.fecha} cura={this.state.cura} residenciaCura={this.state.residenciaCura} cedCura={this.state.cedCura} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} lugar={this.state.lugar} lugarMatrimonio={this.state.lugarMatrimonio} nombreFeligres={this.state.nombreFeligres} esposo={this.state.esposo} esposa={this.state.esposa} cedEsposo={this.state.cedEsposo} cedEsposa={this.state.cedEsposa} fechaMatrimonio={this.state.fechaMatrimonio} lugarTrabajoDestinatario={this.state.destinatalugarTrabajoDestinatariorio} email={this.state.email}/>}
+                                document={<ProductoCartaCelebrarMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} destinatario={this.state.destinatario} fecha={this.state.fecha} cura={this.state.cura} calidadCura={this.state.calidadCura} residenciaCura={this.state.residenciaCura} cedCura={this.state.cedCura} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} lugar={this.state.lugar} lugarMatrimonio={this.state.lugarMatrimonio} nombreFeligres={this.state.nombreFeligres} esposo={this.state.esposo} esposa={this.state.esposa} cedEsposo={this.state.cedEsposo} cedEsposa={this.state.cedEsposa} fechaMatrimonio={this.state.fechaMatrimonio} lugarTrabajoDestinatario={this.state.destinatalugarTrabajoDestinatariorio} email={this.state.email}/>}
                                 fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

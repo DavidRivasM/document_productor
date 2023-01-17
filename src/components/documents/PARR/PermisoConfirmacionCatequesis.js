@@ -18,6 +18,7 @@ class PermisoConfirmacionCatequesis extends Component {
         razon: "",
 
         cura: '',
+        calidadCura: '',
         ced: '',
         tel: "",
         email: "",
@@ -784,17 +785,22 @@ class PermisoConfirmacionCatequesis extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Párroco.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
                                                     <input onChange={this.onChange('cura')} name="cura" type="text" className="form-control" placeholder="Bartolome Mora" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Párroco destinatario.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
+                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" className="form-control" placeholder="Vicario Parroquial" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario.</i></span>
                                                     <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="David Rivas Mora" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la parroquia en donde labora el Párroco destinatario.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la parroquia en donde labora el sacerdote destinatario.</i></span>
                                                     <input onChange={this.onChange('parroquiaDestinatario')} name="parroquiaDestinatario" type="text" placeholder="Desamparados" className="form-control" />
                                                 </div>
 
@@ -846,7 +852,7 @@ class PermisoConfirmacionCatequesis extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoPermisoConfirmacionCatequesis parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} destinatario={this.state.destinatario} parroquiaDestinatario={this.state.parroquiaDestinatario} personaSolicitante={this.state.personaSolicitante} cedPersonaSolicitante={this.state.cedPersonaSolicitante} direccionParroquia={this.state.direccionParroquia} padrePersonaSolicitante={this.state.padrePersonaSolicitante} razon={this.state.razon} cura={this.state.cura} madrePersonaSolicitante={this.state.madrePersonaSolicitante} ced={this.state.ced} web={this.state.web} image={this.state.image} email={this.state.email} codigo={this.state.codigo} tel={this.state.tel} />}
+                                document={<ProductoPermisoConfirmacionCatequesis parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} destinatario={this.state.destinatario} parroquiaDestinatario={this.state.parroquiaDestinatario} personaSolicitante={this.state.personaSolicitante} cedPersonaSolicitante={this.state.cedPersonaSolicitante} direccionParroquia={this.state.direccionParroquia} padrePersonaSolicitante={this.state.padrePersonaSolicitante} razon={this.state.razon} cura={this.state.cura} calidadCura={this.state.calidadCura} madrePersonaSolicitante={this.state.madrePersonaSolicitante} ced={this.state.ced} web={this.state.web} image={this.state.image} email={this.state.email} codigo={this.state.codigo} tel={this.state.tel} />}
                                 fileName={this.state.codigo + "-" + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

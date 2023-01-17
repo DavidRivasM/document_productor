@@ -19,6 +19,7 @@ class CartaNulidad extends Component {
         residenciaConyugue: '',
 
         cura: '',
+        calidadCura: '',
         ced: '',
         tel: "",
         email: "",
@@ -744,7 +745,6 @@ class CartaNulidad extends Component {
                                                     <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
                                                     <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
                                                     <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
-
                                                     <option value="Parroquia Santo Cristo de Esquipulas">Parroquia Santo Cristo de Esquipulas</option>
                                                     <option value="Parroquia Sagrado Corazón de Jesús">Parroquia Sagrado Corazón de Jesús</option>
                                                     <option value="Parroquia Nuestra Señora de Fátima">Parroquia Nuestra Señora de Fátima</option>
@@ -786,8 +786,13 @@ class CartaNulidad extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Cura párroco que redacta el documento.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
                                                     <input onChange={this.onChange('cura')} name="cura" type="text" className="form-control" placeholder="Bartolome de las Casas" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
+                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" className="form-control" placeholder="Vicario parroquial" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -848,7 +853,7 @@ class CartaNulidad extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoCartaNulidad parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} vicario={this.state.vicario} solicitante={this.state.solicitante} cedSolicitante={this.state.cedSolicitante} residenciaSolicitante={this.state.residenciaSolicitante} parroquiaSolicitante={this.state.parroquiaSolicitante} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} conyugueSolicitante={this.state.conyugueSolicitante} cedConyugue={this.state.cedConyugue} residenciaConyugue={this.state.residenciaConyugue} email={this.state.email}/>}
+                                document={<ProductoCartaNulidad parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} vicario={this.state.vicario} solicitante={this.state.solicitante} cedSolicitante={this.state.cedSolicitante} residenciaSolicitante={this.state.residenciaSolicitante} parroquiaSolicitante={this.state.parroquiaSolicitante} cura={this.state.cura} calidadCura={this.state.calidadCura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} conyugueSolicitante={this.state.conyugueSolicitante} cedConyugue={this.state.cedConyugue} residenciaConyugue={this.state.residenciaConyugue} email={this.state.email}/>}
                                 fileName={this.state.codigo + "-" + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

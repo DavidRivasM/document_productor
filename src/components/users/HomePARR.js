@@ -96,7 +96,7 @@ const HomePARR = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Permiso para bautizar en otra parroquia (FORM.PA.13)</h5>
-                            <p className="card-text">Documento que se elabora para delegar el acto sacramental del Bautismo a un Cura en particular.</p>
+                            <p className="card-text">Documento que se elabora para delegar el acto sacramental del Bautismo a un sacerdote en particular.</p>
                             {
                                 documento8 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento8("Permiso Bautizar Otra Parroquia")}>
                                     Crear
@@ -113,7 +113,7 @@ const HomePARR = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Permiso para matricula de catequesis/confirmacion en otra parroquia (FORM.PA.14)</h5>
-                            <p className="card-text">Documento en el que un Cura párroco autoriza a una persona para realizar la catequesis o la confirmación en otra parroquia.</p>
+                            <p className="card-text">Documento en el que un sacerdote autoriza a una persona para realizar la catequesis o la confirmación en otra parroquia.</p>
                             {
                                 documento11 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento11("Permiso matricula catequesis")}>
                                     Crear
@@ -130,7 +130,7 @@ const HomePARR = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Permiso Catequesis prematrimonial (FORM.PA.15)</h5>
-                            <p className="card-text">Documento en el que un Cura párroco autoriza a una pareja futura a casarse para la gestión de la Catequesis prematrimonial en una parroquia determinada.</p>
+                            <p className="card-text">Documento en el que un sacerdote autoriza a una pareja futura a casarse para la gestión de la Catequesis prematrimonial en una parroquia determinada.</p>
                             {
                                 documento13 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento13("Permiso Catequesis Prematrimonial")}>
                                     Crear
@@ -147,7 +147,7 @@ const HomePARR = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Carta para celebrar matrimonio (FORM.PA.16)</h5>
-                            <p className="card-text">Documento en el que un Cura párroco solicita a otro presenciar un matrimonio en concordancia con las disposiciones establecidas en el Código canónico.</p>
+                            <p className="card-text">Documento en el que un sacerdote solicita a otro presenciar un matrimonio en concordancia con las disposiciones establecidas en el Código canónico.</p>
                             {
                                 documento12 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento12("Carta celebracion matrimonio")}>
                                     Crear
@@ -181,7 +181,7 @@ const HomePARR = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Carta nulidad general (FORM.PA.19)</h5>
-                            <p className="card-text">Documento en el cual un Cura parroco hace la solicitud al Vicario judicial para iniciar un trámite de nulidad sobre un matrimonio en partiicular.</p>
+                            <p className="card-text">Documento en el cual un sacerdote hace la solicitud al Vicario judicial para iniciar un trámite de nulidad sobre un matrimonio en particular.</p>
                             {
                                 documento5 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento5("Carta Nulidad")}>
                                     Crear
@@ -215,7 +215,7 @@ const HomePARR = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Carta buenas costumbres (FORM.PA.21)</h5>
-                            <p className="card-text">Carta que emite un parroco a otro con el fin de hacer constar las buenas costumbres y modo de vida de un feligres.</p>
+                            <p className="card-text">Carta que emite un sacerdote a otro con el fin de hacer constar las buenas costumbres y modo de vida de un feligres.</p>
                             {
                                 documento6 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento6("Carta Buenas Costumbres")}>
                                     Crear

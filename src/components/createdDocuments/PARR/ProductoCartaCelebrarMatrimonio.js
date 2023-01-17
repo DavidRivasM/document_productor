@@ -72,12 +72,12 @@ const ProductoCartaCelebrarMatrimonio = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "610px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "615px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "610px", right: "1px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "615px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
@@ -89,12 +89,11 @@ const ProductoCartaCelebrarMatrimonio = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
             <Text style={{ padding: "2px", fontSize: "12px" }}>Pbro. {props.destinatario}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px" }}>Cura Parroco</Text>
             <Text style={{ padding: "2px", fontSize: "12px" }}>{props.lugarTrabajoDestinatario}</Text>
             <Text style={{ padding: "2px", fontSize: "12px" }}>Estimado presbítero,</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por medio de las presentes, el suscrito {props.cura} de la Diócesis de Alajuela, céd. {props.cedCura}, residente {props.residenciaCura}, solicita respetuosamente la respectiva delegación de su parte a tenor del cn. 1111 con el fin de presenciar el matrimonio de {props.esposo} ced. {props.cedEsposo} y {props.esposa} ced. {props.cedEsposa}, fijado para el {props.fechaMatrimonio} en la iglesia de la diaconía de {props.lugarMatrimonio}.</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por medio de las presentes, el suscrito Pbro. {props.cura}, {props.calidadCura} de la Diócesis de Alajuela, céd. {props.cedCura}, residente {props.residenciaCura}, solicita respetuosamente la respectiva delegación de su parte a tenor del cn. 1111 con el fin de presenciar el matrimonio de {props.esposo} ced. {props.cedEsposo} y {props.esposa} ced. {props.cedEsposa}, fijado para el {props.fechaMatrimonio} en la iglesia de la diaconía de {props.lugarMatrimonio}.</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por las atenciones a la presente, gracias y encomendado a Dios sus intenciones se despide, en Cristo Buen Pastor,</Text>
 
@@ -106,7 +105,7 @@ const ProductoCartaCelebrarMatrimonio = (props) => {
 
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>_______________________________</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Cura Párroco de {props.parroquia}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>{props.calidadCura} de {props.parroquia}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Diocesis de Alajuela</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
@@ -117,7 +116,7 @@ const ProductoCartaCelebrarMatrimonio = (props) => {
             <Text style={{ fontSize: "12px", marginLeft: "auto", color: 'gray' }} >_____________________________________</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Tel: {props.tel}</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Correo electrónico: {props.email}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Dirección: {props.web}</Text>
+            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Página web: {props.web}</Text>
           </View>
         </Page>
       </Document>

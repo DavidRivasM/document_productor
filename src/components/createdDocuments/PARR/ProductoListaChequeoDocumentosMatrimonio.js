@@ -123,12 +123,12 @@ const ProductoListaChequeoDocumentosMatrimonio = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "650px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "655px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "650px", right: "1px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "655px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
@@ -334,7 +334,7 @@ const ProductoListaChequeoDocumentosMatrimonio = (props) => {
             <Text style={{ fontSize: "12px", marginLeft: "auto", color: 'gray' }} >_____________________________________</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Tel: {props.tel}</Text>
             <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Correo electrónico: {props.email}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Dirección: {props.web}</Text>
+            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Página web: {props.web}</Text>
           </View>
         </Page>
       </Document>
