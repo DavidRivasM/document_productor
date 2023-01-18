@@ -147,7 +147,7 @@ const HomePARR = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Carta para celebrar matrimonio (FORM.PA.16)</h5>
-                            <p className="card-text">Documento en el que un sacerdote solicita a otro presenciar un matrimonio en concordancia con las disposiciones establecidas en el Código canónico.</p>
+                            <p className="card-text">Documento en el que un sacerdote solicita a otro presenciar un matrimonio en concordancia con las disposiciones establecidas en el Código Canónico.</p>
                             {
                                 documento12 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento12("Carta celebracion matrimonio")}>
                                     Crear
@@ -181,7 +181,7 @@ const HomePARR = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Carta nulidad general (FORM.PA.19)</h5>
-                            <p className="card-text">Documento en el cual un sacerdote hace la solicitud al Vicario judicial para iniciar un trámite de nulidad sobre un matrimonio en particular.</p>
+                            <p className="card-text">Documento en el que un sacerdote hace la solicitud al Vicario Judicial para iniciar un trámite de nulidad sobre un matrimonio en particular.</p>
                             {
                                 documento5 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento5("Carta Nulidad")}>
                                     Crear
@@ -215,7 +215,7 @@ const HomePARR = (props) => {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Carta buenas costumbres (FORM.PA.21)</h5>
-                            <p className="card-text">Carta que emite un sacerdote a otro con el fin de hacer constar las buenas costumbres y modo de vida de un feligres.</p>
+                            <p className="card-text">Carta que emite un sacerdote a otro con el fín de hacer constar las buenas costumbres y modo de vida de un feligrés.</p>
                             {
                                 documento6 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento6("Carta Buenas Costumbres")}>
                                     Crear

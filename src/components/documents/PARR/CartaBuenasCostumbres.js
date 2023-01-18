@@ -2,21 +2,18 @@ import React, { Component } from 'react';
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import ProductoCartaBuenasCostumbres from '../../createdDocuments/PARR/ProductoCartaBuenasCostumbres';
 
-
-
-
 class CartaBuenasCostumbres extends Component {
-
 
     state = {
         parroquia: '',
         consecutivo: '',
         destinatario: '',
+        parroquiaDestinatario: '',
         fecha: '',
         nombreFeligres: '',
         cedFeligres: '',
         residenciaFeligres: '',
-       
+
         tel: "",
         cura: '',
         email: "",
@@ -27,8 +24,6 @@ class CartaBuenasCostumbres extends Component {
         postSubmitted: false,
 
     }
-
-
 
     onChange = input => e => {
         this.setState({
@@ -708,7 +703,7 @@ class CartaBuenasCostumbres extends Component {
         }
 
     }
-    
+
     sunmitPost = (e) => {
 
         if (!this.state.consecutivo || !this.state.parroquia) {
@@ -719,16 +714,16 @@ class CartaBuenasCostumbres extends Component {
                 postSubmitted: true
             })
             this.capturar();
-        
+
         }
 
     }
 
     render(props) {
-        
+
         return (
             <>
-            
+
                 {!this.state.postSubmitted ?
                     (
                         <div className="jumbotron">
@@ -738,8 +733,8 @@ class CartaBuenasCostumbres extends Component {
                                         <form className="form-horizontal" method="post">
                                             <fieldset>
                                                 <legend className="text-center header">Ingrese los datos</legend>
-                                                
-                                                
+
+
                                                 <select name="parroquia" onChange={this.onChange('parroquia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
                                                     <option defaultValue>Seleccione la parroquia</option>
                                                     <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
@@ -784,33 +779,39 @@ class CartaBuenasCostumbres extends Component {
                                                 </div>
 
                                                 <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
+                                                    <input onChange={this.onChange('fecha')} name="fecha" type="text" placeholder="2 de enero de 2022" className="form-control" />
+                                                </div>
+                                                
+                                                <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Pedro Mora Chavarría" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario.</i></span>
-                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
+                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Bartolomé de las Casas" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="text" placeholder="2 de enero de 2022" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la parroquia en la que labora el sacerdote destinatario.</i></span>
+                                                    <input onChange={this.onChange('parroquiaDestinatario')} name="parroquiaDestinatario" type="text" placeholder="Parroquia de Cartago" className="form-control" />
                                                 </div>
 
+
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del feligresa al que se va a constar que tiene buenas costumbres.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del feligrés al que se va a constar que tiene buenas costumbres.</i></span>
                                                     <input onChange={this.onChange('nombreFeligres')} name="nombreFeligres" type="text" placeholder="Julio Oreamuno Mora" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el número de cedula del feligres.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el número de cédula del feligrés.</i></span>
                                                     <input onChange={this.onChange('cedFeligres')} name="cedFeligres" type="text" placeholder="2 4567 2341" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del feligres.</i></span>
-                                                    <input onChange={this.onChange('residenciaFeligres')} name="residenciaFeligres" type="text" placeholder="Los Angeles" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la residencia del feligrés.</i></span>
+                                                    <input onChange={this.onChange('residenciaFeligres')} name="residenciaFeligres" type="text" placeholder="Los Ángeles de Alajuela" className="form-control" />
                                                 </div>
 
 
@@ -832,8 +833,8 @@ class CartaBuenasCostumbres extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoCartaBuenasCostumbres parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} residenciaFeligres={this.state.residenciaFeligres} nombreFeligres={this.state.nombreFeligres} cedFeligres={this.state.cedFeligres} destinatario={this.state.destinatario}/>}
-                                fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
+                                document={<ProductoCartaBuenasCostumbres parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} residenciaFeligres={this.state.residenciaFeligres} nombreFeligres={this.state.nombreFeligres} cedFeligres={this.state.cedFeligres} destinatario={this.state.destinatario} parroquiaDestinatario={this.state.parroquiaDestinatario} />}
+                                fileName={this.state.codigo + '-' + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
 

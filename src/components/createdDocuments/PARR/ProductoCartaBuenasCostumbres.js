@@ -8,6 +8,11 @@ import OpenSans from '../../../styles/fonts/OpenSans-Bold.ttf'
 
 const ProductoCartaBuenasCostumbres = (props) => {
 
+  Font.registerHyphenationCallback(word => {
+    // Return entire word as unique part
+    return [word];
+  });
+
   // Register font
   Font.register({ family: 'GreatVives', src: GreatVives });
   Font.register({ family: 'OpenSans', src: OpenSans });
@@ -100,16 +105,18 @@ const ProductoCartaBuenasCostumbres = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
             <Text style={{ padding: "2px", fontSize: "12px" }}>Pbro. {props.destinatario}</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>Cura párroco</Text>
+            <Text style={{ padding: "2px", fontSize: "12px" }}>{props.parroquiaDestinatario}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>    </Text>
 
-            <Text style={styles.normalText}>Estimado presbítero, por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, Pbro. {props.cura} de {props.parroquia}, hace constar que el senor\señora:</Text>
+            <Text style={styles.normalText}>Estimado presbítero, por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, Pbro. {props.cura} de la {props.parroquia}, hace constar que el Sr. o Sr/a:</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>   </Text>
             <Text style={styles.boldText}>{props.nombreFeligres}</Text>
-            <Text style={styles.boldText}>CEDULA: {props.cedFeligres}</Text>
+            <Text style={styles.boldText}>CÉDULA: {props.cedFeligres}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>   </Text>
 
-            <Text style={styles.normalText}>Es vecina y feligrés de esta comunidad parroquial; específicamente del sector de {props.residenciaFeligres}. Hago constar que no hay motivos para dudar de sus buenas costumbres y modo de vida ante la comunidad.</Text>
+            <Text style={styles.normalText}>Es vecina y feligrés de esta comunidad parroquial; específicamente del sector de: {props.residenciaFeligres}. Hago constar que no hay motivos para dudar de sus buenas costumbres y modo de vida ante la comunidad.</Text>
 
             <Text style={styles.normalText}>Sin más, por el momento, se despide su servidor en Cristo,</Text>
 
@@ -129,7 +136,6 @@ const ProductoCartaBuenasCostumbres = (props) => {
             right: "40",
             bottom: "40px"
           }}>
-            <Text style={styles.footer} fixed>_____________________________________</Text>
             <Text style={styles.footer} fixed>Tel: {props.tel}</Text>
             <Text style={styles.footer} fixed>Correo electrónico: {props.email}</Text>
             <Text style={styles.footer} fixed>Página web: {props.web}</Text>

@@ -712,7 +712,7 @@ class CartaNulidad extends Component {
 
     sunmitPost = (e) => {
 
-        if (!this.state.consecutivo  ) {
+        if (!this.state.consecutivo) {
             alert('Todos los espacios son requeridos!');
             e.preventDefault();
         } else {
@@ -781,17 +781,17 @@ class CartaNulidad extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" placeholder="24 de febrero de 2022" />
+                                                    <input onChange={this.onChange('fecha')} name="fecha" type="text" className="form-control" placeholder="24 de febrero de 2022" />
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('cura')} name="cura" type="text" className="form-control" placeholder="Bartolome de las Casas" />
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" className="form-control" placeholder="Bartolomé de las Casas" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del Vicario Judicial a quien va dirigido el documento.</i></span>
-                                                    <textarea onChange={this.onChange('vicario')} className="form-control" name="vicario" placeholder="Vinicio Ramirez Retana"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del destinatario del documento.</i></span>
+                                                    <textarea onChange={this.onChange('vicario')} className="form-control" name="vicario" placeholder="Vinicio Ramírez Retana"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
@@ -806,29 +806,29 @@ class CartaNulidad extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de residencia del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('residenciaSolicitante')} className="form-control" name="residenciaSolicitante" placeholder="La Garita"></textarea>
+                                                    <textarea onChange={this.onChange('residenciaSolicitante')} className="form-control" name="residenciaSolicitante" placeholder="La Garita de Alajuela"></textarea>
                                                 </div>
-                                               
+
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la parroquia en la que esta empadronado el solicitante.</i></span>
                                                     <textarea onChange={this.onChange('parroquiaSolicitante')} className="form-control" name="parroquiaSolicitante" placeholder="Parroquia del Carmen"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del conyugue.</i></span>
-                                                    <textarea onChange={this.onChange('conyugueSolicitante')} className="form-control" name="conyugueSolicitante" placeholder="Carmen Salas"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del cónyugue.</i></span>
+                                                    <textarea onChange={this.onChange('conyugueSolicitante')} className="form-control" name="conyugueSolicitante" placeholder="Carmen Salas Rivas"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese l número de cédula del conyugue.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el número de cédula del cónyugue.</i></span>
                                                     <textarea onChange={this.onChange('cedConyugue')} className="form-control" name="cedConyugue" placeholder="2 2344 1234"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de residencia del conyugue.</i></span>
-                                                    <textarea onChange={this.onChange('residenciaConyugue')} className="form-control" name="residenciaConyugue" placeholder="Tambor"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de residencia del cónyugue.</i></span>
+                                                    <textarea onChange={this.onChange('residenciaConyugue')} className="form-control" name="residenciaConyugue" placeholder="Tambor de Alajuela"></textarea>
                                                 </div>
-                                                       
+
                                                 <div className="form-group">
                                                     <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar información</button>
                                                 </div>
@@ -847,7 +847,7 @@ class CartaNulidad extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoCartaNulidad parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} vicario={this.state.vicario} solicitante={this.state.solicitante} cedSolicitante={this.state.cedSolicitante} residenciaSolicitante={this.state.residenciaSolicitante} parroquiaSolicitante={this.state.parroquiaSolicitante} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} conyugueSolicitante={this.state.conyugueSolicitante} cedConyugue={this.state.cedConyugue} residenciaConyugue={this.state.residenciaConyugue} email={this.state.email}/>}
+                                document={<ProductoCartaNulidad parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} vicario={this.state.vicario} solicitante={this.state.solicitante} cedSolicitante={this.state.cedSolicitante} residenciaSolicitante={this.state.residenciaSolicitante} parroquiaSolicitante={this.state.parroquiaSolicitante} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} conyugueSolicitante={this.state.conyugueSolicitante} cedConyugue={this.state.cedConyugue} residenciaConyugue={this.state.residenciaConyugue} email={this.state.email} />}
                                 fileName={this.state.codigo + "-" + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

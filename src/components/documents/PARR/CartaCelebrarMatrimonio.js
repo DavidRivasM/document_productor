@@ -785,8 +785,13 @@ class CartaCelebrarMatrimonio extends Component {
                                                 </div>
 
                                                 <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento</i></span>
+                                                    <input onChange={this.onChange('fecha')} name="fecha" type="text" placeholder="2 de enero de 2022" className="form-control" />
+                                                </div>
+                                                
+                                                <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Bartolome Mora Chavarria" className="form-control" />
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Bartolomé Mora Chavarría" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -796,7 +801,7 @@ class CartaCelebrarMatrimonio extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario.</i></span>
-                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
+                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarría" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -804,28 +809,24 @@ class CartaCelebrarMatrimonio extends Component {
                                                     <input onChange={this.onChange('lugarTrabajoDestinatario')} name="lugarTrabajoDestinatario" type="text" placeholder="Parroquia de San Rafael" className="form-control" />
                                                 </div>
 
-                                                <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboracion del documento</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" placeholder="2 de enero de 2022" className="form-control" />
-                                                </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del conyugue.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del cónyugue.</i></span>
                                                     <input onChange={this.onChange('esposo')} name="esposo" type="text" placeholder="Julio Oreamuno Mora" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cédula del conyugue.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cédula del cónyugue.</i></span>
                                                     <input onChange={this.onChange('cedEsposo')} name="cedEsposo" type="text" placeholder="1 1234 1234" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la conyugue.</i></span>
-                                                    <input onChange={this.onChange('esposa')} name="esposa" type="text" placeholder="Maria Mora Alpizar" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la cónyugue.</i></span>
+                                                    <input onChange={this.onChange('esposa')} name="esposa" type="text" placeholder="María Mora Alpízar" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cédula de la conyugue.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la cédula de la cónyugue.</i></span>
                                                     <input onChange={this.onChange('cedEsposa')} name="cedEsposa" type="text" placeholder="1 1234 1234" className="form-control" />
                                                 </div>
 

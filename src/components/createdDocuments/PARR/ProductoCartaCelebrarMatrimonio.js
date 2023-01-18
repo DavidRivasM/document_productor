@@ -8,6 +8,11 @@ import OpenSans from '../../../styles/fonts/OpenSans-Bold.ttf'
 
 const ProductoCartaCelebrarMatrimonio = (props) => {
 
+  Font.registerHyphenationCallback(word => {
+    // Return entire word as unique part
+    return [word];
+  });
+
   // Register font
   Font.register({ family: 'GreatVives', src: GreatVives });
   Font.register({ family: 'OpenSans', src: OpenSans });
@@ -102,10 +107,11 @@ const ProductoCartaCelebrarMatrimonio = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px" }}>Estimado presbítero,</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
 
-            <Text style={styles.normalText}>Por medio de las presentes, el suscrito Pbro. {props.cura} de la Diócesis de Alajuela, céd. {props.cedCura}, residente {props.parroquia}, solicita respetuosamente la respectiva delegación de su parte a tenor del cn. 1111 con el fin de presenciar el matrimonio de {props.esposo} ced. {props.cedEsposo} y {props.esposa} ced. {props.cedEsposa}, fijado para el {props.fechaMatrimonio} en la iglesia de la diaconía de {props.lugarMatrimonio}.</Text>
+            <Text style={styles.normalText}>Por medio de las presentes, el suscrito Pbro. {props.cura} de la Diócesis de Alajuela, céd. {props.cedCura}, residente de la {props.parroquia}, solicita respetuosamente la respectiva delegación de su parte a tenor del Cann. 1111 con el fin de presenciar el matrimonio de {props.esposo} ced. {props.cedEsposo} y {props.esposa} ced. {props.cedEsposa}, fijado para el {props.fechaMatrimonio} en la iglesia de {props.lugarMatrimonio}.</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
             <Text style={styles.normalText}>Por las atenciones a la presente, gracias y encomendado a Dios sus intenciones se despide, en Cristo Buen Pastor,</Text>
 
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
 
@@ -121,7 +127,6 @@ const ProductoCartaCelebrarMatrimonio = (props) => {
             right: "40",
             bottom: "40px"
           }}>
-            <Text style={styles.footer} fixed>_____________________________________</Text>
             <Text style={styles.footer} fixed>Tel: {props.tel}</Text>
             <Text style={styles.footer} fixed>Correo electrónico: {props.email}</Text>
             <Text style={styles.footer} fixed>Página web: {props.web}</Text>
