@@ -23,6 +23,12 @@ const ProductoCartaCelebrarMatrimonio = (props) => {
       color: 'gray',
       fontFamily: "GreatVives"
     },
+    normalText: {
+      textAlign: "justify",
+      padding: "2px",
+      fontSize: "12px",
+      lineHeight: "2px"
+    },
     boldText: {
       fontSize: "12px",
       margin: "auto",
@@ -56,34 +62,37 @@ const ProductoCartaCelebrarMatrimonio = (props) => {
       position: "absolute",
       left: "50px",
       bottom: "300px"
+    },
+    footer: {
+      fontSize: "9px",
+      color: 'gray'
     }
   });
 
   return (
     <>
       <Document >
-        <Page size="A4" style={{
-          display: "flex",
+        <Page size="A4" wrap={false} style={{
           padding: "65px",
-          textAlign: "justify",
-
         }}>
-          <View id="Post">
+
+          <View id="header">
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "615px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "50px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "615px", right: "1px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "50px", right: "1px" }}
             />
-
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
             <Text style={styles.titleText}>{props.parroquia}</Text>
             <Text style={{ margin: "auto" }} >_________________________________________</Text>
+          </View>
 
+          <View id="body">
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.lugar}, {props.fecha}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.codigo}-{props.consecutivo}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
@@ -93,30 +102,29 @@ const ProductoCartaCelebrarMatrimonio = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px" }}>Estimado presbítero,</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por medio de las presentes, el suscrito Pbro. {props.cura}, {props.calidadCura} de la Diócesis de Alajuela, céd. {props.cedCura}, residente {props.residenciaCura}, solicita respetuosamente la respectiva delegación de su parte a tenor del cn. 1111 con el fin de presenciar el matrimonio de {props.esposo} ced. {props.cedEsposo} y {props.esposa} ced. {props.cedEsposa}, fijado para el {props.fechaMatrimonio} en la iglesia de la diaconía de {props.lugarMatrimonio}.</Text>
-
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por las atenciones a la presente, gracias y encomendado a Dios sus intenciones se despide, en Cristo Buen Pastor,</Text>
-
-
-           
+            <Text style={styles.normalText}>Por medio de las presentes, el suscrito Pbro. {props.cura} de la Diócesis de Alajuela, céd. {props.cedCura}, residente {props.parroquia}, solicita respetuosamente la respectiva delegación de su parte a tenor del cn. 1111 con el fin de presenciar el matrimonio de {props.esposo} ced. {props.cedEsposo} y {props.esposa} ced. {props.cedEsposa}, fijado para el {props.fechaMatrimonio} en la iglesia de la diaconía de {props.lugarMatrimonio}.</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
+            <Text style={styles.normalText}>Por las atenciones a la presente, gracias y encomendado a Dios sus intenciones se despide, en Cristo Buen Pastor,</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
 
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>_______________________________</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>{props.calidadCura} de {props.parroquia}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Cura Párroco, Vicario parroquial o sacerdote autorizado</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>{props.parroquia}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Diocesis de Alajuela</Text>
+          </View>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
-
-
-            <Text style={{ fontSize: "12px", marginLeft: "auto", color: 'gray' }} >_____________________________________</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Tel: {props.tel}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Correo electrónico: {props.email}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Página web: {props.web}</Text>
+          <View id="footer" style={{
+            position: 'absolute',
+            right: "40",
+            bottom: "40px"
+          }}>
+            <Text style={styles.footer} fixed>_____________________________________</Text>
+            <Text style={styles.footer} fixed>Tel: {props.tel}</Text>
+            <Text style={styles.footer} fixed>Correo electrónico: {props.email}</Text>
+            <Text style={styles.footer} fixed>Página web: {props.web}</Text>
           </View>
         </Page>
       </Document>

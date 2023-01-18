@@ -19,7 +19,6 @@ class CartaBuenasCostumbres extends Component {
        
         tel: "",
         cura: '',
-        calidadCura: '',
         email: "",
         web: "",
         image: "",
@@ -790,11 +789,6 @@ class CartaBuenasCostumbres extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" placeholder="Vicario Parroquial" className="form-control" />
-                                                </div>
-
-                                                <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario.</i></span>
                                                     <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
                                                 </div>
@@ -838,7 +832,7 @@ class CartaBuenasCostumbres extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoCartaBuenasCostumbres parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} calidadCura={this.state.calidadCura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} residenciaFeligres={this.state.residenciaFeligres} nombreFeligres={this.state.nombreFeligres} cedFeligres={this.state.cedFeligres} destinatario={this.state.destinatario}/>}
+                                document={<ProductoCartaBuenasCostumbres parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} residenciaFeligres={this.state.residenciaFeligres} nombreFeligres={this.state.nombreFeligres} cedFeligres={this.state.cedFeligres} destinatario={this.state.destinatario}/>}
                                 fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
