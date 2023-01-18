@@ -72,7 +72,7 @@ const ProductoCartaBuenasCostumbres = (props) => {
   return (
     <>
       <Document >
-        <Page size="A4" style={{
+        <Page size="A4" wrap={false} style={{
           display: "flex",
           padding: "65px",
         }}>
@@ -81,12 +81,12 @@ const ProductoCartaBuenasCostumbres = (props) => {
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "50px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "55px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "50px", right: "1px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "55px", right: "1px" }}
             />
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
             <Text style={styles.titleText}>{props.parroquia}</Text>

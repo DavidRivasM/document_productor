@@ -23,6 +23,12 @@ const ProductoCartaNulidad = (props) => {
       color: 'gray',
       fontFamily: "GreatVives"
     },
+    normalText: {
+      textAlign: "justify",
+      padding: "2px",
+      fontSize: "12px",
+      lineHeight: "2px"
+    },
     boldText: {
       fontSize: "12px",
       margin: "auto",
@@ -56,6 +62,10 @@ const ProductoCartaNulidad = (props) => {
       position: "absolute",
       left: "50px",
       bottom: "300px"
+    },
+    footer: {
+      fontSize: "9px",
+      color: 'gray'
     }
   });
 
@@ -63,26 +73,26 @@ const ProductoCartaNulidad = (props) => {
     <>
       <Document >
         <Page size="A4" style={{
-          display: "flex",
-          padding: "65px",
-          textAlign: "justify",
-
+          padding: "65px"
         }}>
-          <View id="Post">
+
+          <View id="header">
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "650px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "55px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "650px", right: "1px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "55px", right: "1px" }}
             />
-
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
             <Text style={styles.titleText}>{props.parroquia}</Text>
             <Text style={{ margin: "auto" }} >_________________________________________</Text>
+          </View>
+
+          <View id="body">
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.lugar}, {props.fecha}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", marginLeft: "auto" }}>{props.codigo}-{props.consecutivo}</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
@@ -92,33 +102,38 @@ const ProductoCartaNulidad = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px" }}>Tribunal Eclesiástico Provincia de Costa Rica</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Paz y Bien</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px"}}>Muy estimado Padre, por medio de la presente de manera respetuosa quisiera
+            <Text style={styles.normalText}>Paz y Bien</Text>
+            <Text style={styles.normalText}>Muy estimado Padre, por medio de la presente de manera respetuosa quisiera
               presentarle el caso de Sr. {props.solicitante}, ced: {props.cedSolicitante}, vecino {props.residenciaSolicitante} de {props.parroquiaSolicitante}, quien en días pasados me visitó en la oficina de {props.lugar} con el fin de buscar asesoría
               sobre el proceso de estudio de la posible nulidad matrimonial en su relación sacramental con
               el sr/a. {props.conyugueSolicitante}, céd: {props.cedConyugue}, vecino/a de {props.residenciaConyugue}.</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Estimados, todos los detalles de su caso, considero suficiente el argumento que se ha
+            <Text style={styles.normalText}>Estimados, todos los detalles de su caso, considero suficiente el argumento que se ha
               presentado para establecer posibles causales de nulidad matrimonial, en las condiciones que
               evaluará usted con prudencia.</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por las atenciones a la presente, gracias y encomendando a Dios sus intenciones se
+            <Text style={styles.normalText}>Por las atenciones a la presente, gracias y encomendando a Dios sus intenciones se
               despide, en Cristo Buen Pastor,</Text>
-      
+
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
 
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>_____________________________________</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>{props.calidadCura} de {props.parroquia}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Cura Párroco, Vicario parroquial o sacerdote autorizado</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>{props.parroquia}</Text>
             <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Diocesis de Alajuela</Text>
+          </View>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
-
-            <Text style={{ fontSize: "12px", marginLeft: "auto", color: 'gray' }} >_____________________________________</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Tel: {props.tel}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Correo electrónico: {props.email}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Página web: {props.web}</Text>
+          <View id="footer" style={{
+            position: 'absolute',
+            right: "40",
+            bottom: "40px"
+          }}>
+            <Text style={styles.footer} fixed>_____________________________________</Text>
+            <Text style={styles.footer} fixed>Tel: {props.tel}</Text>
+            <Text style={styles.footer} fixed>Correo electrónico: {props.email}</Text>
+            <Text style={styles.footer} fixed>Página web: {props.web}</Text>
           </View>
         </Page>
       </Document>
