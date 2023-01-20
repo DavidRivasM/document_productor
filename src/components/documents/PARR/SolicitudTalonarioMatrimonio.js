@@ -15,7 +15,6 @@ class SolicitudTalonarioMatrimonio extends Component {
         lugarTrabajo: '',
 
         cura: '',
-        calidadCura: '',
         ced: '',
         tel: "",
         email: "",
@@ -741,7 +740,6 @@ class SolicitudTalonarioMatrimonio extends Component {
                                                     <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
                                                     <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
                                                     <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
-
                                                     <option value="Parroquia Santo Cristo de Esquipulas">Parroquia Santo Cristo de Esquipulas</option>
                                                     <option value="Parroquia Sagrado Corazón de Jesús">Parroquia Sagrado Corazón de Jesús</option>
                                                     <option value="Parroquia Nuestra Señora de Fátima">Parroquia Nuestra Señora de Fátima</option>
@@ -779,7 +777,7 @@ class SolicitudTalonarioMatrimonio extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" placeholder="24 de febrero de 2022" />
+                                                    <input onChange={this.onChange('fecha')} name="fecha" type="text" className="form-control" placeholder="24 de febrero de 2022" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -788,17 +786,12 @@ class SolicitudTalonarioMatrimonio extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" placeholder="Vicario Parroquial" className="form-control" />
-                                                </div>
-
-                                                <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del destinatario.</i></span>
                                                     <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="David Rivas Mora" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la sede en donde labora el destinatario.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la sede del lugar en donde labora el destinatario.</i></span>
                                                     <input onChange={this.onChange('lugarTrabajo')} name="lugarTrabajo" type="text" placeholder="Desamparados" className="form-control" />
                                                 </div>
 
@@ -835,7 +828,7 @@ class SolicitudTalonarioMatrimonio extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoSolicitudTalonarioMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} destinatario={this.state.destinatario} codigoRegistro={this.state.codigoRegistro} personaAutorizada={this.state.personaAutorizada} lugarTrabajo={this.state.lugarTrabajo} cedPersonaAutorizada={this.state.cedPersonaAutorizada} cura={this.state.cura} calidadCura={this.state.calidadCura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} />}
+                                document={<ProductoSolicitudTalonarioMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} destinatario={this.state.destinatario} codigoRegistro={this.state.codigoRegistro} personaAutorizada={this.state.personaAutorizada} lugarTrabajo={this.state.lugarTrabajo} cedPersonaAutorizada={this.state.cedPersonaAutorizada} cura={this.state.cura} ced={this.state.ced} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} email={this.state.email} />}
                                 fileName={this.state.codigo + "-" + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

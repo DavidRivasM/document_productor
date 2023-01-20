@@ -18,7 +18,6 @@ class PermisoConfirmacionCatequesis extends Component {
         razon: "",
 
         cura: '',
-        calidadCura: '',
         ced: '',
         tel: "",
         email: "",
@@ -711,7 +710,7 @@ class PermisoConfirmacionCatequesis extends Component {
 
     sunmitPost = (e) => {
 
-        if (!this.state.consecutivo  ) {
+        if (!this.state.consecutivo) {
             alert('Todos los espacios son requeridos!');
             e.preventDefault();
         } else {
@@ -781,17 +780,12 @@ class PermisoConfirmacionCatequesis extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" placeholder="24 de febrero de 2022" />
+                                                    <input onChange={this.onChange('fecha')} name="fecha" type="text" className="form-control" placeholder="24 de febrero de 2022" />
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('cura')} name="cura" type="text" className="form-control" placeholder="Bartolome Mora" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" className="form-control" placeholder="Vicario Parroquial" />
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" className="form-control" placeholder="Bartolome Mora de las Casas" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -801,7 +795,7 @@ class PermisoConfirmacionCatequesis extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la parroquia en donde labora el sacerdote destinatario.</i></span>
-                                                    <input onChange={this.onChange('parroquiaDestinatario')} name="parroquiaDestinatario" type="text" placeholder="Desamparados" className="form-control" />
+                                                    <input onChange={this.onChange('parroquiaDestinatario')} name="parroquiaDestinatario" type="text" placeholder="Parroquia del Carmen" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -820,20 +814,20 @@ class PermisoConfirmacionCatequesis extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del padre de la persona que realizará la Confirmación o Catequesis..</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del padre de la persona que realizará la Confirmación o Catequesis.</i></span>
                                                     <textarea onChange={this.onChange('padrePersonaSolicitante')} className="form-control" name="padrePersonaSolicitante" placeholder="Pedro Mora Porras"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la madre de la persona que realizará la Confirmación o Catequesis..</i></span>
-                                                    <textarea onChange={this.onChange('madrePersonaSolicitante')} className="form-control" name="madrePersonaSolicitante" placeholder="Maria Rojas Mora"></textarea>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la madre de la persona que realizará la Confirmación o Catequesis.</i></span>
+                                                    <textarea onChange={this.onChange('madrePersonaSolicitante')} className="form-control" name="madrePersonaSolicitante" placeholder="María Rojas Mora"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la razón por la cual la persona que realizará la Confirmación o Catequesis.</i></span>
                                                     <textarea onChange={this.onChange('razon')} className="form-control" name="razon" placeholder="por una situación médica hasta ahora puede realizar la confirmación"></textarea>
                                                 </div>
-                                                                                                    
+
                                                 <div className="form-group">
                                                     <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar información</button>
                                                 </div>
@@ -852,7 +846,7 @@ class PermisoConfirmacionCatequesis extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoPermisoConfirmacionCatequesis parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} destinatario={this.state.destinatario} parroquiaDestinatario={this.state.parroquiaDestinatario} personaSolicitante={this.state.personaSolicitante} cedPersonaSolicitante={this.state.cedPersonaSolicitante} direccionParroquia={this.state.direccionParroquia} padrePersonaSolicitante={this.state.padrePersonaSolicitante} razon={this.state.razon} cura={this.state.cura} calidadCura={this.state.calidadCura} madrePersonaSolicitante={this.state.madrePersonaSolicitante} ced={this.state.ced} web={this.state.web} image={this.state.image} email={this.state.email} codigo={this.state.codigo} tel={this.state.tel} />}
+                                document={<ProductoPermisoConfirmacionCatequesis parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} destinatario={this.state.destinatario} parroquiaDestinatario={this.state.parroquiaDestinatario} personaSolicitante={this.state.personaSolicitante} cedPersonaSolicitante={this.state.cedPersonaSolicitante} direccionParroquia={this.state.direccionParroquia} padrePersonaSolicitante={this.state.padrePersonaSolicitante} razon={this.state.razon} cura={this.state.cura} madrePersonaSolicitante={this.state.madrePersonaSolicitante} ced={this.state.ced} web={this.state.web} image={this.state.image} email={this.state.email} codigo={this.state.codigo} tel={this.state.tel} />}
                                 fileName={this.state.codigo + "-" + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

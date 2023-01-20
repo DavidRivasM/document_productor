@@ -8,14 +8,22 @@ import OpenSans from '../../../styles/fonts/OpenSans-Bold.ttf'
 
 const ProductoSolicitudTalonarioMatrimonio = (props) => {
 
+  Font.registerHyphenationCallback(word => {
+    // Return entire word as unique part
+    return [word];
+  });
+
   // Register font
   Font.register({ family: 'GreatVives', src: GreatVives });
   Font.register({ family: 'OpenSans', src: OpenSans });
 
   // Styles register
   const styles = StyleSheet.create({
-    baseText: {
-      padding: "2px", fontSize: "12px", lineHeight: "2px"
+    normalText: {
+      textAlign: "justify",
+      padding: "2px",
+      fontSize: "12px",
+      lineHeight: "2px"
     },
     titleText: {
       fontSize: "25px",
@@ -56,6 +64,10 @@ const ProductoSolicitudTalonarioMatrimonio = (props) => {
       position: "absolute",
       left: "50px",
       bottom: "300px"
+    },
+    footer: {
+      fontSize: "9px",
+      color: 'gray'
     }
   });
 
@@ -63,27 +75,27 @@ const ProductoSolicitudTalonarioMatrimonio = (props) => {
     <>
       <Document >
         <Page size="A4" style={{
-          display: "flex",
           padding: "65px",
-          textAlign: "justify",
-
         }}>
-          <View id="Post">
+          <View>
             <Image
               src={escudocuria}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "620px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "55px" }}
             />
             <Image
               src={props.image}
               alt="random image"
-              style={{ width: "70px", height: "70px", position: "absolute", bottom: "620px", right: "1px" }}
+              style={{ width: "70px", height: "70px", position: "absolute", bottom: "55px", right: "1px" }}
             />
 
             <Text style={styles.titleText}>Diócesis de Alajuela Costa Rica</Text>
             <Text style={styles.titleText}>{props.parroquia}</Text>
             <Text style={{ margin: "auto" }} >_________________________________________</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "0.5px" }}>                     </Text>
+          </View>
+
+          <View id="Post">
+
             <Text style={styles.boldText}>SOLICITUD TALONARIO DE MATRIMONIO</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
@@ -97,30 +109,36 @@ const ProductoSolicitudTalonarioMatrimonio = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px" }}>Registro Civil</Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Por la presente es mi deseo saludarlo y desearle Paz y Bien. El Suscrito, Pbro. {props.cura}, {props.calidadCura} de {props.parroquia}, solicita para esta parroquia un block de Certificados de Inscripción de Matrimonio Católico con Código Registro {props.codigoRegistro}.
+            <Text style={styles.normalText}>Por la presente es mi deseo saludarlo y desearle Paz y Bien. El Suscrito, Pbro. {props.cura}, Cura Párroco, Vicario parroquial o sacerdote autorizado de {props.parroquia}, solicita para esta parroquia un block de Certificados de Inscripción de Matrimonio Católico con Código Registro {props.codigoRegistro}.
             </Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Autorizo al señor {props.personaAutorizada}, cédula {props.cedPersonaAutorizada}, para retirarlos a nombre de ésta parroquia.</Text>
+            <Text style={styles.normalText}>Autorizo al señor {props.personaAutorizada}, cédula {props.cedPersonaAutorizada}, para retirarlos a nombre de ésta parroquia.</Text>
 
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Agradeciéndole su valiosa colaboración, le saluda:</Text>
+            <Text style={styles.normalText}>Agradeciéndole su valiosa colaboración, le saluda:</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>      </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
-
-
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>{props.calidadCura} de {props.parroquia}</Text>
-            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Diocesis de Alajuela</Text>
-
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "1px" }}>                     </Text>
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>                     </Text>
 
-            <Text style={{ fontSize: "12px", marginLeft: "auto", color: 'gray' }} >_____________________________________</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Tel: {props.tel}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Correo electrónico: {props.email}</Text>
-            <Text style={{ marginLeft: "auto", fontSize: "9px", color: 'gray' }}>Página web: {props.web}</Text>
+
+            <Text style={{ paddingTop: "2px", fontSize: "12px", margin: "auto" }} >_____________________________________</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Pbro. {props.cura}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Cura Párroco, Vicario parroquial o sacerdote autorizado</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>{props.parroquia}</Text>
+            <Text style={{ fontSize: "12px", lineHeight: "1.5px", margin: "auto" }}>Diocesis de Alajuela</Text>
+
+          </View>
+
+          <View style={{
+            position: 'absolute',
+            right: "40",
+            bottom: "40px"
+          }}>
+            <Text style={styles.footer} fixed>Tel: {props.tel}</Text>
+            <Text style={styles.footer} fixed>Correo electrónico: {props.email}</Text>
+            <Text style={styles.footer} fixed>Página web: {props.web}</Text>
           </View>
         </Page>
       </Document>

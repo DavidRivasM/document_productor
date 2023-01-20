@@ -22,7 +22,6 @@ class PermisoCatequesisPrematrimonial extends Component {
 
         tel: "",
         cura: '',
-        calidadCura: '',
         cedCura: '',
         residenciaCura: '',
         email: "",
@@ -749,7 +748,6 @@ class PermisoCatequesisPrematrimonial extends Component {
                                                     <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
                                                     <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
                                                     <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
-
                                                     <option value="Parroquia Santo Cristo de Esquipulas">Parroquia Santo Cristo de Esquipulas</option>
                                                     <option value="Parroquia Sagrado Corazón de Jesús">Parroquia Sagrado Corazón de Jesús</option>
                                                     <option value="Parroquia Nuestra Señora de Fátima">Parroquia Nuestra Señora de Fátima</option>
@@ -786,28 +784,24 @@ class PermisoCatequesisPrematrimonial extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario.</i></span>
-                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de trabajo del sacerdote destinatario.</i></span>
-                                                    <input onChange={this.onChange('lugarTrabajoDestinatario')} name="lugarTrabajoDestinatario" type="text" placeholder="Santa Barvara, Heredia" className="form-control" />
-                                                </div>
-
-                                                <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
                                                     <input onChange={this.onChange('fecha')} name="fecha" type="text" placeholder="2 de enero de 2022" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Oldemar Mora" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario.</i></span>
+                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Pedro Mora Chavarría" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" placeholder="Vicario Parroquial" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la parroquia en la que labora el sacerdote destinatario.</i></span>
+                                                    <input onChange={this.onChange('lugarTrabajoDestinatario')} name="lugarTrabajoDestinatario" type="text" placeholder="Parroquia de Aljuelita" className="form-control" />
+                                                </div>
+
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Oldemar Mora Piña" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -853,7 +847,7 @@ class PermisoCatequesisPrematrimonial extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoPermisoCatequesisPrematrimonial parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} destinatario={this.state.destinatario} fecha={this.state.fecha} cura={this.state.cura} calidadCura={this.state.calidadCura} web={this.state.web} image={this.state.image} email={this.state.email} codigo={this.state.codigo} tel={this.state.tel} lugar={this.state.lugar} esposo={this.state.esposo} esposa={this.state.esposa} cedEsposo={this.state.cedEsposo} cedEsposa={this.state.cedEsposa} razon={this.state.razon}  lugarTrabajoDestinatario={this.state.lugarTrabajoDestinatario} />}
+                                document={<ProductoPermisoCatequesisPrematrimonial parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} destinatario={this.state.destinatario} fecha={this.state.fecha} cura={this.state.cura} web={this.state.web} image={this.state.image} email={this.state.email} codigo={this.state.codigo} tel={this.state.tel} lugar={this.state.lugar} esposo={this.state.esposo} esposa={this.state.esposa} cedEsposo={this.state.cedEsposo} cedEsposa={this.state.cedEsposa} razon={this.state.razon} lugarTrabajoDestinatario={this.state.lugarTrabajoDestinatario} />}
                                 fileName={this.state.codigo + '-' + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>

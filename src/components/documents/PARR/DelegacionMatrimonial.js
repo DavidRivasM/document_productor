@@ -12,7 +12,6 @@ class DelegacionMatrimonial extends Component {
         lugar: '',
         fecha: '',
         cura: '',
-        calidadCura: '',
         destinatario: '',
         novio: '',
         novia: '',
@@ -741,7 +740,6 @@ class DelegacionMatrimonial extends Component {
                                                     <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
                                                     <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
                                                     <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
-
                                                     <option value="Parroquia Santo Cristo de Esquipulas">Parroquia Santo Cristo de Esquipulas</option>
                                                     <option value="Parroquia Sagrado Corazón de Jesús">Parroquia Sagrado Corazón de Jesús</option>
                                                     <option value="Parroquia Nuestra Señora de Fátima">Parroquia Nuestra Señora de Fátima</option>
@@ -776,6 +774,10 @@ class DelegacionMatrimonial extends Component {
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el consecutivo.</i></span>
                                                     <input onChange={this.onChange('consecutivo')} name="consecutivo" type="text" placeholder="001-2022" className="form-control" />
                                                 </div>
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
+                                                    <input onChange={this.onChange('fecha')} name="fecha" type="text" placeholder="2 de enero de 2023" className="form-control" />
+                                                </div>
 
                                                 <select name="parroquia" onChange={this.onChange('tipo')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
                                                     <option defaultValue>Seleccione el tipo de delegación.</option>
@@ -789,19 +791,10 @@ class DelegacionMatrimonial extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('calidadCura')} name="calidadCura" type="text" placeholder="Vicario Parroquial" className="form-control" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote a quien va dirigido el documento.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario del documento.</i></span>
                                                     <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Ignacio Santos Santos" className="form-control" />
                                                 </div>
 
-                                                <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento.</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" />
-                                                </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha prevista de matrimonio.</i></span>
@@ -841,7 +834,7 @@ class DelegacionMatrimonial extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoDelegacionMatrimonial parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} fechaMatrimonio={this.state.fechaMatrimonio} fechaPresentacion={this.state.fechaPresentacion} cura={this.state.cura} calidadCura={this.state.calidadCura} novio={this.state.novio} novia={this.state.novia} tel={this.state.tel} email={this.state.email} web={this.state.web} image={this.state.image} tipo={this.state.tipo} codigo={this.state.codigo} destinatario={this.state.destinatario} />}
+                                document={<ProductoDelegacionMatrimonial parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} fechaMatrimonio={this.state.fechaMatrimonio} fechaPresentacion={this.state.fechaPresentacion} cura={this.state.cura} novio={this.state.novio} novia={this.state.novia} tel={this.state.tel} email={this.state.email} web={this.state.web} image={this.state.image} tipo={this.state.tipo} codigo={this.state.codigo} destinatario={this.state.destinatario} />}
                                 fileName={this.state.codigo + "-" + this.state.consecutivo}
                                 pdfVersion="1.7"
                             >

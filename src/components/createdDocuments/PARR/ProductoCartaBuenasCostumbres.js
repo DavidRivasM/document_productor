@@ -107,9 +107,8 @@ const ProductoCartaBuenasCostumbres = (props) => {
             <Text style={{ padding: "2px", fontSize: "12px" }}>Pbro. {props.destinatario}</Text>
             <Text style={{ padding: "2px", fontSize: "12px" }}>Cura párroco</Text>
             <Text style={{ padding: "2px", fontSize: "12px" }}>{props.parroquiaDestinatario}</Text>
-            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>    </Text>
-
-            <Text style={styles.normalText}>Estimado presbítero, por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, Pbro. {props.cura} de la {props.parroquia}, hace constar que el Sr. o Sr/a:</Text>
+            <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>Estimado presbítero,</Text>
+            <Text style={styles.normalText}>Por la presente es mi deseo saludarlo y desearle Paz y Bien en su Ministerio Sacerdotal. El Suscrito, Pbro. {props.cura} de la {props.parroquia}, hace constar que el Sr. o Sr/a:</Text>
 
             <Text style={{ padding: "2px", fontSize: "12px", lineHeight: "2px" }}>   </Text>
             <Text style={styles.boldText}>{props.nombreFeligres}</Text>

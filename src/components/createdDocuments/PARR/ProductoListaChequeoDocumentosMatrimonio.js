@@ -8,6 +8,11 @@ import OpenSans from '../../../styles/fonts/OpenSans-Bold.ttf'
 
 const ProductoListaChequeoDocumentosMatrimonio = (props) => {
 
+  Font.registerHyphenationCallback(word => {
+    // Return entire word as unique part
+    return [word];
+  });
+
   // Register font
   Font.register({ family: 'GreatVives', src: GreatVives });
   Font.register({ family: 'OpenSans', src: OpenSans });

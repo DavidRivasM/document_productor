@@ -13,7 +13,6 @@ class PermisoBautizarOtraParroquia extends Component {
         consecutivo: '',
         fecha: '',
         autorizador: '',
-        puestoAutorizador: '',
         cedPadre: '',
         nombreMadre: '',
         cedMadre: '',
@@ -798,17 +797,17 @@ class PermisoBautizarOtraParroquia extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('autorizador')} name="autorizador" type="text" placeholder="Pedro Mora Chavarria" className="form-control" />
+                                                    <input onChange={this.onChange('autorizador')} name="autorizador" type="text" placeholder="Pedro Mora Chavarría" className="form-control" />
                                                 </div>
-
+                    
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la calidad del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('puestoAutorizador')} name="puestoAutorizador" type="text" placeholder="Vicario Parroquial" className="form-control" />
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote destinatario.</i></span>
+                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Juan Mora Porras" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese nombre del padre del niño a bautizar.</i></span>
-                                                    <input onChange={this.onChange('nombrePadre')} name="nombrePadre" type="text" placeholder="Vinicio Alfaro" className="form-control" />
+                                                    <input onChange={this.onChange('nombrePadre')} name="nombrePadre" type="text" placeholder="Vinicio Alfaro Sartén" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -818,17 +817,17 @@ class PermisoBautizarOtraParroquia extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese nombre de la madre del niño a bautizar.</i></span>
-                                                    <input onChange={this.onChange('nombreMadre')} name="nombreMadre" type="text" placeholder="Verónica Alfaro" className="form-control" />
+                                                    <input onChange={this.onChange('nombreMadre')} name="nombreMadre" type="text" placeholder="Verónica Alfaro Mora" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el numero de cedula de la madre del niño a bautizar.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el número de cédula de la madre del niño a bautizar.</i></span>
                                                     <input onChange={this.onChange('cedMadre')} name="cedMadre" type="text" placeholder="2 0987 0897" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del nino a bautizar.</i></span>
-                                                    <input onChange={this.onChange('nombreNino')} name="nombreNino" type="text" placeholder="Julian Alfaro" className="form-control" />
+                                                    <input onChange={this.onChange('nombreNino')} name="nombreNino" type="text" placeholder="Julian Alfaro Rivas" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
@@ -836,10 +835,6 @@ class PermisoBautizarOtraParroquia extends Component {
                                                     <input onChange={this.onChange('razon')} name="razon" type="text" placeholder="Cercanía con la residencia actual del niño." className="form-control" />
                                                 </div>
 
-                                                <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del cura a quien va dirigido el oficio.</i></span>
-                                                    <input onChange={this.onChange('destinatario')} name="destinatario" type="text" placeholder="Juan Mora" className="form-control" />
-                                                </div>
 
                                                 <div className="form-group">
                                                     <button type="button" onClick={this.sunmitPost} className="btn btn-danger btn-lg">Validar informacion</button>
@@ -855,7 +850,7 @@ class PermisoBautizarOtraParroquia extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoPermisoBautizarOtraParroquia parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} autorizador={this.state.autorizador} puestoAutorizador={this.state.puestoAutorizador} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} nombreMadre={this.state.nombreMadre} cedMadre={this.state.cedMadre} nombrePadre={this.state.nombrePadre} cedPadre={this.state.cedPadre} nombreNino={this.state.nombreNino} razon={this.state.razon} destinatario={this.state.destinatario} email={this.state.email}/>}
+                                document={<ProductoPermisoBautizarOtraParroquia parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} lugar={this.state.lugar} fecha={this.state.fecha} autorizador={this.state.autorizador} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} nombreMadre={this.state.nombreMadre} cedMadre={this.state.cedMadre} nombrePadre={this.state.nombrePadre} cedPadre={this.state.cedPadre} nombreNino={this.state.nombreNino} razon={this.state.razon} destinatario={this.state.destinatario} email={this.state.email}/>}
                                 fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
