@@ -836,7 +836,7 @@ class CartaCelebrarMatrimonio extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar previsto del matrimonio.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la iglesia prevista para el matrimonio.</i></span>
                                                     <input onChange={this.onChange('lugarMatrimonio')} name="lugarMatrimonio" type="text" placeholder="La Garita, Alajuela" className="form-control" />
                                                 </div>
 

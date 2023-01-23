@@ -788,16 +788,21 @@ class DeclaracionJuradaConfirmacion extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha en que se presentó el solicitante.</i></span>
-                                                    <input onChange={this.onChange('fecha')} name="fecha" type="date" className="form-control" placeholder=" 24 de febrero de 2022" />
+                                                    <input onChange={this.onChange('fecha')} name="fecha" type="text" className="form-control" placeholder=" 24 de febrero de 2022" />
+                                                </div>
+
+                                                <div className="form-group">
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Bartolome de las Casas" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del la persona solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('persona')} className="form-control" name="persona" placeholder="Vinicio Ramirez Retana"></textarea>
+                                                    <textarea onChange={this.onChange('persona')} className="form-control" name="persona" placeholder="Vinicio Ramírez Retana"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el numero de cédula de la persona solicitante.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el número de cédula de la persona solicitante.</i></span>
                                                     <textarea onChange={this.onChange('cedPersona')} className="form-control" name="cedPersona" placeholder="1 1234 1234"></textarea>
                                                 </div>
 
@@ -827,37 +832,37 @@ class DeclaracionJuradaConfirmacion extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el lugar de residencia del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('residencia')} className="form-control" name="residencia" placeholder="Alajuelita centro, San Jose"></textarea>
+                                                    <textarea onChange={this.onChange('residencia')} className="form-control" name="residencia" placeholder="Alajuelita centro, San José"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del padre del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('padrino')} className="form-control" name="padrino" placeholder="Marcos Hernandez Perez"></textarea>
+                                                    <textarea onChange={this.onChange('padrino')} className="form-control" name="padrino" placeholder="Marcos Hernández Pérez"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre de la madre del solicitante.</i></span>
-                                                    <textarea onChange={this.onChange('madrina')} className="form-control" name="madrina" placeholder="Maria Lopez Mora"></textarea>
+                                                    <textarea onChange={this.onChange('madrina')} className="form-control" name="madrina" placeholder="María López Mora"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha en la que se realizó la Confirmación.</i></span>
-                                                    <textarea onChange={this.onChange('fechaConfirmacion')} className="form-control" name="fechaConformacion" placeholder="4 de enero del 2000"></textarea>
+                                                    <textarea onChange={this.onChange('fechaConfirmacion')} className="form-control" name="fechaConfirmacion" placeholder="4 de enero del 2000"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del obispo que realizó la Comunion.</i></span>
+                                                    <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote que realizó la Comunion.</i></span>
                                                     <textarea onChange={this.onChange('obispoConfirmacion')} className="form-control" name="obispoConfirmacion" placeholder="Juan Mora Porras"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la prueba de la Confirmación.</i></span>
-                                                    <textarea onChange={this.onChange('pruebaConfirmacion')} className="form-control" name="pruebaConfirmacion" placeholder="Verificacion de documentos sacramentales"></textarea>
+                                                    <textarea onChange={this.onChange('pruebaConfirmacion')} className="form-control" name="pruebaConfirmacion" placeholder="Verificación de documentos sacramentales"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del testigo.</i></span>
-                                                    <textarea onChange={this.onChange('testigo')} className="form-control" name="testigo" placeholder="Estonia Perez Mora"></textarea>
+                                                    <textarea onChange={this.onChange('testigo')} className="form-control" name="testigo" placeholder="Alejandra Peréz Mora"></textarea>
                                                 </div>
 
                                                 <div className="form-group">
