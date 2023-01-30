@@ -54,7 +54,7 @@ class DelegacionMatrimonial extends Component {
             })
         }
 
-        else if (this.state.parroquia === "Parroquia de Catedral") {
+        else if (this.state.parroquia === "Parroquia Nuestra Señora del Pilar") {
 
             this.setState({
                 tel: 24414665
@@ -137,7 +137,7 @@ class DelegacionMatrimonial extends Component {
                 codigo: "PGREC"
             })
             this.setState({
-                lugar: "Las Mercedes"
+                lugar: "Grecia"
             })
         }
         else if (this.state.parroquia === "Parroquia Santo Cristo de Esquipulas") {
@@ -578,7 +578,7 @@ class DelegacionMatrimonial extends Component {
                 lugar: "Grecia"
             })
         }
-        else if (this.state.parroquia === "Parroquia Santo Padre Pío") {
+        else if (this.state.parroquia === "Parroquia Sagrado Corazón de Jesús de Tacares") {
             this.setState({
                 tel: 24584086
             })
@@ -698,6 +698,26 @@ class DelegacionMatrimonial extends Component {
                 lugar: "San Isidro"
             })
         }
+        else if (this.state.parroquia === "Parroquia San Mateo Apóstol") {
+            this.setState({
+                tel: 24288147
+            })
+            this.setState({
+                email: "parroquiasanmateo@gmail.com"
+            })
+            this.setState({
+                web: "https://es-la.facebook.com/parroquia.s.apostol.5/"
+            })
+            this.setState({
+                image: "SIN IMAGEN"
+            })
+            this.setState({
+                codigo: "PSMAT"
+            })
+            this.setState({
+                lugar: "San Mateo"
+            })
+        }
 
         else {
             console.log("Ejecuta el ELSE")
@@ -735,34 +755,48 @@ class DelegacionMatrimonial extends Component {
 
                                                 <select name="parroquia" onChange={this.onChange('parroquia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
                                                     <option defaultValue>Seleccione la parroquia</option>
-                                                    <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
-                                                    <option value="Parroquia de Catedral">Parroquia de Catedral</option>
-                                                    <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
-                                                    <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
-                                                    <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
-                                                    <option value="Parroquia Santo Cristo de Esquipulas">Parroquia Santo Cristo de Esquipulas</option>
+                                                    {/* Vicaría Monseñor Antonio del Carmen Monestel y Zamora */}
+                                                    <option value="Parroquia Nuestra Señora del Pilar">Parroquia Nuestra Señora del Pilar</option>
                                                     <option value="Parroquia Sagrado Corazón de Jesús">Parroquia Sagrado Corazón de Jesús</option>
+                                                    <option value="Parroquia Santo Cristo de Esquipulas">Parroquia Santo Cristo de Esquipulas</option>
+                                                    <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
                                                     <option value="Parroquia Nuestra Señora de Fátima">Parroquia Nuestra Señora de Fátima</option>
-                                                    <option value="Parroquia Nuestra Señora de las Piedades Naranjo">Parroquia Nuestra Señora de las Piedades Naranjo</option>
+
+                                                    {/* Vicaría Monseñor Víctor Manuel Sanabria Martínez */}
                                                     <option value="Parroquia San Ramón Nonato">Parroquia San Ramón Nonato</option>
                                                     <option value="Parroquia Nuestra Señora de las Mercedes Palmares">Parroquia Nuestra Señora de las Mercedes Palmares</option>
+                                                    <option value="Parroquia Nuestra Señora de las Piedades Naranjo">Parroquia Nuestra Señora de las Piedades Naranjo</option>
+                                                    <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
                                                     <option value="Parroquia Nuestra Señora de las Piedades">Parroquia Nuestra Señora de las Piedades</option>
+
+                                                    {/* Vicaría Monseñor Juan Vicente Solís Fernández */}
                                                     <option value="Parroquia San Rafael Arcángel Atenas">Parroquia San Rafael Arcángel Atenas</option>
+                                                    <option value="Parroquia San Mateo Apóstol">Parroquia San Mateo Apóstol</option>
                                                     <option value="Parroquia Santo Domingo de Guzmán Orotina">Parroquia Santo Domingo de Guzmán Orotina</option>
                                                     <option value="Parroquia Santa Rosa de Lima">Parroquia Santa Rosa de Lima</option>
-                                                    <option value="Parroquia San Joaquín de Flores">Parroquia San Joaquín de Flores</option>
-                                                    <option value="Parroquia Nuestra Señora de los Desamparados">Parroquia Nuestra Señora de los Desamparados</option>
+
+                                                    {/* Vicaría Monseñor Enrique Bolaños Quesada */}
                                                     <option value="Parroquia Santa Bárvara">Parroquia Santa Bárvara</option>
+                                                    <option value="Parroquia San Joaquín de Flores">Parroquia San Joaquín de Flores</option>
+                                                    <option value="Parroquia Santiago Apóstol">Parroquia Santiago Apóstol</option>
                                                     <option value="Parroquia Santo Domingo de Guzmán Heredia">Parroquia Santo Domingo de Guzmán Heredia</option>
                                                     <option value="Parroquia Santos Ángeles Custodios">Parroquia Santos Ángeles Custodios</option>
-                                                    <option value="Parroquia Santiago Apóstol">Parroquia Santiago Apóstol</option>
+                                                    <option value="Parroquia Nuestra Señora de los Desamparados">Parroquia Nuestra Señora de los Desamparados</option>
+
+                                                    {/* Vicaría Monseñor José Rafael Barquero Arce */}
                                                     <option value="Parroquia San Antonio de Padua">Parroquia San Antonio de Padua</option>
                                                     <option value="Parroquia San Rafael">Parroquia San Rafael</option>
                                                     <option value="Parroquia Inmaculada Concepción">Parroquia Inmaculada Concepción</option>
                                                     <option value="Parroquia San Antonio de Padua El Tejar">Parroquia San Antonio de Padua El Tejar</option>
+
+                                                    {/* Vicaría Monseñor Ángel SanCasimiro Fernández */}
+                                                    <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
                                                     <option value="Parroquia Santigo Apóstol Sarchí">Parroquia Santigo Apóstol Sarchí</option>
                                                     <option value="Parroquia Santa Gertrudis">Parroquia Santa Gertrudis</option>
-                                                    <option value="Parroquia Santo Padre Pío">Parroquia Santo Padre Pío</option>
+                                                    <option value="Parroquia Sagrado Corazón de Jesús de Tacares">Parroquia Sagrado Corazón de Jesús de Tacares</option>
+
+                                                    {/* Vicaría Monseñor Delfín Quesada Castro */}
+                                                    <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
                                                     <option value="Parroquia Santa Bárvara Sabanilla">Parroquia Santa Bárvara Sabanilla</option>
                                                     <option value="Parroquia Patriarca San José">Parroquia Patriarca San José</option>
                                                     <option value="Parroquia Santa Ana">Parroquia Santa Ana</option>
@@ -787,7 +821,7 @@ class DelegacionMatrimonial extends Component {
 
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
-                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Bartolome de las Casas" className="form-control" />
+                                                    <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Bartolomé de las Casas" className="form-control" />
                                                 </div>
 
                                                 <div className="form-group">

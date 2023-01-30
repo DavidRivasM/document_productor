@@ -20,7 +20,7 @@ class CartaCelebrarMatrimonio extends Component {
         cedEsposa: '',
         fechaMatrimonio: '',
         lugarMatrimonio: '',
-       
+
         tel: "",
         cura: '',
         cedCura: '',
@@ -61,7 +61,7 @@ class CartaCelebrarMatrimonio extends Component {
             })
         }
 
-        else if (this.state.parroquia === "Parroquia de Catedral") {
+        else if (this.state.parroquia === "Parroquia Nuestra Señora del Pilar") {
 
             this.setState({
                 tel: 24414665
@@ -144,7 +144,7 @@ class CartaCelebrarMatrimonio extends Component {
                 codigo: "PGREC"
             })
             this.setState({
-                lugar: "Las Mercedes"
+                lugar: "Grecia"
             })
         }
         else if (this.state.parroquia === "Parroquia Santo Cristo de Esquipulas") {
@@ -585,7 +585,7 @@ class CartaCelebrarMatrimonio extends Component {
                 lugar: "Grecia"
             })
         }
-        else if (this.state.parroquia === "Parroquia Santo Padre Pío") {
+        else if (this.state.parroquia === "Parroquia Sagrado Corazón de Jesús de Tacares") {
             this.setState({
                 tel: 24584086
             })
@@ -705,13 +705,33 @@ class CartaCelebrarMatrimonio extends Component {
                 lugar: "San Isidro"
             })
         }
+        else if (this.state.parroquia === "Parroquia San Mateo Apóstol") {
+            this.setState({
+                tel: 24288147
+            })
+            this.setState({
+                email: "parroquiasanmateo@gmail.com"
+            })
+            this.setState({
+                web: "https://es-la.facebook.com/parroquia.s.apostol.5/"
+            })
+            this.setState({
+                image: "SIN IMAGEN"
+            })
+            this.setState({
+                codigo: "PSMAT"
+            })
+            this.setState({
+                lugar: "San Mateo"
+            })
+        }
 
         else {
             console.log("Ejecuta el ELSE")
         }
 
     }
-    
+
     sunmitPost = (e) => {
 
         if (!this.state.consecutivo || !this.state.parroquia) {
@@ -722,16 +742,16 @@ class CartaCelebrarMatrimonio extends Component {
                 postSubmitted: true
             })
             this.capturar();
-        
+
         }
 
     }
 
     render(props) {
-        
+
         return (
             <>
-            
+
                 {!this.state.postSubmitted ?
                     (
                         <div className="jumbotron">
@@ -741,37 +761,52 @@ class CartaCelebrarMatrimonio extends Component {
                                         <form className="form-horizontal" method="post">
                                             <fieldset>
                                                 <legend className="text-center header">Ingrese los datos</legend>
-                                                
+
                                                 <select name="parroquia" onChange={this.onChange('parroquia')} className="form-group col-md-5 col-md-offset-5" aria-label="Default select example">
                                                     <option defaultValue>Seleccione la parroquia</option>
-                                                    <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
-                                                    <option value="Parroquia de Catedral">Parroquia de Catedral</option>
-                                                    <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
-                                                    <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
-                                                    <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
-                                                    <option value="Parroquia Santo Cristo de Esquipulas">Parroquia Santo Cristo de Esquipulas</option>
+                                                    
+                                                    {/* Vicaría Monseñor Antonio del Carmen Monestel y Zamora */}
+                                                    <option value="Parroquia Nuestra Señora del Pilar">Parroquia Nuestra Señora del Pilar</option>
                                                     <option value="Parroquia Sagrado Corazón de Jesús">Parroquia Sagrado Corazón de Jesús</option>
+                                                    <option value="Parroquia Santo Cristo de Esquipulas">Parroquia Santo Cristo de Esquipulas</option>
+                                                    <option value="Parroquia Nuestra Señora del Carmen">Parroquia Nuestra Señora del Carmen</option>
                                                     <option value="Parroquia Nuestra Señora de Fátima">Parroquia Nuestra Señora de Fátima</option>
-                                                    <option value="Parroquia Nuestra Señora de las Piedades Naranjo">Parroquia Nuestra Señora de las Piedades Naranjo</option>
+
+                                                    {/* Vicaría Monseñor Víctor Manuel Sanabria Martínez */}
                                                     <option value="Parroquia San Ramón Nonato">Parroquia San Ramón Nonato</option>
                                                     <option value="Parroquia Nuestra Señora de las Mercedes Palmares">Parroquia Nuestra Señora de las Mercedes Palmares</option>
+                                                    <option value="Parroquia Nuestra Señora de las Piedades Naranjo">Parroquia Nuestra Señora de las Piedades Naranjo</option>
+                                                    <option value="Parroquia de San Rafael Arcángel Zarcero">Parroquia de San Rafael Arcángel Zarcero</option>
                                                     <option value="Parroquia Nuestra Señora de las Piedades">Parroquia Nuestra Señora de las Piedades</option>
+
+                                                    {/* Vicaría Monseñor Juan Vicente Solís Fernández */}
                                                     <option value="Parroquia San Rafael Arcángel Atenas">Parroquia San Rafael Arcángel Atenas</option>
+                                                    <option value="Parroquia San Mateo Apóstol">Parroquia San Mateo Apóstol</option>
                                                     <option value="Parroquia Santo Domingo de Guzmán Orotina">Parroquia Santo Domingo de Guzmán Orotina</option>
                                                     <option value="Parroquia Santa Rosa de Lima">Parroquia Santa Rosa de Lima</option>
-                                                    <option value="Parroquia San Joaquín de Flores">Parroquia San Joaquín de Flores</option>
-                                                    <option value="Parroquia Nuestra Señora de los Desamparados">Parroquia Nuestra Señora de los Desamparados</option>
+
+                                                    {/* Vicaría Monseñor Enrique Bolaños Quesada */}
                                                     <option value="Parroquia Santa Bárvara">Parroquia Santa Bárvara</option>
+                                                    <option value="Parroquia San Joaquín de Flores">Parroquia San Joaquín de Flores</option>
+                                                    <option value="Parroquia Santiago Apóstol">Parroquia Santiago Apóstol</option>
                                                     <option value="Parroquia Santo Domingo de Guzmán Heredia">Parroquia Santo Domingo de Guzmán Heredia</option>
                                                     <option value="Parroquia Santos Ángeles Custodios">Parroquia Santos Ángeles Custodios</option>
-                                                    <option value="Parroquia Santiago Apóstol">Parroquia Santiago Apóstol</option>
+                                                    <option value="Parroquia Nuestra Señora de los Desamparados">Parroquia Nuestra Señora de los Desamparados</option>
+
+                                                    {/* Vicaría Monseñor José Rafael Barquero Arce */}
                                                     <option value="Parroquia San Antonio de Padua">Parroquia San Antonio de Padua</option>
                                                     <option value="Parroquia San Rafael">Parroquia San Rafael</option>
                                                     <option value="Parroquia Inmaculada Concepción">Parroquia Inmaculada Concepción</option>
                                                     <option value="Parroquia San Antonio de Padua El Tejar">Parroquia San Antonio de Padua El Tejar</option>
+
+                                                    {/* Vicaría Monseñor Ángel SanCasimiro Fernández */}
+                                                    <option value="Parroquia Nuestra Señora de las Mercedes">Parroquia Nuestra Señora de las Mercedes</option>
                                                     <option value="Parroquia Santigo Apóstol Sarchí">Parroquia Santigo Apóstol Sarchí</option>
                                                     <option value="Parroquia Santa Gertrudis">Parroquia Santa Gertrudis</option>
-                                                    <option value="Parroquia Santo Padre Pío">Parroquia Santo Padre Pío</option>
+                                                    <option value="Parroquia Sagrado Corazón de Jesús de Tacares">Parroquia Sagrado Corazón de Jesús de Tacares</option>
+
+                                                    {/* Vicaría Monseñor Delfín Quesada Castro */}
+                                                    <option value="Parroquia de San Pedro de Poás">Parroquia de San Pedro de Poás</option>
                                                     <option value="Parroquia Santa Bárvara Sabanilla">Parroquia Santa Bárvara Sabanilla</option>
                                                     <option value="Parroquia Patriarca San José">Parroquia Patriarca San José</option>
                                                     <option value="Parroquia Santa Ana">Parroquia Santa Ana</option>
@@ -788,7 +823,7 @@ class CartaCelebrarMatrimonio extends Component {
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese la fecha de elaboración del documento</i></span>
                                                     <input onChange={this.onChange('fecha')} name="fecha" type="text" placeholder="2 de enero de 2022" className="form-control" />
                                                 </div>
-                                                
+
                                                 <div className="form-group">
                                                     <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon">Ingrese el nombre del sacerdote firmante.</i></span>
                                                     <input onChange={this.onChange('cura')} name="cura" type="text" placeholder="Bartolomé Mora Chavarría" className="form-control" />
@@ -859,8 +894,8 @@ class CartaCelebrarMatrimonio extends Component {
                             <h5 >¡La información fue validada!</h5>
 
                             <PDFDownloadLink
-                                document={<ProductoCartaCelebrarMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} destinatario={this.state.destinatario} fecha={this.state.fecha} cura={this.state.cura} cedCura={this.state.cedCura} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} lugar={this.state.lugar} lugarMatrimonio={this.state.lugarMatrimonio} nombreFeligres={this.state.nombreFeligres} esposo={this.state.esposo} esposa={this.state.esposa} cedEsposo={this.state.cedEsposo} cedEsposa={this.state.cedEsposa} fechaMatrimonio={this.state.fechaMatrimonio} lugarTrabajoDestinatario={this.state.destinatalugarTrabajoDestinatariorio} email={this.state.email}/>}
-                                fileName={this.state.codigo + '-'+ this.state.consecutivo}                            >
+                                document={<ProductoCartaCelebrarMatrimonio parroquia={this.state.parroquia} consecutivo={this.state.consecutivo} destinatario={this.state.destinatario} fecha={this.state.fecha} cura={this.state.cura} cedCura={this.state.cedCura} web={this.state.web} image={this.state.image} codigo={this.state.codigo} tel={this.state.tel} lugar={this.state.lugar} lugarMatrimonio={this.state.lugarMatrimonio} nombreFeligres={this.state.nombreFeligres} esposo={this.state.esposo} esposa={this.state.esposa} cedEsposo={this.state.cedEsposo} cedEsposa={this.state.cedEsposa} fechaMatrimonio={this.state.fechaMatrimonio} lugarTrabajoDestinatario={this.state.destinatalugarTrabajoDestinatariorio} email={this.state.email} />}
+                                fileName={this.state.codigo + '-' + this.state.consecutivo}                            >
                                 <button type="button" className="btn btn-danger mb-1">Descargar documento</button>
                             </PDFDownloadLink>
 
