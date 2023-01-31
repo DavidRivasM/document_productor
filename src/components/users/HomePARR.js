@@ -14,6 +14,7 @@ import PermisoConfirmacionCatequesis from '../documents/PARR/PermisoConfirmacion
 import CartaCelebrarMatrimonio from '../documents/PARR/CartaCelebrarMatrimonio';
 import PermisoCatequesisPrematrimonial from '../documents/PARR/PermisoCatequesisPrematrimonial';
 import BoletaInscripcionCatequesisBautismal from '../documents/PARR/BoletaInscripcionCatequesisBautismal';
+import ListaRemision from '../documents/PARR/ListaRemision';
 
 
 
@@ -32,6 +33,7 @@ const HomePARR = (props) => {
     const [documento12, setDocumento12] = useState("");
     const [documento13, setDocumento13] = useState("");
     const [documento14, setDocumento14] = useState("");
+    const [documento15, setDocumento15] = useState("");
 
 
     return (
@@ -244,6 +246,24 @@ const HomePARR = (props) => {
                         </div>
                     </div>
                 </div>
+
+                <div className="col-sm-6">
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">Lista de remisión (FORM.ADA.01)</h5>
+                            <p className="card-text">Documento que contiene el detalle de los documentos que se transferirán al Archivo Diocesano.</p>
+                            {
+                                documento15 === "" ? <button type="button" className="btn btn-danger" onClick={() => setDocumento15("Lista de remision")}>
+                                    Crear
+                                </button> : <>
+                                    <ListaRemision />
+                                    <button type="button" className="btn btn-danger" onClick={() => setDocumento15("")} >Volver</button>
+                                </>
+                            }
+                        </div>
+                    </div>
+                </div>
+
                 {/* <div className="col-sm-6">
                     <div className="card">
                         <div className="card-body">
